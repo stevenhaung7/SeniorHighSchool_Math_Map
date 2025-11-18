@@ -26,17 +26,20 @@ export interface Edge {
 }
 
 /**
- * 題目範例 (預留結構)
+ * 題目範例
  */
 export interface Example {
   id: string;
   title: string;
-  content: string;
-  solution?: string;
+  question: string;          // 題目敘述
+  options?: string[];        // 選擇題選項（選填）
+  answer: string;            // 答案
+  solution: string;          // 詳解
   difficulty: 'easy' | 'medium' | 'hard';
   relatedNodes: string[];
   tags: string[];
-  hint?: string;
+  hint?: string;             // 提示
+  type: 'choice' | 'calc' | 'proof';  // 題型：選擇、計算、證明
 }
 
 /**

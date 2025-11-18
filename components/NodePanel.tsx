@@ -1,6 +1,8 @@
 'use client'
 
 import { ConceptNode } from '@/types'
+import ExampleCard from './ExampleCard'
+import mapData from '@/data/trigonometry.json'
 
 interface NodePanelProps {
   node: ConceptNode | null
@@ -126,12 +128,31 @@ export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes
 
         {/* 預留：題目練習 */}
         <section className="border-t pt-4">
-          <h3 className="font-semibold text-gray-700 mb-2">📝 練習題目</h3>
-          <div className="bg-gray-50 border border-dashed border-gray-300 rounded p-4 text-center text-sm text-gray-500">
-            題目功能開發中...
-            <br />
-            <span className="text-xs">未來可在此處連結相關練習題</span>
-          </div>
+          <h3 className="font-semibold text-gray-700 mb-3 flex items-center gap-2">
+            <span>📝 練習題目</span>
+            {node.examples && node.examples.length > 0 && (
+              <span className="text-xs bg-primary-100 text-primary-700 px-2 py-0.5 rounded">
+                {node.examples.length} 題
+              </span>
+            )}
+          </h3>
+          
+          {node.examples && node.examples.length > 0 ? (
+            <div className="space-y-3">
+              {node.examples.map(exampleId => {
+                const example = mapData.examples.find(ex => ex.id === exampleId)
+                return example ? (
+                  <ExampleCard key={example.id} example={example as any} />
+                ) : null
+              })}
+            </div>
+          ) : (
+            <div className="bg-gray-50 border border-dashed border-gray-300 rounded p-4 text-center text-sm text-gray-500">
+              此觀念暫無練習題
+              <br />
+              <span className="text-xs">題目持續新增中...</span>
+            </div>
+          )}
         </section>
       </div>
     </div>
