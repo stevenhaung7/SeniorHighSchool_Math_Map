@@ -266,7 +266,7 @@ export default function ConceptMap() {
         isOpen={isPanelOpen}
         onClose={handleClosePanel}
         onNodeClick={handleNodeClick}
-        allNodes={mapData.nodes}
+        allNodes={mapData.nodes as ConceptNode[]}
       />
     </div>
   )
