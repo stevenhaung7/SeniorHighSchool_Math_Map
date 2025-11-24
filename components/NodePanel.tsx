@@ -24,6 +24,15 @@ export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes
     return allNodes.find(n => n.id === id)
   }
 
+  // 計算後續觀念（哪些觀念依賴當前觀念）
+  const getNextConcepts = () => {
+    return allNodes.filter(n => 
+      n.prerequisites.includes(node.id) || n.related.includes(node.id)
+    )
+  }
+
+  const nextConcepts = getNextConcepts()
+
   return (
     <div className="absolute top-0 right-0 w-96 h-full bg-white shadow-2xl z-20 overflow-y-auto">
       <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex justify-between items-start">
@@ -108,6 +117,31 @@ export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes
                   </button>
                 ) : null
               })}
+            </div>
+          </section>
+        )}
+
+        {/* 後續觀念 (誰需要這個觀念) */}
+        {nextConcepts.length > 0 && (
+          <section>
+            <h3 className="font-semibold text-gray-700 mb-2 flex items-center gap-2">
+              <span className="text-green-500">→</span>
+              後續觀念 (接著可以學)
+            </h3>
+            <div className="space-y-2">
+              {nextConcepts.map(nextNode => (
+                <button
+                  key={nextNode.id}
+                  onClick={() => onNodeClick(nextNode.id)}
+                  className="w-full text-left p-2 bg-green-50 hover:bg-green-100 rounded border border-green-200 transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 rounded-full ${getLevelColor(nextNode.level)}`}></div>
+                    <span className="text-sm font-medium text-gray-800">{nextNode.name}</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1 ml-4">{nextNode.description}</p>
+                </button>
+              ))}
             </div>
           </section>
         )}
