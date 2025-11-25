@@ -1,0 +1,681 @@
+{
+  "topic": "微積分",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-26",
+  "nodes": [
+    {
+      "id": "c1.1",
+      "name": "數列極限",
+      "description": "$\\lim_{n \\to \\infty} a_n = L$、收斂與發散",
+      "category": "極限",
+      "level": 1,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["數列極限"],
+      "examples": ["ex_c1_1_1", "ex_c1_1_2"]
+    },
+    {
+      "id": "c1.2",
+      "name": "函數極限",
+      "description": "$\\lim_{x \\to a} f(x) = L$、左極限與右極限",
+      "category": "極限",
+      "level": 1,
+      "prerequisites": [],
+      "related": ["c1.1"],
+      "tags": ["函數極限"],
+      "examples": ["ex_c1_2_1", "ex_c1_2_2"]
+    },
+    {
+      "id": "c1.3",
+      "name": "極限運算法則",
+      "description": "和、差、積、商的極限法則",
+      "category": "極限",
+      "level": 1,
+      "prerequisites": ["c1.2"],
+      "related": [],
+      "tags": ["極限法則"],
+      "examples": ["ex_c1_3_1"]
+    },
+    {
+      "id": "c1.4",
+      "name": "無窮極限",
+      "description": "$\\lim_{x \\to \\infty} f(x)$、水平漸近線",
+      "category": "極限",
+      "level": 1,
+      "prerequisites": ["c1.2"],
+      "related": [],
+      "tags": ["無窮極限"],
+      "examples": ["ex_c1_4_1"]
+    },
+    {
+      "id": "c2.1",
+      "name": "連續性",
+      "description": "$\\lim_{x \\to a} f(x) = f(a)$、連續函數的性質",
+      "category": "連續",
+      "level": 2,
+      "prerequisites": ["c1.2"],
+      "related": [],
+      "tags": ["連續"],
+      "examples": ["ex_c2_1_1"]
+    },
+    {
+      "id": "c2.2",
+      "name": "中間值定理",
+      "description": "連續函數在區間內必取得中間值",
+      "category": "連續",
+      "level": 2,
+      "prerequisites": ["c2.1"],
+      "related": [],
+      "tags": ["中間值定理"],
+      "examples": ["ex_c2_2_1"]
+    },
+    {
+      "id": "c3.1",
+      "name": "導數定義",
+      "description": "$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$",
+      "category": "導數",
+      "level": 3,
+      "prerequisites": ["c1.2"],
+      "related": [],
+      "tags": ["導數"],
+      "examples": ["ex_c3_1_1", "ex_c3_1_2"]
+    },
+    {
+      "id": "c3.2",
+      "name": "基本微分公式",
+      "description": "$(x^n)' = nx^{n-1}$、$(e^x)' = e^x$、$(\\ln x)' = \\frac{1}{x}$",
+      "category": "導數",
+      "level": 3,
+      "prerequisites": ["c3.1"],
+      "related": [],
+      "tags": ["微分公式"],
+      "examples": ["ex_c3_2_1", "ex_c3_2_2"]
+    },
+    {
+      "id": "c3.3",
+      "name": "導數四則運算",
+      "description": "$(f+g)' = f' + g'$、$(fg)' = f'g + fg'$、$(\\frac{f}{g})' = \\frac{f'g-fg'}{g^2}$",
+      "category": "導數",
+      "level": 3,
+      "prerequisites": ["c3.2"],
+      "related": [],
+      "tags": ["微分運算"],
+      "examples": ["ex_c3_3_1"]
+    },
+    {
+      "id": "c3.4",
+      "name": "連鎖律",
+      "description": "$(f \\circ g)' = f'(g(x)) \\cdot g'(x)$、合成函數微分",
+      "category": "導數",
+      "level": 3,
+      "prerequisites": ["c3.2"],
+      "related": [],
+      "tags": ["連鎖律"],
+      "examples": ["ex_c3_4_1", "ex_c3_4_2"]
+    },
+    {
+      "id": "c4.1",
+      "name": "羅必達法則",
+      "description": "$\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f'(x)}{g'(x)}$，處理 $\\frac{0}{0}$、$\\frac{\\infty}{\\infty}$",
+      "category": "微分應用",
+      "level": 4,
+      "prerequisites": ["c3.1", "c1.2"],
+      "related": [],
+      "tags": ["羅必達法則"],
+      "examples": ["ex_c4_1_1"]
+    },
+    {
+      "id": "c4.2",
+      "name": "函數遞增遞減",
+      "description": "$f' > 0$ 遞增、$f' < 0$ 遞減",
+      "category": "微分應用",
+      "level": 4,
+      "prerequisites": ["c3.1"],
+      "related": [],
+      "tags": ["單調性"],
+      "examples": ["ex_c4_2_1"]
+    },
+    {
+      "id": "c4.3",
+      "name": "極值",
+      "description": "$f'(c) = 0$ 且二階導數判斷極大、極小",
+      "category": "微分應用",
+      "level": 4,
+      "prerequisites": ["c4.2"],
+      "related": [],
+      "tags": ["極值"],
+      "examples": ["ex_c4_3_1"]
+    },
+    {
+      "id": "c4.4",
+      "name": "凹凸性",
+      "description": "$f'' > 0$ 凹向上、$f'' < 0$ 凹向下、反曲點",
+      "category": "微分應用",
+      "level": 4,
+      "prerequisites": ["c4.3"],
+      "related": [],
+      "tags": ["凹凸性"],
+      "examples": ["ex_c4_4_1"]
+    },
+    {
+      "id": "c4.5",
+      "name": "最佳化問題",
+      "description": "應用導數求最大值與最小值",
+      "category": "微分應用",
+      "level": 4,
+      "prerequisites": ["c4.3"],
+      "related": [],
+      "tags": ["最佳化"],
+      "examples": ["ex_c4_5_1"]
+    },
+    {
+      "id": "c5.1",
+      "name": "不定積分",
+      "description": "$\\int f(x)dx = F(x) + C$、反導數",
+      "category": "積分",
+      "level": 5,
+      "prerequisites": ["c3.2"],
+      "related": [],
+      "tags": ["不定積分"],
+      "examples": ["ex_c5_1_1", "ex_c5_1_2"]
+    },
+    {
+      "id": "c5.2",
+      "name": "基本積分公式",
+      "description": "$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$、$\\int e^x dx = e^x + C$",
+      "category": "積分",
+      "level": 5,
+      "prerequisites": ["c5.1"],
+      "related": [],
+      "tags": ["積分公式"],
+      "examples": ["ex_c5_2_1"]
+    },
+    {
+      "id": "c5.3",
+      "name": "代換積分法",
+      "description": "令 $u = g(x)$，$\\int f(g(x))g'(x)dx = \\int f(u)du$",
+      "category": "積分",
+      "level": 5,
+      "prerequisites": ["c5.2"],
+      "related": ["c3.4"],
+      "tags": ["代換法"],
+      "examples": ["ex_c5_3_1", "ex_c5_3_2"]
+    },
+    {
+      "id": "c5.4",
+      "name": "分部積分法",
+      "description": "$\\int u dv = uv - \\int v du$",
+      "category": "積分",
+      "level": 5,
+      "prerequisites": ["c5.2"],
+      "related": ["c3.3"],
+      "tags": ["分部積分"],
+      "examples": ["ex_c5_4_1"]
+    },
+    {
+      "id": "c6.1",
+      "name": "定積分定義",
+      "description": "$\\int_a^b f(x)dx = \\lim_{n \\to \\infty} \\sum_{i=1}^n f(x_i^*) \\Delta x$",
+      "category": "定積分",
+      "level": 6,
+      "prerequisites": ["c5.1"],
+      "related": [],
+      "tags": ["定積分"],
+      "examples": ["ex_c6_1_1"]
+    },
+    {
+      "id": "c6.2",
+      "name": "微積分基本定理",
+      "description": "$\\int_a^b f(x)dx = F(b) - F(a)$，$F' = f$",
+      "category": "定積分",
+      "level": 6,
+      "prerequisites": ["c6.1", "c5.1"],
+      "related": [],
+      "tags": ["基本定理"],
+      "examples": ["ex_c6_2_1", "ex_c6_2_2"]
+    },
+    {
+      "id": "c6.3",
+      "name": "定積分應用：面積",
+      "description": "曲線下方面積、兩曲線間面積",
+      "category": "定積分",
+      "level": 6,
+      "prerequisites": ["c6.2"],
+      "related": [],
+      "tags": ["面積"],
+      "examples": ["ex_c6_3_1"]
+    },
+    {
+      "id": "c6.4",
+      "name": "定積分應用：體積",
+      "description": "旋轉體體積、圓盤法、殼層法",
+      "category": "定積分",
+      "level": 6,
+      "prerequisites": ["c6.3"],
+      "related": [],
+      "tags": ["體積"],
+      "examples": ["ex_c6_4_1"]
+    },
+    {
+      "id": "c7.1",
+      "name": "一階微分方程",
+      "description": "$\\frac{dy}{dx} = f(x, y)$、可分離變數",
+      "category": "微分方程",
+      "level": 7,
+      "prerequisites": ["c5.1"],
+      "related": [],
+      "tags": ["微分方程"],
+      "examples": ["ex_c7_1_1"]
+    },
+    {
+      "id": "c7.2",
+      "name": "線性微分方程",
+      "description": "$\\frac{dy}{dx} + P(x)y = Q(x)$、積分因子法",
+      "category": "微分方程",
+      "level": 7,
+      "prerequisites": ["c7.1"],
+      "related": [],
+      "tags": ["線性微分方程"],
+      "examples": ["ex_c7_2_1"]
+    },
+    {
+      "id": "c7.3",
+      "name": "二階常係數微分方程",
+      "description": "$ay'' + by' + cy = 0$、特徵方程",
+      "category": "微分方程",
+      "level": 7,
+      "prerequisites": ["c7.1"],
+      "related": [],
+      "tags": ["二階微分方程"],
+      "examples": ["ex_c7_3_1"]
+    },
+    {
+      "id": "c8.1",
+      "name": "泰勒級數",
+      "description": "$f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n$",
+      "category": "級數",
+      "level": 8,
+      "prerequisites": ["c3.1"],
+      "related": [],
+      "tags": ["泰勒級數"],
+      "examples": ["ex_c8_1_1"]
+    },
+    {
+      "id": "c8.2",
+      "name": "麥克勞林級數",
+      "description": "泰勒級數在 $a=0$ 的特例",
+      "category": "級數",
+      "level": 8,
+      "prerequisites": ["c8.1"],
+      "related": [],
+      "tags": ["麥克勞林級數"],
+      "examples": ["ex_c8_2_1"]
+    },
+    {
+      "id": "c8.3",
+      "name": "多變數微分",
+      "description": "偏導數 $\\frac{\\partial f}{\\partial x}$、梯度、方向導數",
+      "category": "多變數微積分",
+      "level": 8,
+      "prerequisites": ["c3.1"],
+      "related": [],
+      "tags": ["偏微分"],
+      "examples": ["ex_c8_3_1"]
+    },
+    {
+      "id": "c8.4",
+      "name": "重積分",
+      "description": "$\\iint_D f(x,y) dA$、雙重積分、三重積分",
+      "category": "多變數微積分",
+      "level": 8,
+      "prerequisites": ["c6.1"],
+      "related": [],
+      "tags": ["重積分"],
+      "examples": ["ex_c8_4_1"]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_c1_1_1",
+      "question": "求 $\\lim_{n \\to \\infty} \\frac{2n+1}{3n-2}$",
+      "answer": "$\\frac{2}{3}$",
+      "solution": "分子分母同除以 $n$：\n\n$\\lim_{n \\to \\infty} \\frac{2n+1}{3n-2} = \\lim_{n \\to \\infty} \\frac{2 + \\frac{1}{n}}{3 - \\frac{2}{n}}$\n\n當 $n \\to \\infty$，$\\frac{1}{n} \\to 0$\n\n$= \\frac{2+0}{3-0} = \\frac{2}{3}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["數列極限"]
+    },
+    {
+      "id": "ex_c1_1_2",
+      "question": "數列 $a_n = \\frac{(-1)^n}{n}$ 收斂還是發散？",
+      "answer": "收斂至 0",
+      "solution": "$|a_n| = \\frac{1}{n} \\to 0$ 當 $n \\to \\infty$\n\n雖然符號交替，但絕對值趨近 0\n\n$\\lim_{n \\to \\infty} a_n = 0$（收斂）",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["數列極限"]
+    },
+    {
+      "id": "ex_c1_2_1",
+      "question": "求 $\\lim_{x \\to 2} (3x - 5)$",
+      "answer": "$1$",
+      "solution": "直接代入：\n\n$\\lim_{x \\to 2} (3x - 5) = 3(2) - 5 = 6 - 5 = 1$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["函數極限"]
+    },
+    {
+      "id": "ex_c1_2_2",
+      "question": "求 $\\lim_{x \\to 0} \\frac{x^2 - x}{x}$",
+      "answer": "$-1$",
+      "solution": "先化簡（$x \\neq 0$）：\n\n$\\frac{x^2 - x}{x} = \\frac{x(x-1)}{x} = x - 1$\n\n$\\lim_{x \\to 0} (x-1) = 0 - 1 = -1$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["函數極限"]
+    },
+    {
+      "id": "ex_c1_3_1",
+      "question": "若 $\\lim_{x \\to a} f(x) = 3$，$\\lim_{x \\to a} g(x) = 2$，求 $\\lim_{x \\to a} [f(x) \\cdot g(x)]$",
+      "answer": "$6$",
+      "solution": "積的極限 = 極限的積\n\n$\\lim_{x \\to a} [f(x) \\cdot g(x)] = \\lim_{x \\to a} f(x) \\cdot \\lim_{x \\to a} g(x)$\n\n$= 3 \\times 2 = 6$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["極限法則"]
+    },
+    {
+      "id": "ex_c1_4_1",
+      "question": "求 $\\lim_{x \\to \\infty} \\frac{5x + 3}{2x - 1}$",
+      "answer": "$\\frac{5}{2}$",
+      "solution": "分子分母同除以 $x$：\n\n$\\lim_{x \\to \\infty} \\frac{5 + \\frac{3}{x}}{2 - \\frac{1}{x}} = \\frac{5+0}{2-0} = \\frac{5}{2}$\n\n水平漸近線：$y = \\frac{5}{2}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["無窮極限"]
+    },
+    {
+      "id": "ex_c2_1_1",
+      "question": "$f(x) = \\frac{x^2 - 4}{x - 2}$ 在 $x = 2$ 連續嗎？",
+      "answer": "不連續",
+      "solution": "在 $x = 2$ 時，$f(2)$ 無定義（分母為 0）\n\n雖然 $\\lim_{x \\to 2} f(x) = \\lim_{x \\to 2} \\frac{(x-2)(x+2)}{x-2} = 4$\n\n但 $f(2)$ 不存在，所以不連續",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["連續"]
+    },
+    {
+      "id": "ex_c2_2_1",
+      "question": "若 $f$ 在 $[0, 3]$ 連續，$f(0) = -2$，$f(3) = 5$，則方程 $f(x) = 0$ 在 $(0, 3)$ 內至少有一解？",
+      "answer": "是",
+      "solution": "中間值定理：\n\n$f$ 連續，$f(0) = -2 < 0 < 5 = f(3)$\n\n0 介於 $f(0)$ 和 $f(3)$ 之間\n\n必存在 $c \\in (0, 3)$ 使得 $f(c) = 0$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["中間值定理"]
+    },
+    {
+      "id": "ex_c3_1_1",
+      "question": "用定義求 $f(x) = x^2$ 在 $x = 3$ 的導數",
+      "answer": "$6$",
+      "solution": "$f'(3) = \\lim_{h \\to 0} \\frac{f(3+h) - f(3)}{h}$\n\n$= \\lim_{h \\to 0} \\frac{(3+h)^2 - 9}{h}$\n\n$= \\lim_{h \\to 0} \\frac{9 + 6h + h^2 - 9}{h}$\n\n$= \\lim_{h \\to 0} \\frac{6h + h^2}{h} = \\lim_{h \\to 0} (6 + h) = 6$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["導數"]
+    },
+    {
+      "id": "ex_c3_1_2",
+      "question": "導數的幾何意義是什麼？",
+      "answer": "切線斜率",
+      "solution": "$f'(a)$ 表示函數 $f$ 在 $x = a$ 處的切線斜率",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["導數"]
+    },
+    {
+      "id": "ex_c3_2_1",
+      "question": "求 $f(x) = x^5$ 的導數",
+      "answer": "$f'(x) = 5x^4$",
+      "solution": "$(x^n)' = nx^{n-1}$\n\n$(x^5)' = 5x^{5-1} = 5x^4$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["微分公式"]
+    },
+    {
+      "id": "ex_c3_2_2",
+      "question": "求 $f(x) = 3e^x + \\ln x$ 的導數",
+      "answer": "$f'(x) = 3e^x + \\frac{1}{x}$",
+      "solution": "$(e^x)' = e^x$，$(\\ln x)' = \\frac{1}{x}$\n\n$f'(x) = 3e^x + \\frac{1}{x}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["微分公式"]
+    },
+    {
+      "id": "ex_c3_3_1",
+      "question": "求 $f(x) = x^2 \\sin x$ 的導數",
+      "answer": "$f'(x) = 2x \\sin x + x^2 \\cos x$",
+      "solution": "乘積法則：$(uv)' = u'v + uv'$\n\n$u = x^2$，$u' = 2x$\n$v = \\sin x$，$v' = \\cos x$\n\n$f'(x) = 2x \\sin x + x^2 \\cos x$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["微分運算"]
+    },
+    {
+      "id": "ex_c3_4_1",
+      "question": "求 $f(x) = (2x + 1)^3$ 的導數",
+      "answer": "$f'(x) = 6(2x+1)^2$",
+      "solution": "連鎖律：令 $u = 2x + 1$\n\n$f(x) = u^3$\n\n$f'(x) = 3u^2 \\cdot \\frac{du}{dx} = 3(2x+1)^2 \\cdot 2 = 6(2x+1)^2$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["連鎖律"]
+    },
+    {
+      "id": "ex_c3_4_2",
+      "question": "求 $f(x) = e^{x^2}$ 的導數",
+      "answer": "$f'(x) = 2xe^{x^2}$",
+      "solution": "連鎖律：令 $u = x^2$\n\n$f(x) = e^u$\n\n$f'(x) = e^u \\cdot \\frac{du}{dx} = e^{x^2} \\cdot 2x = 2xe^{x^2}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["連鎖律"]
+    },
+    {
+      "id": "ex_c4_1_1",
+      "question": "求 $\\lim_{x \\to 0} \\frac{\\sin x}{x}$",
+      "answer": "$1$",
+      "solution": "這是 $\\frac{0}{0}$ 型，用羅必達法則：\n\n$\\lim_{x \\to 0} \\frac{\\sin x}{x} = \\lim_{x \\to 0} \\frac{\\cos x}{1} = \\frac{1}{1} = 1$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["羅必達法則"]
+    },
+    {
+      "id": "ex_c4_2_1",
+      "question": "若 $f'(x) = x^2 - 4$，在哪些區間 $f$ 遞增？",
+      "answer": "$(-\\infty, -2)$ 和 $(2, \\infty)$",
+      "solution": "$f'(x) > 0$ 時遞增\n\n$x^2 - 4 > 0$\n\n$(x-2)(x+2) > 0$\n\n$x < -2$ 或 $x > 2$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["單調性"]
+    },
+    {
+      "id": "ex_c4_3_1",
+      "question": "求 $f(x) = x^3 - 3x + 2$ 的極值",
+      "answer": "極大值：$x = -1$，極小值：$x = 1$",
+      "solution": "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 0$\n\n$x = \\pm 1$\n\n$f''(x) = 6x$\n\n$f''(-1) = -6 < 0$ → 極大\n$f''(1) = 6 > 0$ → 極小",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["極值"]
+    },
+    {
+      "id": "ex_c4_4_1",
+      "question": "若 $f''(x) > 0$，函數圖形的形狀？",
+      "answer": "凹向上（U型）",
+      "solution": "$f'' > 0$ 表示 $f'$ 遞增\n\n切線斜率遞增 → 圖形凹向上",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["凹凸性"]
+    },
+    {
+      "id": "ex_c4_5_1",
+      "question": "長方形周長 100 公尺，求面積最大值",
+      "answer": "$625$ 平方公尺（正方形）",
+      "solution": "設長 $x$，寬 $\\frac{100-2x}{2} = 50-x$\n\n面積 $A(x) = x(50-x) = 50x - x^2$\n\n$A'(x) = 50 - 2x = 0$ → $x = 25$\n\n$A(25) = 25 \\times 25 = 625$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["最佳化"]
+    },
+    {
+      "id": "ex_c5_1_1",
+      "question": "若 $F'(x) = 2x$，求 $F(x)$",
+      "answer": "$F(x) = x^2 + C$",
+      "solution": "反導數：\n\n$\\int 2x dx = x^2 + C$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["不定積分"]
+    },
+    {
+      "id": "ex_c5_1_2",
+      "question": "積分與微分的關係？",
+      "answer": "互為反運算",
+      "solution": "若 $F'(x) = f(x)$，則 $\\int f(x) dx = F(x) + C$\n\n$\\frac{d}{dx}[\\int f(x)dx] = f(x)$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["不定積分"]
+    },
+    {
+      "id": "ex_c5_2_1",
+      "question": "求 $\\int (3x^2 + 2x) dx$",
+      "answer": "$x^3 + x^2 + C$",
+      "solution": "$\\int (3x^2 + 2x) dx = \\int 3x^2 dx + \\int 2x dx$\n\n$= 3 \\cdot \\frac{x^3}{3} + 2 \\cdot \\frac{x^2}{2} + C$\n\n$= x^3 + x^2 + C$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["積分公式"]
+    },
+    {
+      "id": "ex_c5_3_1",
+      "question": "求 $\\int 2x(x^2 + 1)^3 dx$",
+      "answer": "$\\frac{(x^2+1)^4}{4} + C$",
+      "solution": "令 $u = x^2 + 1$，$du = 2x dx$\n\n$\\int 2x(x^2+1)^3 dx = \\int u^3 du$\n\n$= \\frac{u^4}{4} + C = \\frac{(x^2+1)^4}{4} + C$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["代換法"]
+    },
+    {
+      "id": "ex_c5_3_2",
+      "question": "求 $\\int \\frac{\\cos x}{\\sin x} dx$",
+      "answer": "$\\ln |\\sin x| + C$",
+      "solution": "令 $u = \\sin x$，$du = \\cos x dx$\n\n$\\int \\frac{\\cos x}{\\sin x} dx = \\int \\frac{1}{u} du = \\ln |u| + C$\n\n$= \\ln |\\sin x| + C$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["代換法"]
+    },
+    {
+      "id": "ex_c5_4_1",
+      "question": "求 $\\int x e^x dx$",
+      "answer": "$(x-1)e^x + C$",
+      "solution": "分部積分：$\\int u dv = uv - \\int v du$\n\n令 $u = x$，$dv = e^x dx$\n$du = dx$，$v = e^x$\n\n$\\int x e^x dx = x e^x - \\int e^x dx$\n\n$= x e^x - e^x + C = (x-1)e^x + C$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["分部積分"]
+    },
+    {
+      "id": "ex_c6_1_1",
+      "question": "定積分 $\\int_a^b f(x)dx$ 的幾何意義？",
+      "answer": "曲線下方的有向面積",
+      "solution": "定積分表示曲線 $y = f(x)$ 與 $x$ 軸、$x=a$、$x=b$ 所圍的有向面積\n\n$x$ 軸上方為正，下方為負",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["定積分"]
+    },
+    {
+      "id": "ex_c6_2_1",
+      "question": "求 $\\int_0^2 x^2 dx$",
+      "answer": "$\\frac{8}{3}$",
+      "solution": "反導數：$F(x) = \\frac{x^3}{3}$\n\n$\\int_0^2 x^2 dx = F(2) - F(0)$\n\n$= \\frac{8}{3} - 0 = \\frac{8}{3}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["基本定理"]
+    },
+    {
+      "id": "ex_c6_2_2",
+      "question": "若 $F(x) = \\int_0^x t^2 dt$，求 $F'(x)$",
+      "answer": "$F'(x) = x^2$",
+      "solution": "微積分基本定理：\n\n若 $F(x) = \\int_a^x f(t) dt$，則 $F'(x) = f(x)$\n\n$F'(x) = x^2$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["基本定理"]
+    },
+    {
+      "id": "ex_c6_3_1",
+      "question": "求 $y = x^2$ 與 $x$ 軸在 $[0, 2]$ 間的面積",
+      "answer": "$\\frac{8}{3}$",
+      "solution": "面積 $= \\int_0^2 x^2 dx = \\left[\\frac{x^3}{3}\\right]_0^2$\n\n$= \\frac{8}{3} - 0 = \\frac{8}{3}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["面積"]
+    },
+    {
+      "id": "ex_c6_4_1",
+      "question": "$y = x$ 在 $[0, 1]$ 繞 $x$ 軸旋轉的體積",
+      "answer": "$\\frac{\\pi}{3}$",
+      "solution": "圓盤法：$V = \\pi \\int_0^1 (x)^2 dx$\n\n$= \\pi \\int_0^1 x^2 dx = \\pi \\left[\\frac{x^3}{3}\\right]_0^1$\n\n$= \\pi \\cdot \\frac{1}{3} = \\frac{\\pi}{3}$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["體積"]
+    },
+    {
+      "id": "ex_c7_1_1",
+      "question": "解微分方程 $\\frac{dy}{dx} = 2x$",
+      "answer": "$y = x^2 + C$",
+      "solution": "可分離變數：\n\n$dy = 2x dx$\n\n兩邊積分：$\\int dy = \\int 2x dx$\n\n$y = x^2 + C$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["微分方程"]
+    },
+    {
+      "id": "ex_c7_2_1",
+      "question": "線性微分方程的標準形式？",
+      "answer": "$\\frac{dy}{dx} + P(x)y = Q(x)$",
+      "solution": "一階線性微分方程標準形式：\n\n$\\frac{dy}{dx} + P(x)y = Q(x)$\n\n使用積分因子 $\\mu(x) = e^{\\int P(x)dx}$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["線性微分方程"]
+    },
+    {
+      "id": "ex_c7_3_1",
+      "question": "解 $y'' - 5y' + 6y = 0$",
+      "answer": "$y = C_1 e^{2x} + C_2 e^{3x}$",
+      "solution": "特徵方程：$r^2 - 5r + 6 = 0$\n\n$(r-2)(r-3) = 0$\n\n$r = 2, 3$（相異實根）\n\n通解：$y = C_1 e^{2x} + C_2 e^{3x}$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["二階微分方程"]
+    },
+    {
+      "id": "ex_c8_1_1",
+      "question": "$e^x$ 在 $a = 0$ 的泰勒級數前三項",
+      "answer": "$1 + x + \\frac{x^2}{2}$",
+      "solution": "$f(x) = e^x$，$f^{(n)}(x) = e^x$\n\n$f(0) = 1$，$f'(0) = 1$，$f''(0) = 1$\n\n$e^x = 1 + x + \\frac{x^2}{2!} + \\cdots = 1 + x + \\frac{x^2}{2} + \\cdots$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["泰勒級數"]
+    },
+    {
+      "id": "ex_c8_2_1",
+      "question": "$\\sin x$ 的麥克勞林級數前三項",
+      "answer": "$x - \\frac{x^3}{6}$",
+      "solution": "$f(x) = \\sin x$\n\n$f(0) = 0$，$f'(0) = 1$，$f''(0) = 0$，$f'''(0) = -1$\n\n$\\sin x = x - \\frac{x^3}{3!} + \\cdots = x - \\frac{x^3}{6} + \\cdots$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["麥克勞林級數"]
+    },
+    {
+      "id": "ex_c8_3_1",
+      "question": "求 $f(x, y) = x^2 y + y^3$ 的 $\\frac{\\partial f}{\\partial x}$",
+      "answer": "$2xy$",
+      "solution": "對 $x$ 偏微分，視 $y$ 為常數：\n\n$\\frac{\\partial f}{\\partial x} = \\frac{\\partial}{\\partial x}(x^2 y + y^3) = 2xy$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["偏微分"]
+    },
+    {
+      "id": "ex_c8_4_1",
+      "question": "求 $\\int_0^1 \\int_0^1 xy \\, dy \\, dx$",
+      "answer": "$\\frac{1}{4}$",
+      "solution": "先對 $y$ 積分：\n\n$\\int_0^1 \\left[\\frac{xy^2}{2}\\right]_0^1 dx = \\int_0^1 \\frac{x}{2} dx$\n\n$= \\left[\\frac{x^2}{4}\\right]_0^1 = \\frac{1}{4}$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["重積分"]
+    }
+  ]
+}

@@ -25,3 +25,13 @@ body {
     text-wrap: balance;
   }
 }
+
+/* 2.5D 效果 - Cytoscape 容器的背景漸層 */
+#cy-container {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Cytoscape canvas 2.5D 增強效果 */
+canvas[data-id="layer2-node"] {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}

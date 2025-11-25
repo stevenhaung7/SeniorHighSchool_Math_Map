@@ -2,7 +2,19 @@
 
 import { ConceptNode } from '@/types'
 import ExampleCard from './ExampleCard'
-import mapData from '@/data/trigonometry.json'
+import trigonometryData from '@/data/trigonometry.json'
+import vectorData from '@/data/vector.json'
+import functionData from '@/data/function.json'
+import algebraData from '@/data/algebra.json'
+import probabilityData from '@/data/probability.json'
+import geometryData from '@/data/geometry.json'
+import statisticsData from '@/data/statistics.json'
+import calculusData from '@/data/calculus.json'
+import linearAlgebraData from '@/data/linear-algebra.json'
+import discreteMathData from '@/data/discrete-math.json'
+import { useTopic } from '@/contexts/TopicContext'
+import katex from 'katex'
+import 'katex/dist/katex.min.css'
 
 interface NodePanelProps {
   node: ConceptNode | null
@@ -12,7 +24,51 @@ interface NodePanelProps {
   allNodes: ConceptNode[]
 }
 
+// 渲染包含 LaTeX 的文字
+function renderMathText(text: string | undefined): JSX.Element[] {
+  if (!text) return [<span key="empty">-</span>]
+  
+  const parts: JSX.Element[] = []
+  const regex = /\$(.*?)\$/g
+  let lastIndex = 0
+  let match
+  let key = 0
+
+  while ((match = regex.exec(text)) !== null) {
+    // 加入數學式之前的文字
+    if (match.index > lastIndex) {
+      parts.push(<span key={`text-${key++}`}>{text.substring(lastIndex, match.index)}</span>)
+    }
+    
+    // 渲染數學式
+    const mathContent = match[1]
+    try {
+      const html = katex.renderToString(mathContent, {
+        throwOnError: false,
+        displayMode: false,
+      })
+      parts.push(<span key={`math-${key++}`} dangerouslySetInnerHTML={{ __html: html }} />)
+    } catch (e) {
+      parts.push(<span key={`math-${key++}`}>{`$${mathContent}$`}</span>)
+    }
+    
+    lastIndex = regex.lastIndex
+  }
+  
+  // 加入剩餘文字
+  if (lastIndex < text.length) {
+    parts.push(<span key={`text-${key++}`}>{text.substring(lastIndex)}</span>)
+  }
+  
+  return parts.length > 0 ? parts : [<span key="text-0">{text}</span>]
+}
+
 export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes }: NodePanelProps) {
+  const { currentTopic } = useTopic()
+  
+  // 根據當前主題選擇資料
+  const mapData = currentTopic === 'vector' ? vectorData : currentTopic === 'function' ? functionData : currentTopic === 'algebra' ? algebraData : currentTopic === 'probability' ? probabilityData : currentTopic === 'geometry' ? geometryData : currentTopic === 'statistics' ? statisticsData : currentTopic === 'calculus' ? calculusData : currentTopic === 'linear-algebra' ? linearAlgebraData : currentTopic === 'discrete-math' ? discreteMathData : trigonometryData
+  
   if (!isOpen || !node) return null
 
   const getLevelColor = (level: number) => {
@@ -62,7 +118,7 @@ export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes
         {/* 說明 */}
         <section>
           <h3 className="font-semibold text-gray-700 mb-2">說明</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">{node.description}</p>
+          <div className="text-gray-600 text-sm leading-relaxed">{renderMathText(node.description)}</div>
         </section>
 
         {/* 前置觀念 (強依賴) */}
@@ -85,7 +141,7 @@ export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes
                       <div className={`w-2 h-2 rounded-full ${getLevelColor(prereqNode.level)}`}></div>
                       <span className="text-sm font-medium text-gray-800">{prereqNode.name}</span>
                     </div>
-                    <p className="text-xs text-gray-500 mt-1 ml-4">{prereqNode.description}</p>
+                    <div className="text-xs text-gray-500 mt-1 ml-4">{renderMathText(prereqNode.description)}</div>
                   </button>
                 ) : null
               })}
@@ -113,7 +169,7 @@ export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes
                       <div className={`w-2 h-2 rounded-full ${getLevelColor(relNode.level)}`}></div>
                       <span className="text-sm font-medium text-gray-800">{relNode.name}</span>
                     </div>
-                    <p className="text-xs text-gray-500 mt-1 ml-4">{relNode.description}</p>
+                    <div className="text-xs text-gray-500 mt-1 ml-4">{renderMathText(relNode.description)}</div>
                   </button>
                 ) : null
               })}
@@ -139,7 +195,7 @@ export default function NodePanel({ node, isOpen, onClose, onNodeClick, allNodes
                     <div className={`w-2 h-2 rounded-full ${getLevelColor(nextNode.level)}`}></div>
                     <span className="text-sm font-medium text-gray-800">{nextNode.name}</span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1 ml-4">{nextNode.description}</p>
+                  <div className="text-xs text-gray-500 mt-1 ml-4">{renderMathText(nextNode.description)}</div>
                 </button>
               ))}
             </div>

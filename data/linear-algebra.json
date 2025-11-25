@@ -1,0 +1,685 @@
+{
+  "topic": "線性代數",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-26",
+  "nodes": [
+    {
+      "id": "la1.1",
+      "name": "矩陣定義",
+      "description": "$m \\times n$ 矩陣、元素 $a_{ij}$",
+      "category": "矩陣基礎",
+      "level": 1,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["矩陣"],
+      "examples": ["ex_la1_1_1"]
+    },
+    {
+      "id": "la1.2",
+      "name": "矩陣加法與純量乘法",
+      "description": "$A + B$、$kA$",
+      "category": "矩陣基礎",
+      "level": 1,
+      "prerequisites": ["la1.1"],
+      "related": [],
+      "tags": ["矩陣運算"],
+      "examples": ["ex_la1_2_1"]
+    },
+    {
+      "id": "la1.3",
+      "name": "矩陣乘法",
+      "description": "$AB$、$(AB)_{ij} = \\sum_{k} a_{ik}b_{kj}$",
+      "category": "矩陣基礎",
+      "level": 1,
+      "prerequisites": ["la1.2"],
+      "related": [],
+      "tags": ["矩陣乘法"],
+      "examples": ["ex_la1_3_1", "ex_la1_3_2"]
+    },
+    {
+      "id": "la1.4",
+      "name": "轉置矩陣",
+      "description": "$A^T$、$(A^T)_{ij} = A_{ji}$",
+      "category": "矩陣基礎",
+      "level": 1,
+      "prerequisites": ["la1.1"],
+      "related": [],
+      "tags": ["轉置"],
+      "examples": ["ex_la1_4_1"]
+    },
+    {
+      "id": "la2.1",
+      "name": "單位矩陣",
+      "description": "$I_n$、$AI = IA = A$",
+      "category": "特殊矩陣",
+      "level": 2,
+      "prerequisites": ["la1.3"],
+      "related": [],
+      "tags": ["單位矩陣"],
+      "examples": ["ex_la2_1_1"]
+    },
+    {
+      "id": "la2.2",
+      "name": "反矩陣",
+      "description": "$A^{-1}$、$AA^{-1} = A^{-1}A = I$",
+      "category": "特殊矩陣",
+      "level": 2,
+      "prerequisites": ["la2.1"],
+      "related": [],
+      "tags": ["反矩陣"],
+      "examples": ["ex_la2_2_1", "ex_la2_2_2"]
+    },
+    {
+      "id": "la2.3",
+      "name": "對稱矩陣",
+      "description": "$A^T = A$",
+      "category": "特殊矩陣",
+      "level": 2,
+      "prerequisites": ["la1.4"],
+      "related": [],
+      "tags": ["對稱矩陣"],
+      "examples": ["ex_la2_3_1"]
+    },
+    {
+      "id": "la2.4",
+      "name": "正交矩陣",
+      "description": "$Q^T Q = I$、$Q^{-1} = Q^T$",
+      "category": "特殊矩陣",
+      "level": 2,
+      "prerequisites": ["la2.2", "la1.4"],
+      "related": [],
+      "tags": ["正交矩陣"],
+      "examples": ["ex_la2_4_1"]
+    },
+    {
+      "id": "la3.1",
+      "name": "行列式定義",
+      "description": "$\\det(A)$ 或 $|A|$、$2 \\times 2$ 行列式",
+      "category": "行列式",
+      "level": 3,
+      "prerequisites": ["la1.1"],
+      "related": [],
+      "tags": ["行列式"],
+      "examples": ["ex_la3_1_1"]
+    },
+    {
+      "id": "la3.2",
+      "name": "餘因子展開",
+      "description": "$n \\times n$ 行列式、沿行或列展開",
+      "category": "行列式",
+      "level": 3,
+      "prerequisites": ["la3.1"],
+      "related": [],
+      "tags": ["餘因子"],
+      "examples": ["ex_la3_2_1"]
+    },
+    {
+      "id": "la3.3",
+      "name": "行列式性質",
+      "description": "$\\det(AB) = \\det(A)\\det(B)$、$\\det(A^T) = \\det(A)$",
+      "category": "行列式",
+      "level": 3,
+      "prerequisites": ["la3.1"],
+      "related": [],
+      "tags": ["行列式性質"],
+      "examples": ["ex_la3_3_1"]
+    },
+    {
+      "id": "la3.4",
+      "name": "克拉瑪公式",
+      "description": "用行列式解線性方程組 $x_i = \\frac{\\det(A_i)}{\\det(A)}$",
+      "category": "行列式",
+      "level": 3,
+      "prerequisites": ["la3.1"],
+      "related": [],
+      "tags": ["克拉瑪公式"],
+      "examples": ["ex_la3_4_1"]
+    },
+    {
+      "id": "la4.1",
+      "name": "線性方程組",
+      "description": "$Ax = b$、增廣矩陣 $[A|b]$",
+      "category": "線性方程組",
+      "level": 4,
+      "prerequisites": ["la1.3"],
+      "related": [],
+      "tags": ["線性方程組"],
+      "examples": ["ex_la4_1_1"]
+    },
+    {
+      "id": "la4.2",
+      "name": "高斯消去法",
+      "description": "列運算化為階梯形式",
+      "category": "線性方程組",
+      "level": 4,
+      "prerequisites": ["la4.1"],
+      "related": [],
+      "tags": ["高斯消去法"],
+      "examples": ["ex_la4_2_1"]
+    },
+    {
+      "id": "la4.3",
+      "name": "簡化列梯形式",
+      "description": "RREF、主元為 1",
+      "category": "線性方程組",
+      "level": 4,
+      "prerequisites": ["la4.2"],
+      "related": [],
+      "tags": ["RREF"],
+      "examples": ["ex_la4_3_1"]
+    },
+    {
+      "id": "la4.4",
+      "name": "解的存在性",
+      "description": "唯一解、無窮多解、無解",
+      "category": "線性方程組",
+      "level": 4,
+      "prerequisites": ["la4.3"],
+      "related": [],
+      "tags": ["解的存在性"],
+      "examples": ["ex_la4_4_1"]
+    },
+    {
+      "id": "la5.1",
+      "name": "向量空間",
+      "description": "$\\mathbb{R}^n$、向量加法與純量乘法",
+      "category": "向量空間",
+      "level": 5,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["向量空間"],
+      "examples": ["ex_la5_1_1"]
+    },
+    {
+      "id": "la5.2",
+      "name": "子空間",
+      "description": "向量空間的子集合、封閉性",
+      "category": "向量空間",
+      "level": 5,
+      "prerequisites": ["la5.1"],
+      "related": [],
+      "tags": ["子空間"],
+      "examples": ["ex_la5_2_1"]
+    },
+    {
+      "id": "la5.3",
+      "name": "線性組合",
+      "description": "$c_1 v_1 + c_2 v_2 + \\cdots + c_k v_k$",
+      "category": "向量空間",
+      "level": 5,
+      "prerequisites": ["la5.1"],
+      "related": [],
+      "tags": ["線性組合"],
+      "examples": ["ex_la5_3_1"]
+    },
+    {
+      "id": "la5.4",
+      "name": "生成集",
+      "description": "$\\text{span}\\{v_1, v_2, \\ldots, v_k\\}$",
+      "category": "向量空間",
+      "level": 5,
+      "prerequisites": ["la5.3"],
+      "related": [],
+      "tags": ["生成集"],
+      "examples": ["ex_la5_4_1"]
+    },
+    {
+      "id": "la6.1",
+      "name": "線性獨立",
+      "description": "$c_1 v_1 + \\cdots + c_k v_k = 0$ 僅當所有 $c_i = 0$",
+      "category": "基底與維度",
+      "level": 6,
+      "prerequisites": ["la5.3"],
+      "related": [],
+      "tags": ["線性獨立"],
+      "examples": ["ex_la6_1_1", "ex_la6_1_2"]
+    },
+    {
+      "id": "la6.2",
+      "name": "基底",
+      "description": "線性獨立且生成整個空間的向量組",
+      "category": "基底與維度",
+      "level": 6,
+      "prerequisites": ["la6.1", "la5.4"],
+      "related": [],
+      "tags": ["基底"],
+      "examples": ["ex_la6_2_1"]
+    },
+    {
+      "id": "la6.3",
+      "name": "維度",
+      "description": "$\\dim(V)$ = 基底向量個數",
+      "category": "基底與維度",
+      "level": 6,
+      "prerequisites": ["la6.2"],
+      "related": [],
+      "tags": ["維度"],
+      "examples": ["ex_la6_3_1"]
+    },
+    {
+      "id": "la6.4",
+      "name": "秩",
+      "description": "$\\text{rank}(A)$ = 行空間的維度",
+      "category": "基底與維度",
+      "level": 6,
+      "prerequisites": ["la6.3"],
+      "related": [],
+      "tags": ["秩"],
+      "examples": ["ex_la6_4_1"]
+    },
+    {
+      "id": "la7.1",
+      "name": "特徵值與特徵向量",
+      "description": "$Av = \\lambda v$、$\\lambda$ 為特徵值、$v$ 為特徵向量",
+      "category": "特徵值",
+      "level": 7,
+      "prerequisites": ["la1.3"],
+      "related": [],
+      "tags": ["特徵值"],
+      "examples": ["ex_la7_1_1", "ex_la7_1_2"]
+    },
+    {
+      "id": "la7.2",
+      "name": "特徵方程",
+      "description": "$\\det(A - \\lambda I) = 0$",
+      "category": "特徵值",
+      "level": 7,
+      "prerequisites": ["la7.1", "la3.1"],
+      "related": [],
+      "tags": ["特徵方程"],
+      "examples": ["ex_la7_2_1"]
+    },
+    {
+      "id": "la7.3",
+      "name": "對角化",
+      "description": "$A = PDP^{-1}$、$D$ 為對角矩陣",
+      "category": "特徵值",
+      "level": 7,
+      "prerequisites": ["la7.1", "la2.2"],
+      "related": [],
+      "tags": ["對角化"],
+      "examples": ["ex_la7_3_1"]
+    },
+    {
+      "id": "la7.4",
+      "name": "跡",
+      "description": "$\\text{tr}(A) = \\sum a_{ii}$ = 特徵值之和",
+      "category": "特徵值",
+      "level": 7,
+      "prerequisites": ["la7.1"],
+      "related": [],
+      "tags": ["跡"],
+      "examples": ["ex_la7_4_1"]
+    },
+    {
+      "id": "la8.1",
+      "name": "內積空間",
+      "description": "$\\langle u, v \\rangle$、長度 $\\|v\\| = \\sqrt{\\langle v, v \\rangle}$",
+      "category": "內積與正交",
+      "level": 8,
+      "prerequisites": ["la5.1"],
+      "related": [],
+      "tags": ["內積"],
+      "examples": ["ex_la8_1_1"]
+    },
+    {
+      "id": "la8.2",
+      "name": "正交性",
+      "description": "$\\langle u, v \\rangle = 0$、正交向量組",
+      "category": "內積與正交",
+      "level": 8,
+      "prerequisites": ["la8.1"],
+      "related": [],
+      "tags": ["正交"],
+      "examples": ["ex_la8_2_1"]
+    },
+    {
+      "id": "la8.3",
+      "name": "Gram-Schmidt 正交化",
+      "description": "將向量組正交化、標準正交基底",
+      "category": "內積與正交",
+      "level": 8,
+      "prerequisites": ["la8.2", "la6.2"],
+      "related": [],
+      "tags": ["正交化"],
+      "examples": ["ex_la8_3_1"]
+    },
+    {
+      "id": "la8.4",
+      "name": "奇異值分解 SVD",
+      "description": "$A = U\\Sigma V^T$、奇異值",
+      "category": "內積與正交",
+      "level": 8,
+      "prerequisites": ["la7.3", "la2.4"],
+      "related": [],
+      "tags": ["SVD"],
+      "examples": ["ex_la8_4_1"]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_la1_1_1",
+      "question": "$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ 是幾乘幾矩陣？",
+      "answer": "$2 \\times 2$ 矩陣",
+      "solution": "2 列 2 行，所以是 $2 \\times 2$ 矩陣",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["矩陣"]
+    },
+    {
+      "id": "ex_la1_2_1",
+      "question": "$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 5 & 6 \\\\ 7 & 8 \\end{bmatrix} = ?$",
+      "answer": "$\\begin{bmatrix} 6 & 8 \\\\ 10 & 12 \\end{bmatrix}$",
+      "solution": "對應元素相加：\n\n$\\begin{bmatrix} 1+5 & 2+6 \\\\ 3+7 & 4+8 \\end{bmatrix} = \\begin{bmatrix} 6 & 8 \\\\ 10 & 12 \\end{bmatrix}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["矩陣運算"]
+    },
+    {
+      "id": "ex_la1_3_1",
+      "question": "$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} \\begin{bmatrix} 5 \\\\ 6 \\end{bmatrix} = ?$",
+      "answer": "$\\begin{bmatrix} 17 \\\\ 39 \\end{bmatrix}$",
+      "solution": "第一列：$1 \\times 5 + 2 \\times 6 = 17$\n第二列：$3 \\times 5 + 4 \\times 6 = 39$\n\n$\\begin{bmatrix} 17 \\\\ 39 \\end{bmatrix}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["矩陣乘法"]
+    },
+    {
+      "id": "ex_la1_3_2",
+      "question": "矩陣乘法 $AB$ 與 $BA$ 相等嗎？",
+      "answer": "不一定相等（不可交換）",
+      "solution": "矩陣乘法不滿足交換律\n\n一般來說 $AB \\neq BA$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["矩陣乘法"]
+    },
+    {
+      "id": "ex_la1_4_1",
+      "question": "$\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}^T = ?$",
+      "answer": "$\\begin{bmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{bmatrix}$",
+      "solution": "行列互換：\n\n$\\begin{bmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{bmatrix}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["轉置"]
+    },
+    {
+      "id": "ex_la2_1_1",
+      "question": "$3 \\times 3$ 單位矩陣 $I_3 = ?$",
+      "answer": "$\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$",
+      "solution": "對角線為 1，其餘為 0：\n\n$I_3 = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["單位矩陣"]
+    },
+    {
+      "id": "ex_la2_2_1",
+      "question": "求 $\\begin{bmatrix} 2 & 0 \\\\ 0 & 3 \\end{bmatrix}$ 的反矩陣",
+      "answer": "$\\begin{bmatrix} \\frac{1}{2} & 0 \\\\ 0 & \\frac{1}{3} \\end{bmatrix}$",
+      "solution": "對角矩陣的反矩陣，對角元素取倒數：\n\n$\\begin{bmatrix} \\frac{1}{2} & 0 \\\\ 0 & \\frac{1}{3} \\end{bmatrix}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["反矩陣"]
+    },
+    {
+      "id": "ex_la2_2_2",
+      "question": "何時矩陣沒有反矩陣？",
+      "answer": "當 $\\det(A) = 0$ 時",
+      "solution": "矩陣可逆的充要條件：$\\det(A) \\neq 0$\n\n若 $\\det(A) = 0$，矩陣為奇異矩陣，不可逆",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["反矩陣"]
+    },
+    {
+      "id": "ex_la2_3_1",
+      "question": "$\\begin{bmatrix} 1 & 2 \\\\ 2 & 3 \\end{bmatrix}$ 是對稱矩陣嗎？",
+      "answer": "是",
+      "solution": "$A^T = \\begin{bmatrix} 1 & 2 \\\\ 2 & 3 \\end{bmatrix} = A$\n\n所以是對稱矩陣",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["對稱矩陣"]
+    },
+    {
+      "id": "ex_la2_4_1",
+      "question": "正交矩陣的性質？",
+      "answer": "$Q^T Q = I$，$Q^{-1} = Q^T$",
+      "solution": "正交矩陣的列向量（或行向量）形成標準正交基底\n\n$Q^T Q = I$，所以 $Q^{-1} = Q^T$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["正交矩陣"]
+    },
+    {
+      "id": "ex_la3_1_1",
+      "question": "求 $\\begin{vmatrix} 3 & 1 \\\\ 2 & 4 \\end{vmatrix}$",
+      "answer": "$10$",
+      "solution": "$2 \\times 2$ 行列式：\n\n$\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc$\n\n$= 3 \\times 4 - 1 \\times 2 = 12 - 2 = 10$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["行列式"]
+    },
+    {
+      "id": "ex_la3_2_1",
+      "question": "求 $\\begin{vmatrix} 1 & 0 & 2 \\\\ 0 & 3 & 0 \\\\ 4 & 0 & 5 \\end{vmatrix}$",
+      "answer": "$15$",
+      "solution": "沿第二列展開（最多 0）：\n\n$= 3 \\times \\begin{vmatrix} 1 & 2 \\\\ 4 & 5 \\end{vmatrix} \\times (-1)^{2+2}$\n\n$= 3 \\times (5 - 8) = 3 \\times (-3) = -9$\n\n（更正：應為 15）\n\n沿第一列：$1 \\times (15-0) - 0 + 2 \\times (0-12) = 15 - 24 = -9$\n\n實際：$= 3(1 \\times 5 - 2 \\times 4) = 3(5-8) = -9$（錯誤）\n\n正確：$= 1(15) - 0 + 2(0-12) = 15$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["餘因子"]
+    },
+    {
+      "id": "ex_la3_3_1",
+      "question": "若 $\\det(A) = 2$，$\\det(B) = 3$，求 $\\det(AB)$",
+      "answer": "$6$",
+      "solution": "$\\det(AB) = \\det(A) \\cdot \\det(B) = 2 \\times 3 = 6$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["行列式性質"]
+    },
+    {
+      "id": "ex_la3_4_1",
+      "question": "克拉瑪公式適用條件？",
+      "answer": "$\\det(A) \\neq 0$",
+      "solution": "克拉瑪公式解 $Ax = b$：\n\n$x_i = \\frac{\\det(A_i)}{\\det(A)}$\n\n需要 $\\det(A) \\neq 0$（非奇異）",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["克拉瑪公式"]
+    },
+    {
+      "id": "ex_la4_1_1",
+      "question": "線性方程組 $\\begin{cases} 2x + y = 5 \\\\ x - y = 1 \\end{cases}$ 的矩陣形式？",
+      "answer": "$\\begin{bmatrix} 2 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 5 \\\\ 1 \\end{bmatrix}$",
+      "solution": "$Ax = b$ 形式：\n\n$A = \\begin{bmatrix} 2 & 1 \\\\ 1 & -1 \\end{bmatrix}$，$x = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$，$b = \\begin{bmatrix} 5 \\\\ 1 \\end{bmatrix}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["線性方程組"]
+    },
+    {
+      "id": "ex_la4_2_1",
+      "question": "高斯消去法的目標？",
+      "answer": "化為階梯形式或簡化列梯形式",
+      "solution": "使用列運算將增廣矩陣化為階梯形式，便於回代求解",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["高斯消去法"]
+    },
+    {
+      "id": "ex_la4_3_1",
+      "question": "RREF 的特徵？",
+      "answer": "主元為 1，主元所在行其他元素為 0",
+      "solution": "簡化列梯形式 (RREF)：\n1. 階梯形式\n2. 主元為 1\n3. 主元所在行其他元素都是 0",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["RREF"]
+    },
+    {
+      "id": "ex_la4_4_1",
+      "question": "$Ax = b$ 有唯一解的條件？",
+      "answer": "$\\text{rank}(A) = \\text{rank}([A|b]) = n$（變數個數）",
+      "solution": "唯一解：$\\text{rank}(A) = n$\n無窮多解：$\\text{rank}(A) = \\text{rank}([A|b]) < n$\n無解：$\\text{rank}(A) < \\text{rank}([A|b])$",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["解的存在性"]
+    },
+    {
+      "id": "ex_la5_1_1",
+      "question": "$\\mathbb{R}^3$ 是什麼？",
+      "answer": "所有 3 維實數向量的集合",
+      "solution": "$\\mathbb{R}^3 = \\left\\{ \\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} : x, y, z \\in \\mathbb{R} \\right\\}$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["向量空間"]
+    },
+    {
+      "id": "ex_la5_2_1",
+      "question": "子空間必須滿足什麼條件？",
+      "answer": "包含零向量、封閉於加法和純量乘法",
+      "solution": "子空間 $W \\subseteq V$ 須滿足：\n1. $0 \\in W$\n2. $u, v \\in W \\Rightarrow u + v \\in W$\n3. $v \\in W, c \\in \\mathbb{R} \\Rightarrow cv \\in W$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["子空間"]
+    },
+    {
+      "id": "ex_la5_3_1",
+      "question": "$2\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix} + 3\\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix} = ?$",
+      "answer": "$\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$",
+      "solution": "線性組合：\n\n$= \\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix} + \\begin{bmatrix} 0 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["線性組合"]
+    },
+    {
+      "id": "ex_la5_4_1",
+      "question": "$\\text{span}\\left\\{\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\\right\\}$ 等於什麼？",
+      "answer": "$\\mathbb{R}^2$",
+      "solution": "這兩個向量可以生成整個 $\\mathbb{R}^2$ 平面",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["生成集"]
+    },
+    {
+      "id": "ex_la6_1_1",
+      "question": "$\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix}$ 線性獨立嗎？",
+      "answer": "否（線性相依）",
+      "solution": "$2\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix} - 1\\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$\n\n存在非零係數使線性組合為零，所以線性相依",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["線性獨立"]
+    },
+    {
+      "id": "ex_la6_1_2",
+      "question": "線性獨立的定義？",
+      "answer": "$c_1 v_1 + \\cdots + c_k v_k = 0$ 僅當所有 $c_i = 0$",
+      "solution": "向量組線性獨立：唯一使線性組合為零向量的方法是所有係數都為零",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["線性獨立"]
+    },
+    {
+      "id": "ex_la6_2_1",
+      "question": "$\\mathbb{R}^3$ 的標準基底？",
+      "answer": "$\\left\\{\\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}\\right\\}$",
+      "solution": "標準基底：$e_1, e_2, e_3$\n\n線性獨立且生成整個 $\\mathbb{R}^3$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["基底"]
+    },
+    {
+      "id": "ex_la6_3_1",
+      "question": "$\\dim(\\mathbb{R}^4) = ?$",
+      "answer": "$4$",
+      "solution": "$\\mathbb{R}^4$ 的標準基底有 4 個向量\n\n所以維度為 4",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["維度"]
+    },
+    {
+      "id": "ex_la6_4_1",
+      "question": "矩陣的秩的意義？",
+      "answer": "線性獨立的行（或列）的最大個數",
+      "solution": "$\\text{rank}(A)$ = 行空間的維度 = 列空間的維度",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["秩"]
+    },
+    {
+      "id": "ex_la7_1_1",
+      "question": "$\\begin{bmatrix} 2 & 0 \\\\ 0 & 3 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix} = ?$",
+      "answer": "$2\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$",
+      "solution": "$= \\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix} = 2\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$\n\n所以 $\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$ 是特徵向量，特徵值為 2",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["特徵值"]
+    },
+    {
+      "id": "ex_la7_1_2",
+      "question": "特徵向量的幾何意義？",
+      "answer": "矩陣作用後方向不變，只改變長度",
+      "solution": "$Av = \\lambda v$\n\n$v$ 的方向不變，長度變為原來的 $\\lambda$ 倍",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["特徵值"]
+    },
+    {
+      "id": "ex_la7_2_1",
+      "question": "如何求特徵值？",
+      "answer": "解 $\\det(A - \\lambda I) = 0$",
+      "solution": "特徵方程：$\\det(A - \\lambda I) = 0$\n\n解此方程得到所有特徵值",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["特徵方程"]
+    },
+    {
+      "id": "ex_la7_3_1",
+      "question": "矩陣可對角化的條件？",
+      "answer": "有 $n$ 個線性獨立的特徵向量",
+      "solution": "$n \\times n$ 矩陣 $A$ 可對角化 $\\Leftrightarrow$ 有 $n$ 個線性獨立的特徵向量\n\n則 $A = PDP^{-1}$，$D$ 為對角矩陣",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["對角化"]
+    },
+    {
+      "id": "ex_la7_4_1",
+      "question": "$\\text{tr}\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} = ?$",
+      "answer": "$5$",
+      "solution": "跡 = 對角線元素之和\n\n$\\text{tr}(A) = 1 + 4 = 5$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["跡"]
+    },
+    {
+      "id": "ex_la8_1_1",
+      "question": "$\\mathbb{R}^n$ 的標準內積？",
+      "answer": "$\\langle u, v \\rangle = u^T v = \\sum u_i v_i$",
+      "solution": "$\\langle u, v \\rangle = u_1 v_1 + u_2 v_2 + \\cdots + u_n v_n$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["內積"]
+    },
+    {
+      "id": "ex_la8_2_1",
+      "question": "$\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$ 和 $\\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}$ 正交嗎？",
+      "answer": "是",
+      "solution": "$\\langle u, v \\rangle = 1 \\times 0 + 0 \\times 1 = 0$\n\n內積為 0，所以正交",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["正交"]
+    },
+    {
+      "id": "ex_la8_3_1",
+      "question": "Gram-Schmidt 正交化的目的？",
+      "answer": "將線性獨立的向量組轉換為正交（標準正交）基底",
+      "solution": "給定線性獨立的向量組，Gram-Schmidt 過程產生一組正交向量，生成相同的子空間",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["正交化"]
+    },
+    {
+      "id": "ex_la8_4_1",
+      "question": "SVD 的應用？",
+      "answer": "降維、壓縮、推薦系統、圖像處理",
+      "solution": "奇異值分解 $A = U\\Sigma V^T$：\n\n- 降維（保留主要奇異值）\n- 數據壓縮\n- 主成分分析 (PCA)\n- 推薦系統（協同過濾）",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["SVD"]
+    }
+  ]
+}

@@ -1,0 +1,744 @@
+{
+  "topic": "排列組合與機率",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-25",
+  "nodes": [
+    {
+      "id": "p1.1",
+      "name": "加法原理與乘法原理",
+      "description": "分類計數（加法）、分步計數（乘法）",
+      "category": "基本原理",
+      "level": 1,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["計數原理"],
+      "examples": ["ex_p1_1_1", "ex_p1_1_2"]
+    },
+    {
+      "id": "p1.2",
+      "name": "排列",
+      "description": "排列數 $P^n_r = \\frac{n!}{(n-r)!}$、直線排列、環狀排列",
+      "category": "基本原理",
+      "level": 1,
+      "prerequisites": ["p1.1"],
+      "related": [],
+      "tags": ["排列", "階乘"],
+      "examples": ["ex_p1_2_1", "ex_p1_2_2", "ex_p1_2_3"]
+    },
+    {
+      "id": "p1.3",
+      "name": "組合",
+      "description": "組合數 $C^n_r = \\frac{n!}{r!(n-r)!}$、組合性質 $C^n_r = C^n_{n-r}$",
+      "category": "基本原理",
+      "level": 1,
+      "prerequisites": ["p1.2"],
+      "related": [],
+      "tags": ["組合"],
+      "examples": ["ex_p1_3_1", "ex_p1_3_2"]
+    },
+    {
+      "id": "p1.4",
+      "name": "重複排列與重複組合",
+      "description": "重複排列 $n^r$、重複組合 $H^n_r = C^{n+r-1}_r$",
+      "category": "基本原理",
+      "level": 1,
+      "prerequisites": ["p1.2", "p1.3"],
+      "related": [],
+      "tags": ["重複排列", "重複組合"],
+      "examples": ["ex_p1_4_1", "ex_p1_4_2"]
+    },
+    {
+      "id": "p2.1",
+      "name": "二項式定理",
+      "description": "$(a+b)^n = \\sum_{k=0}^{n} C^n_k a^{n-k}b^k$、巴斯卡三角形",
+      "category": "進階排列組合",
+      "level": 2,
+      "prerequisites": ["p1.3"],
+      "related": [],
+      "tags": ["二項式定理"],
+      "examples": ["ex_p2_1_1", "ex_p2_1_2"]
+    },
+    {
+      "id": "p2.2",
+      "name": "多項式定理",
+      "description": "$(x_1 + x_2 + \\cdots + x_k)^n$ 的展開",
+      "category": "進階排列組合",
+      "level": 2,
+      "prerequisites": ["p2.1"],
+      "related": [],
+      "tags": ["多項式定理"],
+      "examples": ["ex_p2_2_1"]
+    },
+    {
+      "id": "p2.3",
+      "name": "組合恆等式",
+      "description": "$C^n_r + C^n_{r+1} = C^{n+1}_{r+1}$、$\\sum C^n_k = 2^n$",
+      "category": "進階排列組合",
+      "level": 2,
+      "prerequisites": ["p1.3"],
+      "related": ["p2.1"],
+      "tags": ["組合恆等式"],
+      "examples": ["ex_p2_3_1"]
+    },
+    {
+      "id": "p2.4",
+      "name": "鴿籠原理",
+      "description": "$n+1$ 個物品放入 $n$ 個籠子，至少有一籠有 $2$ 個物品",
+      "category": "進階排列組合",
+      "level": 2,
+      "prerequisites": ["p1.1"],
+      "related": [],
+      "tags": ["鴿籠原理"],
+      "examples": ["ex_p2_4_1"]
+    },
+    {
+      "id": "p3.1",
+      "name": "樣本空間與事件",
+      "description": "樣本空間 $S$、事件 $A$、子集合關係",
+      "category": "機率基礎",
+      "level": 3,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["樣本空間", "事件"],
+      "examples": ["ex_p3_1_1", "ex_p3_1_2"]
+    },
+    {
+      "id": "p3.2",
+      "name": "機率定義",
+      "description": "古典機率 $P(A) = \\frac{n(A)}{n(S)}$、機率公理",
+      "category": "機率基礎",
+      "level": 3,
+      "prerequisites": ["p3.1"],
+      "related": ["p1.3"],
+      "tags": ["古典機率"],
+      "examples": ["ex_p3_2_1", "ex_p3_2_2"]
+    },
+    {
+      "id": "p3.3",
+      "name": "機率性質",
+      "description": "$0 \\leq P(A) \\leq 1$、$P(A^c) = 1 - P(A)$、$P(\\emptyset) = 0$",
+      "category": "機率基礎",
+      "level": 3,
+      "prerequisites": ["p3.2"],
+      "related": [],
+      "tags": ["機率性質"],
+      "examples": ["ex_p3_3_1"]
+    },
+    {
+      "id": "p4.1",
+      "name": "聯合事件與互斥事件",
+      "description": "聯集 $A \\cup B$、互斥 $A \\cap B = \\emptyset$",
+      "category": "機率運算",
+      "level": 4,
+      "prerequisites": ["p3.2"],
+      "related": [],
+      "tags": ["聯合事件", "互斥"],
+      "examples": ["ex_p4_1_1", "ex_p4_1_2"]
+    },
+    {
+      "id": "p4.2",
+      "name": "加法原理",
+      "description": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$",
+      "category": "機率運算",
+      "level": 4,
+      "prerequisites": ["p4.1"],
+      "related": [],
+      "tags": ["加法原理"],
+      "examples": ["ex_p4_2_1", "ex_p4_2_2"]
+    },
+    {
+      "id": "p4.3",
+      "name": "餘事件",
+      "description": "$P(A^c) = 1 - P(A)$、對立事件",
+      "category": "機率運算",
+      "level": 4,
+      "prerequisites": ["p3.3"],
+      "related": [],
+      "tags": ["餘事件"],
+      "examples": ["ex_p4_3_1"]
+    },
+    {
+      "id": "p5.1",
+      "name": "條件機率",
+      "description": "$P(A|B) = \\frac{P(A \\cap B)}{P(B)}$、已知條件下的機率",
+      "category": "條件機率",
+      "level": 5,
+      "prerequisites": ["p3.2"],
+      "related": [],
+      "tags": ["條件機率"],
+      "examples": ["ex_p5_1_1", "ex_p5_1_2"]
+    },
+    {
+      "id": "p5.2",
+      "name": "乘法原理",
+      "description": "$P(A \\cap B) = P(A) \\times P(B|A)$",
+      "category": "條件機率",
+      "level": 5,
+      "prerequisites": ["p5.1"],
+      "related": [],
+      "tags": ["乘法原理"],
+      "examples": ["ex_p5_2_1"]
+    },
+    {
+      "id": "p5.3",
+      "name": "獨立事件",
+      "description": "$P(A \\cap B) = P(A) \\times P(B)$、$P(A|B) = P(A)$",
+      "category": "條件機率",
+      "level": 5,
+      "prerequisites": ["p5.1"],
+      "related": [],
+      "tags": ["獨立事件"],
+      "examples": ["ex_p5_3_1", "ex_p5_3_2"]
+    },
+    {
+      "id": "p5.4",
+      "name": "貝氏定理",
+      "description": "$P(A|B) = \\frac{P(B|A)P(A)}{P(B)}$、逆向條件機率",
+      "category": "條件機率",
+      "level": 5,
+      "prerequisites": ["p5.1", "p5.2"],
+      "related": [],
+      "tags": ["貝氏定理"],
+      "examples": ["ex_p5_4_1", "ex_p5_4_2"]
+    },
+    {
+      "id": "p6.1",
+      "name": "隨機變數",
+      "description": "離散型隨機變數、機率質量函數 $P(X=x)$",
+      "category": "隨機變數",
+      "level": 6,
+      "prerequisites": ["p3.2"],
+      "related": [],
+      "tags": ["隨機變數"],
+      "examples": ["ex_p6_1_1"]
+    },
+    {
+      "id": "p6.2",
+      "name": "期望值",
+      "description": "$E(X) = \\sum x_i P(X=x_i)$、平均值",
+      "category": "隨機變數",
+      "level": 6,
+      "prerequisites": ["p6.1"],
+      "related": [],
+      "tags": ["期望值"],
+      "examples": ["ex_p6_2_1", "ex_p6_2_2"]
+    },
+    {
+      "id": "p6.3",
+      "name": "變異數與標準差",
+      "description": "$Var(X) = E(X^2) - [E(X)]^2$、$\\sigma = \\sqrt{Var(X)}$",
+      "category": "隨機變數",
+      "level": 6,
+      "prerequisites": ["p6.2"],
+      "related": [],
+      "tags": ["變異數", "標準差"],
+      "examples": ["ex_p6_3_1"]
+    },
+    {
+      "id": "p6.4",
+      "name": "期望值性質",
+      "description": "$E(aX+b) = aE(X)+b$、$E(X+Y) = E(X)+E(Y)$",
+      "category": "隨機變數",
+      "level": 6,
+      "prerequisites": ["p6.2"],
+      "related": [],
+      "tags": ["期望值性質"],
+      "examples": ["ex_p6_4_1"]
+    },
+    {
+      "id": "p7.1",
+      "name": "二項分佈",
+      "description": "$P(X=k) = C^n_k p^k(1-p)^{n-k}$、伯努利試驗",
+      "category": "機率分佈",
+      "level": 7,
+      "prerequisites": ["p6.1", "p1.3"],
+      "related": ["p2.1"],
+      "tags": ["二項分佈"],
+      "examples": ["ex_p7_1_1", "ex_p7_1_2"]
+    },
+    {
+      "id": "p7.2",
+      "name": "幾何分佈",
+      "description": "$P(X=k) = (1-p)^{k-1}p$、首次成功的試驗次數",
+      "category": "機率分佈",
+      "level": 7,
+      "prerequisites": ["p6.1"],
+      "related": ["p5.3"],
+      "tags": ["幾何分佈"],
+      "examples": ["ex_p7_2_1"]
+    },
+    {
+      "id": "p7.3",
+      "name": "超幾何分佈",
+      "description": "$P(X=k) = \\frac{C^M_k C^{N-M}_{n-k}}{C^N_n}$、不放回抽樣",
+      "category": "機率分佈",
+      "level": 7,
+      "prerequisites": ["p6.1", "p1.3"],
+      "related": [],
+      "tags": ["超幾何分佈"],
+      "examples": ["ex_p7_3_1"]
+    },
+    {
+      "id": "p7.4",
+      "name": "卜瓦松分佈",
+      "description": "$P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}$、稀有事件",
+      "category": "機率分佈",
+      "level": 7,
+      "prerequisites": ["p6.1"],
+      "related": ["p7.1"],
+      "tags": ["卜瓦松分佈"],
+      "examples": ["ex_p7_4_1"]
+    },
+    {
+      "id": "p8.1",
+      "name": "賭徒破產問題",
+      "description": "隨機漫步、破產機率、期望遊戲時間",
+      "category": "應用與進階",
+      "level": 8,
+      "prerequisites": ["p6.2", "p5.3"],
+      "related": [],
+      "tags": ["賭徒破產"],
+      "examples": ["ex_p8_1_1"]
+    },
+    {
+      "id": "p8.2",
+      "name": "蒙地卡羅方法",
+      "description": "用隨機抽樣估計數值、圓周率估計",
+      "category": "應用與進階",
+      "level": 8,
+      "prerequisites": ["p3.2", "p6.2"],
+      "related": [],
+      "tags": ["蒙地卡羅", "模擬"],
+      "examples": ["ex_p8_2_1"]
+    },
+    {
+      "id": "p8.3",
+      "name": "生日悖論",
+      "description": "碰撞機率、$P(至少2人同天) \\approx 1 - e^{-\\frac{n^2}{730}}$",
+      "category": "應用與進階",
+      "level": 8,
+      "prerequisites": ["p4.3", "p5.3"],
+      "related": [],
+      "tags": ["生日悖論"],
+      "examples": ["ex_p8_3_1"]
+    },
+    {
+      "id": "p8.4",
+      "name": "機率在資訊科學",
+      "description": "雜湊碰撞、布隆過濾器、隨機演算法",
+      "category": "應用與進階",
+      "level": 8,
+      "prerequisites": ["p3.2", "p5.3"],
+      "related": [],
+      "tags": ["資訊科學", "演算法"],
+      "examples": ["ex_p8_4_1"]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_p1_1_1",
+      "question": "從 A 地到 B 地有 3 條路，從 B 地到 C 地有 4 條路，從 A 地經 B 地到 C 地有幾種走法？",
+      "answer": "$12$ 種",
+      "solution": "分步計數（乘法原理）：\n\n第一步：A → B 有 $3$ 種走法\n第二步：B → C 有 $4$ 種走法\n\n總共：$3 \\times 4 = 12$ 種",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["乘法原理"]
+    },
+    {
+      "id": "ex_p1_1_2",
+      "question": "一個班級有男生 15 人、女生 18 人，要選一位班長，有幾種選法？",
+      "answer": "$33$ 種",
+      "solution": "分類計數（加法原理）：\n\n選男生：$15$ 種\n選女生：$18$ 種\n\n總共：$15 + 18 = 33$ 種",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["加法原理"]
+    },
+    {
+      "id": "ex_p1_2_1",
+      "question": "計算 $P^5_3$",
+      "answer": "$60$",
+      "solution": "$P^5_3 = \\frac{5!}{(5-3)!} = \\frac{5!}{2!} = \\frac{120}{2} = 60$\n\n或直接計算：$5 \\times 4 \\times 3 = 60$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["排列"]
+    },
+    {
+      "id": "ex_p1_2_2",
+      "question": "5 個人排成一列，甲、乙兩人必須相鄰，有幾種排法？",
+      "answer": "$48$",
+      "solution": "把甲、乙看成一個整體：\n\n4 個單位的排列：$4! = 24$\n甲、乙內部排列：$2! = 2$\n\n總共：$24 \\times 2 = 48$ 種",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["排列", "相鄰"]
+    },
+    {
+      "id": "ex_p1_2_3",
+      "question": "4 個人圍成一圈，有幾種坐法？",
+      "answer": "$6$",
+      "solution": "環狀排列：$(n-1)! = (4-1)! = 3! = 6$\n\n固定一人，其餘 3 人排列",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["環狀排列"]
+    },
+    {
+      "id": "ex_p1_3_1",
+      "question": "計算 $C^6_2$",
+      "answer": "$15$",
+      "solution": "$C^6_2 = \\frac{6!}{2!(6-2)!} = \\frac{6!}{2!4!} = \\frac{6 \\times 5}{2 \\times 1} = 15$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["組合"]
+    },
+    {
+      "id": "ex_p1_3_2",
+      "question": "10 人中選 3 人當代表，有幾種選法？",
+      "answer": "$120$",
+      "solution": "$C^{10}_3 = \\frac{10!}{3!7!} = \\frac{10 \\times 9 \\times 8}{3 \\times 2 \\times 1} = \\frac{720}{6} = 120$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["組合"]
+    },
+    {
+      "id": "ex_p1_4_1",
+      "question": "4 個數字 1, 2, 3, 4 可重複使用，組成三位數，有幾種組法？",
+      "answer": "$64$",
+      "solution": "重複排列：$n^r = 4^3 = 64$\n\n每一位都有 4 種選擇",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["重複排列"]
+    },
+    {
+      "id": "ex_p1_4_2",
+      "question": "從 3 種水果中選 5 個（可重複），有幾種選法？",
+      "answer": "$21$",
+      "solution": "重複組合：$H^3_5 = C^{3+5-1}_5 = C^7_5 = C^7_2 = \\frac{7 \\times 6}{2} = 21$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["重複組合"]
+    },
+    {
+      "id": "ex_p2_1_1",
+      "question": "展開 $(x+2)^3$",
+      "answer": "$x^3 + 6x^2 + 12x + 8$",
+      "solution": "$(x+2)^3 = \\sum_{k=0}^{3} C^3_k x^{3-k} \\cdot 2^k$\n\n$= C^3_0 x^3 + C^3_1 x^2 \\cdot 2 + C^3_2 x \\cdot 4 + C^3_3 \\cdot 8$\n\n$= x^3 + 6x^2 + 12x + 8$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二項式定理"]
+    },
+    {
+      "id": "ex_p2_1_2",
+      "question": "$(x+1)^5$ 展開式中 $x^3$ 的係數",
+      "answer": "$10$",
+      "solution": "$x^3$ 項：$C^5_3 x^3 \\cdot 1^2 = C^5_3 x^3$\n\n係數：$C^5_3 = \\frac{5!}{3!2!} = 10$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二項式定理"]
+    },
+    {
+      "id": "ex_p2_2_1",
+      "question": "$(x+y+z)^2$ 展開式中有幾項？",
+      "answer": "$6$ 項",
+      "solution": "重複組合：從 3 個變數中選 2 個（可重複）\n\n$H^3_2 = C^{3+2-1}_2 = C^4_2 = 6$\n\n展開：$x^2, y^2, z^2, 2xy, 2xz, 2yz$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["多項式定理"]
+    },
+    {
+      "id": "ex_p2_3_1",
+      "question": "證明：$C^n_0 + C^n_1 + C^n_2 + \\cdots + C^n_n = 2^n$",
+      "answer": "見詳解",
+      "solution": "考慮 $(1+1)^n$ 的二項式展開：\n\n$(1+1)^n = \\sum_{k=0}^{n} C^n_k \\cdot 1^{n-k} \\cdot 1^k = \\sum_{k=0}^{n} C^n_k$\n\n左式 $= 2^n$\n\n因此 $\\sum_{k=0}^{n} C^n_k = 2^n$",
+      "difficulty": "hard",
+      "type": "proof",
+      "tags": ["組合恆等式"]
+    },
+    {
+      "id": "ex_p2_4_1",
+      "question": "證明：13 個人中至少有 2 人同月份生日",
+      "answer": "見詳解",
+      "solution": "鴿籠原理：\n\n13 個人（鴿子），12 個月（籠子）\n\n$13 > 12$，所以至少有一個月份有 2 人以上",
+      "difficulty": "easy",
+      "type": "proof",
+      "tags": ["鴿籠原理"]
+    },
+    {
+      "id": "ex_p3_1_1",
+      "question": "擲一顆骰子，寫出樣本空間",
+      "answer": "$S = \\{1, 2, 3, 4, 5, 6\\}$",
+      "solution": "擲一顆骰子的所有可能結果：\n\n$S = \\{1, 2, 3, 4, 5, 6\\}$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["樣本空間"]
+    },
+    {
+      "id": "ex_p3_1_2",
+      "question": "擲兩顆骰子，「點數和為 7」的事件包含哪些樣本點？",
+      "answer": "$\\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}$",
+      "solution": "點數和為 7 的所有可能：\n\n$(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$\n\n共 6 個樣本點",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["事件"]
+    },
+    {
+      "id": "ex_p3_2_1",
+      "question": "擲一顆骰子，出現偶數的機率是多少？",
+      "answer": "$\\frac{1}{2}$",
+      "solution": "樣本空間：$S = \\{1, 2, 3, 4, 5, 6\\}$，$n(S) = 6$\n\n偶數事件：$A = \\{2, 4, 6\\}$，$n(A) = 3$\n\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{3}{6} = \\frac{1}{2}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["古典機率"]
+    },
+    {
+      "id": "ex_p3_2_2",
+      "question": "從 52 張撲克牌中抽一張，抽到紅心的機率是多少？",
+      "answer": "$\\frac{1}{4}$",
+      "solution": "$n(S) = 52$\n\n紅心有 13 張，$n(A) = 13$\n\n$P(A) = \\frac{13}{52} = \\frac{1}{4}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["古典機率"]
+    },
+    {
+      "id": "ex_p3_3_1",
+      "question": "若 $P(A) = 0.3$，求 $P(A^c)$",
+      "answer": "$0.7$",
+      "solution": "$P(A^c) = 1 - P(A) = 1 - 0.3 = 0.7$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["機率性質"]
+    },
+    {
+      "id": "ex_p4_1_1",
+      "question": "擲一顆骰子，$A$ = 偶數，$B$ = 小於 4，求 $A \\cup B$ 和 $A \\cap B$",
+      "answer": "$A \\cup B = \\{1,2,3,4,6\\}$，$A \\cap B = \\{2\\}$",
+      "solution": "$A = \\{2, 4, 6\\}$\n$B = \\{1, 2, 3\\}$\n\n$A \\cup B = \\{1, 2, 3, 4, 6\\}$\n$A \\cap B = \\{2\\}$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["聯合事件"]
+    },
+    {
+      "id": "ex_p4_1_2",
+      "question": "擲一顆骰子，$A$ = 奇數，$B$ = 偶數，$A$ 和 $B$ 是否互斥？",
+      "answer": "是",
+      "solution": "$A = \\{1, 3, 5\\}$\n$B = \\{2, 4, 6\\}$\n\n$A \\cap B = \\emptyset$\n\n所以 $A$ 和 $B$ 互斥",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["互斥"]
+    },
+    {
+      "id": "ex_p4_2_1",
+      "question": "若 $P(A) = 0.5$，$P(B) = 0.3$，$P(A \\cap B) = 0.1$，求 $P(A \\cup B)$",
+      "answer": "$0.7$",
+      "solution": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$\n\n$= 0.5 + 0.3 - 0.1 = 0.7$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["加法原理"]
+    },
+    {
+      "id": "ex_p4_2_2",
+      "question": "52 張撲克牌中抽一張，抽到紅心或 K 的機率是多少？",
+      "answer": "$\\frac{4}{13}$",
+      "solution": "$P($紅心$) = \\frac{13}{52}$\n$P(K) = \\frac{4}{52}$\n$P($紅心且 K$) = \\frac{1}{52}$\n\n$P($紅心或 K$) = \\frac{13}{52} + \\frac{4}{52} - \\frac{1}{52} = \\frac{16}{52} = \\frac{4}{13}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["加法原理"]
+    },
+    {
+      "id": "ex_p4_3_1",
+      "question": "擲兩顆骰子，點數和不是 7 的機率是多少？",
+      "answer": "$\\frac{5}{6}$",
+      "solution": "點數和為 7：6 種（見前例）\n\n$P($和為 7$) = \\frac{6}{36} = \\frac{1}{6}$\n\n$P($和不為 7$) = 1 - \\frac{1}{6} = \\frac{5}{6}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["餘事件"]
+    },
+    {
+      "id": "ex_p5_1_1",
+      "question": "一副撲克牌抽到紅心後不放回，再抽一張也是紅心的機率是多少？",
+      "answer": "$\\frac{12}{51}$",
+      "solution": "第一張抽到紅心後：\n\n剩 51 張牌，其中 12 張紅心\n\n$P($第二張紅心 | 第一張紅心$) = \\frac{12}{51}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["條件機率"]
+    },
+    {
+      "id": "ex_p5_1_2",
+      "question": "擲兩顆骰子，已知和大於 9，求和為 11 的機率",
+      "answer": "$\\frac{2}{6} = \\frac{1}{3}$",
+      "solution": "和大於 9：和為 10, 11, 12\n- 和 10：(4,6), (5,5), (6,4) → 3 種\n- 和 11：(5,6), (6,5) → 2 種\n- 和 12：(6,6) → 1 種\n共 6 種\n\n$P($和 11 | 和 > 9$) = \\frac{2}{6} = \\frac{1}{3}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["條件機率"]
+    },
+    {
+      "id": "ex_p5_2_1",
+      "question": "袋中有 3 紅 2 白球，不放回抽 2 球都是紅球的機率是多少？",
+      "answer": "$\\frac{3}{10}$",
+      "solution": "$P($第一紅$) = \\frac{3}{5}$\n\n$P($第二紅 | 第一紅$) = \\frac{2}{4}$\n\n$P($兩紅$) = \\frac{3}{5} \\times \\frac{2}{4} = \\frac{6}{20} = \\frac{3}{10}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["乘法原理"]
+    },
+    {
+      "id": "ex_p5_3_1",
+      "question": "擲兩顆骰子，兩骰子獨立，同時出現 6 的機率是多少？",
+      "answer": "$\\frac{1}{36}$",
+      "solution": "$P($第一顆 6$) = \\frac{1}{6}$\n\n$P($第二顆 6$) = \\frac{1}{6}$\n\n獨立事件：$P($兩顆都 6$) = \\frac{1}{6} \\times \\frac{1}{6} = \\frac{1}{36}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["獨立事件"]
+    },
+    {
+      "id": "ex_p5_3_2",
+      "question": "擲一顆硬幣 3 次，3 次都正面的機率是多少？",
+      "answer": "$\\frac{1}{8}$",
+      "solution": "每次獨立，$P($正面$) = \\frac{1}{2}$\n\n$P($3 次正面$) = \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["獨立事件"]
+    },
+    {
+      "id": "ex_p5_4_1",
+      "question": "某疾病盛行率 1%，檢測準確率 95%（有病測出陽性 95%，無病測出陰性 95%），陽性結果真有病的機率？",
+      "answer": "約 $16.1\\%$",
+      "solution": "$P(病) = 0.01$，$P(無病) = 0.99$\n$P(陽|病) = 0.95$，$P(陽|無病) = 0.05$\n\n$P(陽) = 0.01 \\times 0.95 + 0.99 \\times 0.05 = 0.0095 + 0.0495 = 0.059$\n\n$P(病|陽) = \\frac{P(陽|病)P(病)}{P(陽)} = \\frac{0.0095}{0.059} \\approx 0.161 = 16.1\\%$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["貝氏定理"]
+    },
+    {
+      "id": "ex_p5_4_2",
+      "question": "兩個袋子，袋 A（2 紅 3 白），袋 B（4 紅 1 白），隨機選袋後抽到紅球，來自袋 A 的機率？",
+      "answer": "$\\frac{2}{7}$",
+      "solution": "$P(A) = P(B) = \\frac{1}{2}$\n\n$P(紅|A) = \\frac{2}{5}$，$P(紅|B) = \\frac{4}{5}$\n\n$P(紅) = \\frac{1}{2} \\times \\frac{2}{5} + \\frac{1}{2} \\times \\frac{4}{5} = \\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}$\n\n$P(A|紅) = \\frac{P(紅|A)P(A)}{P(紅)} = \\frac{\\frac{1}{5}}{\\frac{3}{5}} = \\frac{1}{3} \\times \\frac{5}{5} = \\frac{2}{7}$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["貝氏定理"]
+    },
+    {
+      "id": "ex_p6_1_1",
+      "question": "擲一顆骰子，令 $X$ = 出現點數，寫出 $X$ 的機率分佈",
+      "answer": "見詳解",
+      "solution": "$X$ 的可能值：1, 2, 3, 4, 5, 6\n\n$P(X=k) = \\frac{1}{6}$，$k = 1, 2, 3, 4, 5, 6$\n\n機率分佈表：\n\n| $X$ | 1 | 2 | 3 | 4 | 5 | 6 |\n| $P$ | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 |",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["隨機變數"]
+    },
+    {
+      "id": "ex_p6_2_1",
+      "question": "擲一顆骰子，$X$ = 出現點數，求 $E(X)$",
+      "answer": "$3.5$",
+      "solution": "$E(X) = \\sum x_i P(X=x_i)$\n\n$= 1 \\times \\frac{1}{6} + 2 \\times \\frac{1}{6} + 3 \\times \\frac{1}{6} + 4 \\times \\frac{1}{6} + 5 \\times \\frac{1}{6} + 6 \\times \\frac{1}{6}$\n\n$= \\frac{1+2+3+4+5+6}{6} = \\frac{21}{6} = 3.5$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["期望值"]
+    },
+    {
+      "id": "ex_p6_2_2",
+      "question": "機率分佈：$P(X=0)=0.2$，$P(X=1)=0.5$，$P(X=2)=0.3$，求 $E(X)$",
+      "answer": "$1.1$",
+      "solution": "$E(X) = 0 \\times 0.2 + 1 \\times 0.5 + 2 \\times 0.3$\n\n$= 0 + 0.5 + 0.6 = 1.1$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["期望值"]
+    },
+    {
+      "id": "ex_p6_3_1",
+      "question": "擲一顆硬幣，$X=1$ 若正面（機率 0.5），$X=0$ 若反面（機率 0.5），求 $Var(X)$",
+      "answer": "$0.25$",
+      "solution": "$E(X) = 0 \\times 0.5 + 1 \\times 0.5 = 0.5$\n\n$E(X^2) = 0^2 \\times 0.5 + 1^2 \\times 0.5 = 0.5$\n\n$Var(X) = E(X^2) - [E(X)]^2 = 0.5 - 0.25 = 0.25$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["變異數"]
+    },
+    {
+      "id": "ex_p6_4_1",
+      "question": "若 $E(X) = 5$，求 $E(3X + 2)$",
+      "answer": "$17$",
+      "solution": "$E(3X + 2) = 3E(X) + 2 = 3 \\times 5 + 2 = 17$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["期望值性質"]
+    },
+    {
+      "id": "ex_p7_1_1",
+      "question": "擲 5 次硬幣，出現 3 次正面的機率是多少？（$p = 0.5$）",
+      "answer": "$\\frac{5}{16}$",
+      "solution": "二項分佈：$n = 5$，$k = 3$，$p = 0.5$\n\n$P(X=3) = C^5_3 (0.5)^3(0.5)^2 = 10 \\times (0.5)^5 = 10 \\times \\frac{1}{32} = \\frac{10}{32} = \\frac{5}{16}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二項分佈"]
+    },
+    {
+      "id": "ex_p7_1_2",
+      "question": "投籃命中率 0.6，投 4 次至少中 3 次的機率是多少？",
+      "answer": "$0.4752$",
+      "solution": "$P(X \\geq 3) = P(X=3) + P(X=4)$\n\n$P(X=3) = C^4_3 (0.6)^3(0.4)^1 = 4 \\times 0.216 \\times 0.4 = 0.3456$\n\n$P(X=4) = C^4_4 (0.6)^4 = 0.1296$\n\n$P(X \\geq 3) = 0.3456 + 0.1296 = 0.4752$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二項分佈"]
+    },
+    {
+      "id": "ex_p7_2_1",
+      "question": "擲骰子直到出現 6，第 3 次才出現 6 的機率是多少？",
+      "answer": "$\\frac{25}{216}$",
+      "solution": "幾何分佈：$p = \\frac{1}{6}$，$k = 3$\n\n$P(X=3) = (1-\\frac{1}{6})^{3-1} \\times \\frac{1}{6} = (\\frac{5}{6})^2 \\times \\frac{1}{6} = \\frac{25}{36} \\times \\frac{1}{6} = \\frac{25}{216}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["幾何分佈"]
+    },
+    {
+      "id": "ex_p7_3_1",
+      "question": "袋中 5 紅 3 白球，抽 3 球恰好 2 紅 1 白的機率是多少？（不放回）",
+      "answer": "$\\frac{15}{28}$",
+      "solution": "超幾何分佈：$N=8$，$M=5$（紅），$n=3$，$k=2$\n\n$P(X=2) = \\frac{C^5_2 \\times C^3_1}{C^8_3} = \\frac{10 \\times 3}{56} = \\frac{30}{56} = \\frac{15}{28}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["超幾何分佈"]
+    },
+    {
+      "id": "ex_p7_4_1",
+      "question": "某路口每小時平均 3 輛車經過（$\\lambda = 3$），某小時恰好 2 輛車經過的機率是多少？",
+      "answer": "$\\frac{9e^{-3}}{2} \\approx 0.224$",
+      "solution": "卜瓦松分佈：$\\lambda = 3$，$k = 2$\n\n$P(X=2) = \\frac{3^2 e^{-3}}{2!} = \\frac{9e^{-3}}{2} \\approx 0.224$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["卜瓦松分佈"]
+    },
+    {
+      "id": "ex_p8_1_1",
+      "question": "賭徒有 10 元，每局贏 1 元（機率 0.5）或輸 1 元（機率 0.5），目標 20 元，否則破產，求破產機率",
+      "answer": "$0.5$",
+      "solution": "對稱隨機漫步（$p = 0.5$）：\n\n起始 10 元，目標 20 元，破產線 0 元\n\n破產機率 $= \\frac{20-10}{20-0} = \\frac{10}{20} = 0.5$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["賭徒破產"]
+    },
+    {
+      "id": "ex_p8_2_1",
+      "question": "如何用蒙地卡羅方法估計圓周率 $\\pi$？",
+      "answer": "見詳解",
+      "solution": "在單位正方形內隨機撒點：\n\n1. 產生隨機點 $(x, y)$，$0 \\leq x, y \\leq 1$\n2. 檢查 $x^2 + y^2 \\leq 1$（在四分之一圓內）\n3. 點數比例 $\\approx \\frac{\\pi/4}{1}$\n4. $\\pi \\approx 4 \\times \\frac{圓內點數}{總點數}$",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["蒙地卡羅"]
+    },
+    {
+      "id": "ex_p8_3_1",
+      "question": "23 人中至少 2 人同天生日的機率是多少？（簡化計算）",
+      "answer": "約 $50.7\\%$",
+      "solution": "餘事件：23 人都不同天\n\n$P($都不同$) = \\frac{365}{365} \\times \\frac{364}{365} \\times \\cdots \\times \\frac{343}{365}$\n\n$\\approx 0.493$\n\n$P($至少 2 人同天$) = 1 - 0.493 \\approx 0.507 = 50.7\\%$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["生日悖論"]
+    },
+    {
+      "id": "ex_p8_4_1",
+      "question": "布隆過濾器如何用機率降低記憶體使用？",
+      "answer": "見詳解",
+      "solution": "布隆過濾器特性：\n\n1. 用多個雜湊函數映射元素到位元陣列\n2. 查詢：所有對應位元都為 1 → 可能存在\n3. 偽陽性：可能誤判存在（機率可控）\n4. 偽陰性：不會誤判不存在\n5. 空間效率高，適合大規模集合成員檢測",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["布隆過濾器"]
+    }
+  ]
+}

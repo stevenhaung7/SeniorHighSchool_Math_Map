@@ -10,7 +10,9 @@ interface ExampleCardProps {
 }
 
 // 渲染包含 LaTeX 的文字
-function renderMathText(text: string): JSX.Element[] {
+function renderMathText(text: string | undefined): JSX.Element[] {
+  if (!text) return [<span key="empty">-</span>]
+  
   const parts: JSX.Element[] = []
   const regex = /\$(.*?)\$/g
   let lastIndex = 0

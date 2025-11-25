@@ -1,0 +1,977 @@
+{
+  "topic": "向量",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-25",
+  "nodes": [
+    {
+      "id": "v1.1.1",
+      "name": "向量的意義",
+      "description": "具有大小和方向的量，用有向線段表示",
+      "category": "基礎觀念",
+      "level": 1,
+      "prerequisites": [],
+      "related": [],
+      "tags": [
+        "向量基礎",
+        "定義"
+      ],
+      "examples": [
+        "ex_v1_1_1_001",
+        "ex_v1_1_1_002"
+      ]
+    },
+    {
+      "id": "v1.1.2",
+      "name": "向量的表示法",
+      "description": "向量可用 $\\vec{AB}$、$\\vec{a}$ 或坐標形式 $(x, y)$ 表示",
+      "category": "基礎觀念",
+      "level": 1,
+      "prerequisites": [
+        "v1.1.1"
+      ],
+      "related": [],
+      "tags": [
+        "向量基礎",
+        "符號"
+      ],
+      "examples": [
+        "ex_v1_1_2_001"
+      ]
+    },
+    {
+      "id": "v1.1.3",
+      "name": "向量的大小（長度）",
+      "description": "向量 $\\vec{a} = (x, y)$ 的長度為 $|\\vec{a}| = \\sqrt{x^2 + y^2}$",
+      "category": "基礎觀念",
+      "level": 1,
+      "prerequisites": [
+        "v1.1.2"
+      ],
+      "related": [],
+      "tags": [
+        "向量基礎",
+        "長度",
+        "畢氏定理"
+      ],
+      "examples": [
+        "ex_v1_1_3_001",
+        "ex_v1_1_3_002"
+      ]
+    },
+    {
+      "id": "v1.1.4",
+      "name": "零向量與單位向量",
+      "description": "零向量 $\\vec{0}$ 長度為 0；單位向量長度為 1，如 $\\hat{i} = (1,0)$、$\\hat{j} = (0,1)$",
+      "category": "基礎觀念",
+      "level": 1,
+      "prerequisites": [
+        "v1.1.3"
+      ],
+      "related": [],
+      "tags": [
+        "向量基礎",
+        "特殊向量"
+      ],
+      "examples": [
+        "ex_v1_1_4_001"
+      ]
+    },
+    {
+      "id": "v2.1.1",
+      "name": "向量的加法",
+      "description": "$(x_1, y_1) + (x_2, y_2) = (x_1+x_2, y_1+y_2)$，幾何上為平行四邊形法則或三角形法則",
+      "category": "向量運算",
+      "level": 2,
+      "prerequisites": [
+        "v1.1.2"
+      ],
+      "related": [],
+      "tags": [
+        "向量運算",
+        "加法",
+        "平行四邊形"
+      ],
+      "examples": [
+        "ex_v2_1_1_001",
+        "ex_v2_1_1_002",
+        "ex_v2_1_1_003"
+      ]
+    },
+    {
+      "id": "v2.1.2",
+      "name": "向量的減法",
+      "description": "$(x_1, y_1) - (x_2, y_2) = (x_1-x_2, y_1-y_2)$，幾何上為從終點指向起點",
+      "category": "向量運算",
+      "level": 2,
+      "prerequisites": [
+        "v2.1.1"
+      ],
+      "related": [],
+      "tags": [
+        "向量運算",
+        "減法"
+      ],
+      "examples": [
+        "ex_v2_1_2_001",
+        "ex_v2_1_2_002"
+      ]
+    },
+    {
+      "id": "v2.1.3",
+      "name": "純量積（向量與數的乘法）",
+      "description": "$k\\vec{a} = k(x, y) = (kx, ky)$，改變向量的長度，$k<0$ 時反向",
+      "category": "向量運算",
+      "level": 2,
+      "prerequisites": [
+        "v1.1.2"
+      ],
+      "related": [],
+      "tags": [
+        "向量運算",
+        "純量積",
+        "數乘"
+      ],
+      "examples": [
+        "ex_v2_1_3_001",
+        "ex_v2_1_3_002"
+      ]
+    },
+    {
+      "id": "v2.2.1",
+      "name": "向量的平行與共線",
+      "description": "$\\vec{a} \\parallel \\vec{b}$ 若且唯若存在 $k$ 使 $\\vec{a} = k\\vec{b}$",
+      "category": "向量性質",
+      "level": 2,
+      "prerequisites": [
+        "v2.1.3"
+      ],
+      "related": [],
+      "tags": [
+        "向量關係",
+        "平行",
+        "共線"
+      ],
+      "examples": [
+        "ex_v2_2_1_001",
+        "ex_v2_2_1_002"
+      ]
+    },
+    {
+      "id": "v2.2.2",
+      "name": "分點公式（向量形式）",
+      "description": "點 $P$ 分 $\\overline{AB}$ 為 $m:n$，則 $\\vec{OP} = \\frac{n\\vec{OA} + m\\vec{OB}}{m+n}$",
+      "category": "向量應用",
+      "level": 2,
+      "prerequisites": [
+        "v2.1.1",
+        "v2.1.3"
+      ],
+      "related": [],
+      "tags": [
+        "向量應用",
+        "分點公式",
+        "幾何"
+      ],
+      "examples": [
+        "ex_v2_2_2_001",
+        "ex_v2_2_2_002"
+      ]
+    },
+    {
+      "id": "v3.1.1",
+      "name": "向量的內積（點積）",
+      "description": "$\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta = x_1x_2 + y_1y_2$",
+      "category": "向量進階",
+      "level": 3,
+      "prerequisites": [
+        "v1.1.3",
+        "v2.1.1"
+      ],
+      "related": [],
+      "tags": [
+        "內積",
+        "點積",
+        "三角函數"
+      ],
+      "examples": [
+        "ex_v3_1_1_001",
+        "ex_v3_1_1_002",
+        "ex_v3_1_1_003"
+      ]
+    },
+    {
+      "id": "v3.1.2",
+      "name": "內積的性質",
+      "description": "交換律、分配律、$\\vec{a} \\cdot \\vec{a} = |\\vec{a}|^2$",
+      "category": "向量進階",
+      "level": 3,
+      "prerequisites": [
+        "v3.1.1"
+      ],
+      "related": [],
+      "tags": [
+        "內積",
+        "運算性質"
+      ],
+      "examples": [
+        "ex_v3_1_2_001"
+      ]
+    },
+    {
+      "id": "v3.2.1",
+      "name": "向量垂直判定",
+      "description": "$\\vec{a} \\perp \\vec{b}$ 若且唯若 $\\vec{a} \\cdot \\vec{b} = 0$",
+      "category": "向量關係",
+      "level": 3,
+      "prerequisites": [
+        "v3.1.1"
+      ],
+      "related": [],
+      "tags": [
+        "垂直",
+        "內積應用"
+      ],
+      "examples": [
+        "ex_v3_2_1_001",
+        "ex_v3_2_1_002"
+      ]
+    },
+    {
+      "id": "v3.2.2",
+      "name": "正射影",
+      "description": "$\\vec{a}$ 在 $\\vec{b}$ 上的正射影長 = $\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|}$",
+      "category": "向量應用",
+      "level": 3,
+      "prerequisites": [
+        "v3.1.1"
+      ],
+      "related": [
+        "v3.2.1"
+      ],
+      "tags": [
+        "正射影",
+        "投影",
+        "內積應用"
+      ],
+      "examples": [
+        "ex_v3_2_2_001",
+        "ex_v3_2_2_002"
+      ]
+    },
+    {
+      "id": "v3.3.1",
+      "name": "柯西不等式（向量形式）",
+      "description": "$(\\vec{a} \\cdot \\vec{b})^2 \\leq |\\vec{a}|^2 |\\vec{b}|^2$，等號成立於平行時",
+      "category": "不等式",
+      "level": 3,
+      "prerequisites": [
+        "v3.1.1",
+        "v1.1.3"
+      ],
+      "related": [],
+      "tags": [
+        "不等式",
+        "內積"
+      ],
+      "examples": [
+        "ex_v3_3_1_001"
+      ]
+    },
+    {
+      "id": "v4.1.1",
+      "name": "三維向量",
+      "description": "空間向量 $\\vec{a} = (x, y, z)$，長度 $|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}$",
+      "category": "空間向量",
+      "level": 4,
+      "prerequisites": [
+        "v1.1.3"
+      ],
+      "related": [],
+      "tags": [
+        "三維空間",
+        "空間向量"
+      ],
+      "examples": [
+        "ex_v4_1_1_001",
+        "ex_v4_1_1_002"
+      ]
+    },
+    {
+      "id": "v4.1.2",
+      "name": "三維向量的內積",
+      "description": "$\\vec{a} \\cdot \\vec{b} = x_1x_2 + y_1y_2 + z_1z_2$",
+      "category": "空間向量",
+      "level": 4,
+      "prerequisites": [
+        "v4.1.1",
+        "v3.1.1"
+      ],
+      "related": [],
+      "tags": [
+        "三維空間",
+        "內積"
+      ],
+      "examples": [
+        "ex_v4_1_2_001"
+      ]
+    },
+    {
+      "id": "v4.2.1",
+      "name": "外積（叉積）",
+      "description": "$\\vec{a} \\times \\vec{b}$ 垂直於 $\\vec{a}$ 和 $\\vec{b}$，大小 = $|\\vec{a}||\\vec{b}|\\sin\\theta$",
+      "category": "空間向量",
+      "level": 4,
+      "prerequisites": [
+        "v4.1.1",
+        "v3.1.1"
+      ],
+      "related": [],
+      "tags": [
+        "外積",
+        "叉積",
+        "三維空間"
+      ],
+      "examples": [
+        "ex_v4_2_1_001",
+        "ex_v4_2_1_002"
+      ]
+    },
+    {
+      "id": "v4.2.2",
+      "name": "外積的應用",
+      "description": "平行四邊形面積、判定平行/共面、法向量",
+      "category": "空間向量應用",
+      "level": 4,
+      "prerequisites": [
+        "v4.2.1"
+      ],
+      "related": [],
+      "tags": [
+        "外積應用",
+        "面積",
+        "法向量"
+      ],
+      "examples": [
+        "ex_v4_2_2_001",
+        "ex_v4_2_2_002"
+      ]
+    },
+    {
+      "id": "v4.3.1",
+      "name": "空間中的平面方程式",
+      "description": "法向量 $\\vec{n} = (A, B, C)$ 的平面：$Ax + By + Cz = D$",
+      "category": "空間幾何",
+      "level": 4,
+      "prerequisites": [
+        "v4.2.1",
+        "v3.2.1"
+      ],
+      "related": [],
+      "tags": [
+        "平面方程式",
+        "法向量",
+        "空間幾何"
+      ],
+      "examples": [
+        "ex_v4_3_1_001"
+      ]
+    },
+    {
+      "id": "v4.3.2",
+      "name": "空間中的直線方程式",
+      "description": "參數式：$(x, y, z) = (x_0, y_0, z_0) + t\\vec{v}$",
+      "category": "空間幾何",
+      "level": 4,
+      "prerequisites": [
+        "v4.1.1",
+        "v2.1.3"
+      ],
+      "related": [],
+      "tags": [
+        "直線方程式",
+        "參數式",
+        "空間幾何"
+      ],
+      "examples": [
+        "ex_v4_3_2_001"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_v1_1_1_001",
+      "nodeId": "v1.1.1",
+      "title": "向量的實例",
+      "solution": "(1)(2)(4) 都是向量，因為有大小和方向；溫度只有大小沒有方向，是純量",
+      "difficulty": "easy",
+      "tags": [
+        "觀念理解"
+      ],
+      "question": "哪些是向量？(1) 位移 (2) 速度 (3) 溫度 (4) 力",
+      "answer": "(1)(2)(4) 都是向量，因為有大小和方向；溫度只有大小沒有方向，是純量",
+      "type": "calc",
+      "relatedNodes": [
+        "v1.1.1"
+      ]
+    },
+    {
+      "id": "ex_v1_1_1_002",
+      "nodeId": "v1.1.1",
+      "title": "向量的相等",
+      "solution": "方向相同且長度相等（平移不改變向量）",
+      "difficulty": "easy",
+      "tags": [
+        "觀念理解"
+      ],
+      "question": "$\\vec{AB}$ 與 $\\vec{CD}$ 相等的條件是什麼？",
+      "answer": "方向相同且長度相等（平移不改變向量）",
+      "type": "calc",
+      "relatedNodes": [
+        "v1.1.1"
+      ]
+    },
+    {
+      "id": "ex_v1_1_2_001",
+      "nodeId": "v1.1.2",
+      "title": "向量表示",
+      "solution": "$\\vec{AB} = (4-1, 6-2) = (3, 4)$",
+      "difficulty": "easy",
+      "tags": [
+        "坐標運算"
+      ],
+      "question": "已知 $A(1, 2)$，$B(4, 6)$，求 $\\vec{AB}$ 的坐標形式",
+      "answer": "$\\vec{AB} = (4-1, 6-2) = (3, 4)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v1.1.2"
+      ]
+    },
+    {
+      "id": "ex_v1_1_3_001",
+      "nodeId": "v1.1.3",
+      "title": "計算向量長度",
+      "solution": "$|\\vec{a}| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = 5$",
+      "difficulty": "easy",
+      "tags": [
+        "長度計算"
+      ],
+      "question": "求 $\\vec{a} = (3, 4)$ 的長度",
+      "answer": "$|\\vec{a}| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = 5$",
+      "type": "calc",
+      "relatedNodes": [
+        "v1.1.3"
+      ]
+    },
+    {
+      "id": "ex_v1_1_3_002",
+      "nodeId": "v1.1.3",
+      "title": "求未知坐標",
+      "solution": "$\\sqrt{x^2 + 36} = 10 \\Rightarrow x^2 = 64 \\Rightarrow x = \\pm 8$",
+      "difficulty": "hard",
+      "tags": [
+        "方程式"
+      ],
+      "question": "已知 $\\vec{a} = (x, 6)$ 且 $|\\vec{a}| = 10$，求 $x$",
+      "answer": "$\\sqrt{x^2 + 36} = 10 \\Rightarrow x^2 = 64 \\Rightarrow x = \\pm 8$",
+      "type": "calc",
+      "relatedNodes": [
+        "v1.1.3"
+      ]
+    },
+    {
+      "id": "ex_v1_1_4_001",
+      "nodeId": "v1.1.4",
+      "title": "單位向量",
+      "solution": "$\\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{(3, 4)}{5} = (\\frac{3}{5}, \\frac{4}{5})$",
+      "difficulty": "hard",
+      "tags": [
+        "單位化"
+      ],
+      "question": "求與 $\\vec{a} = (3, 4)$ 同方向的單位向量",
+      "answer": "$\\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{(3, 4)}{5} = (\\frac{3}{5}, \\frac{4}{5})$",
+      "type": "calc",
+      "relatedNodes": [
+        "v1.1.4"
+      ]
+    },
+    {
+      "id": "ex_v2_1_1_001",
+      "nodeId": "v2.1.1",
+      "title": "向量加法基礎",
+      "solution": "$(2+1, 3-5) = (3, -2)$",
+      "difficulty": "easy",
+      "tags": [
+        "基本運算"
+      ],
+      "question": "$(2, 3) + (1, -5) = ?$",
+      "answer": "$(2+1, 3-5) = (3, -2)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.1.1"
+      ]
+    },
+    {
+      "id": "ex_v2_1_1_002",
+      "nodeId": "v2.1.1",
+      "title": "三角形法則",
+      "solution": "$\\vec{AC} = \\vec{AB} + \\vec{BC} = (2, 1) + (3, 4) = (5, 5)$",
+      "difficulty": "easy",
+      "tags": [
+        "幾何應用"
+      ],
+      "question": "已知 $\\vec{AB} = (2, 1)$，$\\vec{BC} = (3, 4)$，求 $\\vec{AC}$",
+      "answer": "$\\vec{AC} = \\vec{AB} + \\vec{BC} = (2, 1) + (3, 4) = (5, 5)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.1.1"
+      ]
+    },
+    {
+      "id": "ex_v2_1_1_003",
+      "nodeId": "v2.1.1",
+      "title": "平行四邊形法則",
+      "solution": "$\\vec{AC} = \\vec{AB} + \\vec{BC} = \\vec{a} + \\vec{b}$（對角線）",
+      "difficulty": "hard",
+      "tags": [
+        "幾何",
+        "平行四邊形"
+      ],
+      "question": "平行四邊形 $ABCD$，若 $\\vec{AB} = \\vec{a}$，$\\vec{AD} = \\vec{b}$，求 $\\vec{AC}$",
+      "answer": "$\\vec{AC} = \\vec{AB} + \\vec{BC} = \\vec{a} + \\vec{b}$（對角線）",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.1.1"
+      ]
+    },
+    {
+      "id": "ex_v2_1_2_001",
+      "nodeId": "v2.1.2",
+      "title": "向量減法",
+      "solution": "$(5-2, 7-3) = (3, 4)$",
+      "difficulty": "easy",
+      "tags": [
+        "基本運算"
+      ],
+      "question": "$(5, 7) - (2, 3) = ?$",
+      "answer": "$(5-2, 7-3) = (3, 4)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.1.2"
+      ]
+    },
+    {
+      "id": "ex_v2_1_2_002",
+      "nodeId": "v2.1.2",
+      "title": "幾何意義",
+      "solution": "$\\vec{AB} = \\vec{OB} - \\vec{OA} = (4, 6) - (1, 2) = (3, 4)$",
+      "difficulty": "easy",
+      "tags": [
+        "幾何應用"
+      ],
+      "question": "已知 $A(1, 2)$，$B(4, 6)$，用減法求 $\\vec{AB}$",
+      "answer": "$\\vec{AB} = \\vec{OB} - \\vec{OA} = (4, 6) - (1, 2) = (3, 4)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.1.2"
+      ]
+    },
+    {
+      "id": "ex_v2_1_3_001",
+      "nodeId": "v2.1.3",
+      "title": "純量積",
+      "solution": "$(3 \\times 2, 3 \\times (-1)) = (6, -3)$",
+      "difficulty": "easy",
+      "tags": [
+        "基本運算"
+      ],
+      "question": "$3(2, -1) = ?$",
+      "answer": "$(3 \\times 2, 3 \\times (-1)) = (6, -3)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.1.3"
+      ]
+    },
+    {
+      "id": "ex_v2_1_3_002",
+      "nodeId": "v2.1.3",
+      "title": "反向向量",
+      "solution": "$|\\vec{a}| = 5$，所求 = $-2\\vec{a} = (-8, -6)$",
+      "difficulty": "hard",
+      "tags": [
+        "向量縮放"
+      ],
+      "question": "求與 $\\vec{a} = (4, 3)$ 反向且長度為 10 的向量",
+      "answer": "$|\\vec{a}| = 5$，所求 = $-2\\vec{a} = (-8, -6)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.1.3"
+      ]
+    },
+    {
+      "id": "ex_v2_2_1_001",
+      "nodeId": "v2.2.1",
+      "title": "判定平行",
+      "solution": "$\\vec{b} = 2\\vec{a}$，故平行",
+      "difficulty": "easy",
+      "tags": [
+        "平行判定"
+      ],
+      "question": "$\\vec{a} = (2, 3)$ 與 $\\vec{b} = (4, 6)$ 是否平行？",
+      "answer": "$\\vec{b} = 2\\vec{a}$，故平行",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.2.1"
+      ]
+    },
+    {
+      "id": "ex_v2_2_1_002",
+      "nodeId": "v2.2.1",
+      "title": "求平行向量",
+      "solution": "$|\\vec{a}| = \\sqrt{13}$，所求 = $\\pm \\vec{a} = (3, -2)$ 或 $(-3, 2)$",
+      "difficulty": "hard",
+      "tags": [
+        "平行",
+        "長度"
+      ],
+      "question": "求與 $\\vec{a} = (3, -2)$ 平行且長度為 $\\sqrt{13}$ 的向量",
+      "answer": "$|\\vec{a}| = \\sqrt{13}$，所求 = $\\pm \\vec{a} = (3, -2)$ 或 $(-3, 2)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.2.1"
+      ]
+    },
+    {
+      "id": "ex_v2_2_2_001",
+      "nodeId": "v2.2.2",
+      "title": "中點公式",
+      "solution": "$\\vec{OM} = \\frac{\\vec{OA} + \\vec{OB}}{2} = \\frac{(1,2) + (5,8)}{2} = (3, 5)$",
+      "difficulty": "easy",
+      "tags": [
+        "中點",
+        "分點"
+      ],
+      "question": "$A(1, 2)$，$B(5, 8)$，求中點 $M$ 的位置向量",
+      "answer": "$\\vec{OM} = \\frac{\\vec{OA} + \\vec{OB}}{2} = \\frac{(1,2) + (5,8)}{2} = (3, 5)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.2.2"
+      ]
+    },
+    {
+      "id": "ex_v2_2_2_002",
+      "nodeId": "v2.2.2",
+      "title": "分點公式應用",
+      "solution": "$\\vec{OP} = \\frac{3(1,2) + 2(6,12)}{5} = \\frac{(15, 30)}{5} = (3, 6)$",
+      "difficulty": "hard",
+      "tags": [
+        "分點",
+        "比例"
+      ],
+      "question": "點 $P$ 分 $\\overline{AB}$ 為 $2:3$（靠近 $A$），若 $A(1, 2)$，$B(6, 12)$，求 $P$",
+      "answer": "$\\vec{OP} = \\frac{3(1,2) + 2(6,12)}{5} = \\frac{(15, 30)}{5} = (3, 6)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v2.2.2"
+      ]
+    },
+    {
+      "id": "ex_v3_1_1_001",
+      "nodeId": "v3.1.1",
+      "title": "內積計算",
+      "solution": "$3 \\times 1 + 4 \\times 2 = 3 + 8 = 11$",
+      "difficulty": "easy",
+      "tags": [
+        "內積"
+      ],
+      "question": "$(3, 4) \\cdot (1, 2) = ?$",
+      "answer": "$3 \\times 1 + 4 \\times 2 = 3 + 8 = 11$",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.1.1"
+      ]
+    },
+    {
+      "id": "ex_v3_1_1_002",
+      "nodeId": "v3.1.1",
+      "title": "求夾角",
+      "solution": "$\\cos\\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}||\\vec{b}|} = \\frac{1}{1 \\times \\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\Rightarrow \\theta = 45°$",
+      "difficulty": "hard",
+      "tags": [
+        "夾角",
+        "三角函數"
+      ],
+      "question": "求 $\\vec{a} = (1, 0)$ 與 $\\vec{b} = (1, 1)$ 的夾角",
+      "answer": "$\\cos\\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}||\\vec{b}|} = \\frac{1}{1 \\times \\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\Rightarrow \\theta = 45°$",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.1.1"
+      ]
+    },
+    {
+      "id": "ex_v3_1_1_003",
+      "nodeId": "v3.1.1",
+      "title": "內積性質應用",
+      "solution": "$\\cos\\theta = \\frac{6}{3 \\times 4} = \\frac{1}{2} \\Rightarrow \\theta = 60°$",
+      "difficulty": "hard",
+      "tags": [
+        "夾角"
+      ],
+      "question": "已知 $|\\vec{a}| = 3$，$|\\vec{b}| = 4$，$\\vec{a} \\cdot \\vec{b} = 6$，求夾角 $\\theta$",
+      "answer": "$\\cos\\theta = \\frac{6}{3 \\times 4} = \\frac{1}{2} \\Rightarrow \\theta = 60°$",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.1.1"
+      ]
+    },
+    {
+      "id": "ex_v3_1_2_001",
+      "nodeId": "v3.1.2",
+      "title": "內積性質",
+      "solution": "$\\vec{a} \\cdot \\vec{a} = |\\vec{a}|^2 = 25$",
+      "difficulty": "easy",
+      "tags": [
+        "性質"
+      ],
+      "question": "已知 $|\\vec{a}| = 5$，求 $\\vec{a} \\cdot \\vec{a}$",
+      "answer": "$\\vec{a} \\cdot \\vec{a} = |\\vec{a}|^2 = 25$",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.1.2"
+      ]
+    },
+    {
+      "id": "ex_v3_2_1_001",
+      "nodeId": "v3.2.1",
+      "title": "垂直判定",
+      "solution": "$\\vec{a} \\cdot \\vec{b} = 6 - 6 = 0$，故垂直",
+      "difficulty": "easy",
+      "tags": [
+        "垂直"
+      ],
+      "question": "$\\vec{a} = (2, 3)$ 與 $\\vec{b} = (3, -2)$ 是否垂直？",
+      "answer": "$\\vec{a} \\cdot \\vec{b} = 6 - 6 = 0$，故垂直",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.2.1"
+      ]
+    },
+    {
+      "id": "ex_v3_2_1_002",
+      "nodeId": "v3.2.1",
+      "title": "求垂直向量",
+      "solution": "$(3, -4)$ 或 $(-3, 4)$（坐標對調、一者變號）",
+      "difficulty": "hard",
+      "tags": [
+        "垂直",
+        "構造"
+      ],
+      "question": "求與 $\\vec{a} = (4, 3)$ 垂直的向量",
+      "answer": "$(3, -4)$ 或 $(-3, 4)$（坐標對調、一者變號）",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.2.1"
+      ]
+    },
+    {
+      "id": "ex_v3_2_2_001",
+      "nodeId": "v3.2.2",
+      "title": "正射影長",
+      "solution": "$\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|} = \\frac{3}{1} = 3$",
+      "difficulty": "easy",
+      "tags": [
+        "投影"
+      ],
+      "question": "$\\vec{a} = (3, 4)$ 在 $\\vec{b} = (1, 0)$ 上的正射影長",
+      "answer": "$\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|} = \\frac{3}{1} = 3$",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.2.2"
+      ]
+    },
+    {
+      "id": "ex_v3_2_2_002",
+      "nodeId": "v3.2.2",
+      "title": "正射影向量",
+      "solution": "$\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2} \\vec{b} = \\frac{5}{2}(1, 1) = (\\frac{5}{2}, \\frac{5}{2})$",
+      "difficulty": "hard",
+      "tags": [
+        "投影",
+        "向量形式"
+      ],
+      "question": "$\\vec{a} = (2, 3)$ 在 $\\vec{b} = (1, 1)$ 上的正射影向量",
+      "answer": "$\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2} \\vec{b} = \\frac{5}{2}(1, 1) = (\\frac{5}{2}, \\frac{5}{2})$",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.2.2"
+      ]
+    },
+    {
+      "id": "ex_v3_3_1_001",
+      "nodeId": "v3.3.1",
+      "title": "柯西不等式",
+      "solution": "由 $(\\vec{a} \\cdot \\vec{b})^2 \\leq |\\vec{a}|^2|\\vec{b}|^2$ 即得，等號成立於 $\\vec{a} \\parallel \\vec{b}$",
+      "difficulty": "hard",
+      "tags": [
+        "不等式",
+        "證明"
+      ],
+      "question": "證明 $(x_1x_2 + y_1y_2)^2 \\leq (x_1^2 + y_1^2)(x_2^2 + y_2^2)$",
+      "answer": "由 $(\\vec{a} \\cdot \\vec{b})^2 \\leq |\\vec{a}|^2|\\vec{b}|^2$ 即得，等號成立於 $\\vec{a} \\parallel \\vec{b}$",
+      "type": "calc",
+      "relatedNodes": [
+        "v3.3.1"
+      ]
+    },
+    {
+      "id": "ex_v4_1_1_001",
+      "nodeId": "v4.1.1",
+      "title": "三維向量長度",
+      "solution": "$|\\vec{a}| = \\sqrt{1 + 4 + 4} = 3$",
+      "difficulty": "easy",
+      "tags": [
+        "三維",
+        "長度"
+      ],
+      "question": "求 $\\vec{a} = (1, 2, 2)$ 的長度",
+      "answer": "$|\\vec{a}| = \\sqrt{1 + 4 + 4} = 3$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.1.1"
+      ]
+    },
+    {
+      "id": "ex_v4_1_1_002",
+      "nodeId": "v4.1.1",
+      "title": "空間兩點距離",
+      "solution": "$\\vec{AB} = (3, 4, 12)$，$|\\vec{AB}| = \\sqrt{9+16+144} = 13$",
+      "difficulty": "easy",
+      "tags": [
+        "三維",
+        "距離"
+      ],
+      "question": "$A(1, 2, 3)$，$B(4, 6, 15)$，求 $|\\vec{AB}|$",
+      "answer": "$\\vec{AB} = (3, 4, 12)$，$|\\vec{AB}| = \\sqrt{9+16+144} = 13$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.1.1"
+      ]
+    },
+    {
+      "id": "ex_v4_1_2_001",
+      "nodeId": "v4.1.2",
+      "title": "三維內積",
+      "solution": "$2 - 2 + 6 = 6$",
+      "difficulty": "easy",
+      "tags": [
+        "三維",
+        "內積"
+      ],
+      "question": "$(1, 2, 3) \\cdot (2, -1, 2) = ?$",
+      "answer": "$2 - 2 + 6 = 6$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.1.2"
+      ]
+    },
+    {
+      "id": "ex_v4_2_1_001",
+      "nodeId": "v4.2.1",
+      "title": "外積計算",
+      "solution": "$\\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ 1 & 0 & 0 \\\\ 0 & 1 & 0 \\end{vmatrix} = (0, 0, 1)$",
+      "difficulty": "hard",
+      "tags": [
+        "外積"
+      ],
+      "question": "$(1, 0, 0) \\times (0, 1, 0) = ?$",
+      "answer": "$\\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ 1 & 0 & 0 \\\\ 0 & 1 & 0 \\end{vmatrix} = (0, 0, 1)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.2.1"
+      ]
+    },
+    {
+      "id": "ex_v4_2_1_002",
+      "nodeId": "v4.2.1",
+      "title": "外積性質",
+      "solution": "$(0, 0, 6-1) = (0, 0, 5)$，垂直於 $xy$ 平面",
+      "difficulty": "hard",
+      "tags": [
+        "外積",
+        "平面"
+      ],
+      "question": "$(2, 1, 0) \\times (1, 3, 0) = ?$",
+      "answer": "$(0, 0, 6-1) = (0, 0, 5)$，垂直於 $xy$ 平面",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.2.1"
+      ]
+    },
+    {
+      "id": "ex_v4_2_2_001",
+      "nodeId": "v4.2.2",
+      "title": "平行四邊形面積",
+      "solution": "$|\\vec{a} \\times \\vec{b}| = |(0, 0, -5)| = 5$",
+      "difficulty": "hard",
+      "tags": [
+        "面積",
+        "外積應用"
+      ],
+      "question": "求 $\\vec{a} = (1, 2, 0)$，$\\vec{b} = (3, 1, 0)$ 所張平行四邊形面積",
+      "answer": "$|\\vec{a} \\times \\vec{b}| = |(0, 0, -5)| = 5$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.2.2"
+      ]
+    },
+    {
+      "id": "ex_v4_2_2_002",
+      "nodeId": "v4.2.2",
+      "title": "法向量",
+      "solution": "$\\vec{n} = \\vec{a} \\times \\vec{b} = (1, -1, 1)$",
+      "difficulty": "hard",
+      "tags": [
+        "法向量",
+        "外積應用"
+      ],
+      "question": "求通過原點且垂直於 $\\vec{a} = (1, 1, 0)$ 和 $\\vec{b} = (0, 1, 1)$ 的平面法向量",
+      "answer": "$\\vec{n} = \\vec{a} \\times \\vec{b} = (1, -1, 1)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.2.2"
+      ]
+    },
+    {
+      "id": "ex_v4_3_1_001",
+      "nodeId": "v4.3.1",
+      "title": "平面方程式",
+      "solution": "$1(x-1) + 2(y-0) + 3(z-0) = 0 \\Rightarrow x + 2y + 3z = 1$",
+      "difficulty": "hard",
+      "tags": [
+        "平面方程式"
+      ],
+      "question": "法向量 $(1, 2, 3)$ 且過點 $(1, 0, 0)$ 的平面方程式",
+      "answer": "$1(x-1) + 2(y-0) + 3(z-0) = 0 \\Rightarrow x + 2y + 3z = 1$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.3.1"
+      ]
+    },
+    {
+      "id": "ex_v4_3_2_001",
+      "nodeId": "v4.3.2",
+      "title": "直線參數式",
+      "solution": "$(x, y, z) = (1, 2, 3) + t(2, -1, 1)$",
+      "difficulty": "hard",
+      "tags": [
+        "直線方程式",
+        "參數式"
+      ],
+      "question": "過點 $(1, 2, 3)$ 且方向向量為 $(2, -1, 1)$ 的直線方程式",
+      "answer": "$(x, y, z) = (1, 2, 3) + t(2, -1, 1)$",
+      "type": "calc",
+      "relatedNodes": [
+        "v4.3.2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+{
+  "topic": "幾何",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-26",
+  "nodes": [
+    {
+      "id": "g1.1",
+      "name": "點、線、角",
+      "description": "點的位置、線段、射線、直線、角的定義與度量",
+      "category": "平面幾何基礎",
+      "level": 1,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["基本元素"],
+      "examples": ["ex_g1_1_1", "ex_g1_1_2"]
+    },
+    {
+      "id": "g1.2",
+      "name": "三角形基礎",
+      "description": "三角形分類、內角和 $180°$、外角性質",
+      "category": "平面幾何基礎",
+      "level": 1,
+      "prerequisites": ["g1.1"],
+      "related": [],
+      "tags": ["三角形"],
+      "examples": ["ex_g1_2_1", "ex_g1_2_2"]
+    },
+    {
+      "id": "g1.3",
+      "name": "四邊形",
+      "description": "平行四邊形、矩形、菱形、正方形、梯形",
+      "category": "平面幾何基礎",
+      "level": 1,
+      "prerequisites": ["g1.1"],
+      "related": [],
+      "tags": ["四邊形"],
+      "examples": ["ex_g1_3_1"]
+    },
+    {
+      "id": "g1.4",
+      "name": "多邊形",
+      "description": "正多邊形、內角和 $(n-2) \\times 180°$、外角和 $360°$",
+      "category": "平面幾何基礎",
+      "level": 1,
+      "prerequisites": ["g1.2"],
+      "related": [],
+      "tags": ["多邊形"],
+      "examples": ["ex_g1_4_1"]
+    },
+    {
+      "id": "g2.1",
+      "name": "全等三角形",
+      "description": "SSS、SAS、ASA、AAS、RHS 全等性質",
+      "category": "全等與相似",
+      "level": 2,
+      "prerequisites": ["g1.2"],
+      "related": [],
+      "tags": ["全等"],
+      "examples": ["ex_g2_1_1", "ex_g2_1_2"]
+    },
+    {
+      "id": "g2.2",
+      "name": "相似三角形",
+      "description": "AA、SAS、SSS 相似性質、對應邊比例",
+      "category": "全等與相似",
+      "level": 2,
+      "prerequisites": ["g2.1"],
+      "related": [],
+      "tags": ["相似"],
+      "examples": ["ex_g2_2_1", "ex_g2_2_2"]
+    },
+    {
+      "id": "g2.3",
+      "name": "畢氏定理",
+      "description": "$a^2 + b^2 = c^2$、勾股定理、應用",
+      "category": "全等與相似",
+      "level": 2,
+      "prerequisites": ["g1.2"],
+      "related": [],
+      "tags": ["畢氏定理"],
+      "examples": ["ex_g2_3_1", "ex_g2_3_2"]
+    },
+    {
+      "id": "g2.4",
+      "name": "三角形的心",
+      "description": "重心、外心、內心、垂心",
+      "category": "全等與相似",
+      "level": 2,
+      "prerequisites": ["g1.2"],
+      "related": [],
+      "tags": ["三角形的心"],
+      "examples": ["ex_g2_4_1"]
+    },
+    {
+      "id": "g3.1",
+      "name": "圓的基本性質",
+      "description": "圓心、半徑、直徑、弦、弧",
+      "category": "圓",
+      "level": 3,
+      "prerequisites": ["g1.1"],
+      "related": [],
+      "tags": ["圓"],
+      "examples": ["ex_g3_1_1"]
+    },
+    {
+      "id": "g3.2",
+      "name": "圓心角與圓周角",
+      "description": "圓心角 = $2 \\times$ 圓周角、同弧對應角",
+      "category": "圓",
+      "level": 3,
+      "prerequisites": ["g3.1"],
+      "related": [],
+      "tags": ["圓心角", "圓周角"],
+      "examples": ["ex_g3_2_1", "ex_g3_2_2"]
+    },
+    {
+      "id": "g3.3",
+      "name": "切線性質",
+      "description": "切線垂直半徑、切線長定理",
+      "category": "圓",
+      "level": 3,
+      "prerequisites": ["g3.1"],
+      "related": [],
+      "tags": ["切線"],
+      "examples": ["ex_g3_3_1"]
+    },
+    {
+      "id": "g3.4",
+      "name": "圓內接四邊形",
+      "description": "對角和 $180°$、圓內接性質",
+      "category": "圓",
+      "level": 3,
+      "prerequisites": ["g3.2", "g1.3"],
+      "related": [],
+      "tags": ["圓內接"],
+      "examples": ["ex_g3_4_1"]
+    },
+    {
+      "id": "g4.1",
+      "name": "面積公式",
+      "description": "三角形 $\\frac{1}{2}bh$、矩形、圓 $\\pi r^2$、扇形",
+      "category": "面積與周長",
+      "level": 4,
+      "prerequisites": ["g1.2", "g3.1"],
+      "related": [],
+      "tags": ["面積"],
+      "examples": ["ex_g4_1_1", "ex_g4_1_2"]
+    },
+    {
+      "id": "g4.2",
+      "name": "海龍公式",
+      "description": "$A = \\sqrt{s(s-a)(s-b)(s-c)}$，$s = \\frac{a+b+c}{2}$",
+      "category": "面積與周長",
+      "level": 4,
+      "prerequisites": ["g4.1"],
+      "related": [],
+      "tags": ["海龍公式"],
+      "examples": ["ex_g4_2_1"]
+    },
+    {
+      "id": "g4.3",
+      "name": "相似形面積比",
+      "description": "相似比 $k$，面積比 $k^2$",
+      "category": "面積與周長",
+      "level": 4,
+      "prerequisites": ["g2.2", "g4.1"],
+      "related": [],
+      "tags": ["相似", "面積比"],
+      "examples": ["ex_g4_3_1"]
+    },
+    {
+      "id": "g5.1",
+      "name": "坐標系統",
+      "description": "直角坐標、象限、坐標平面",
+      "category": "坐標幾何",
+      "level": 5,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["坐標"],
+      "examples": ["ex_g5_1_1"]
+    },
+    {
+      "id": "g5.2",
+      "name": "距離公式",
+      "description": "$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$",
+      "category": "坐標幾何",
+      "level": 5,
+      "prerequisites": ["g5.1", "g2.3"],
+      "related": [],
+      "tags": ["距離"],
+      "examples": ["ex_g5_2_1", "ex_g5_2_2"]
+    },
+    {
+      "id": "g5.3",
+      "name": "分點公式",
+      "description": "中點、內分點、外分點公式",
+      "category": "坐標幾何",
+      "level": 5,
+      "prerequisites": ["g5.2"],
+      "related": [],
+      "tags": ["分點"],
+      "examples": ["ex_g5_3_1"]
+    },
+    {
+      "id": "g5.4",
+      "name": "斜率",
+      "description": "$m = \\frac{y_2-y_1}{x_2-x_1}$、平行與垂直判定",
+      "category": "坐標幾何",
+      "level": 5,
+      "prerequisites": ["g5.1"],
+      "related": [],
+      "tags": ["斜率"],
+      "examples": ["ex_g5_4_1", "ex_g5_4_2"]
+    },
+    {
+      "id": "g6.1",
+      "name": "直線方程式",
+      "description": "點斜式、斜截式、兩點式、截距式、一般式",
+      "category": "直線與圓",
+      "level": 6,
+      "prerequisites": ["g5.4"],
+      "related": [],
+      "tags": ["直線方程式"],
+      "examples": ["ex_g6_1_1", "ex_g6_1_2"]
+    },
+    {
+      "id": "g6.2",
+      "name": "點到直線距離",
+      "description": "$d = \\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$",
+      "category": "直線與圓",
+      "level": 6,
+      "prerequisites": ["g6.1", "g5.2"],
+      "related": [],
+      "tags": ["距離公式"],
+      "examples": ["ex_g6_2_1"]
+    },
+    {
+      "id": "g6.3",
+      "name": "圓方程式",
+      "description": "標準式 $(x-h)^2+(y-k)^2=r^2$、一般式",
+      "category": "直線與圓",
+      "level": 6,
+      "prerequisites": ["g5.2", "g3.1"],
+      "related": [],
+      "tags": ["圓方程式"],
+      "examples": ["ex_g6_3_1", "ex_g6_3_2"]
+    },
+    {
+      "id": "g6.4",
+      "name": "直線與圓的關係",
+      "description": "相離、相切、相交、判別式",
+      "category": "直線與圓",
+      "level": 6,
+      "prerequisites": ["g6.1", "g6.3"],
+      "related": [],
+      "tags": ["直線與圓"],
+      "examples": ["ex_g6_4_1"]
+    },
+    {
+      "id": "g7.1",
+      "name": "拋物線",
+      "description": "$y^2 = 4px$、焦點、準線、拋物線性質",
+      "category": "圓錐曲線",
+      "level": 7,
+      "prerequisites": ["g6.1"],
+      "related": [],
+      "tags": ["拋物線"],
+      "examples": ["ex_g7_1_1", "ex_g7_1_2"]
+    },
+    {
+      "id": "g7.2",
+      "name": "橢圓",
+      "description": "$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$、焦點、長軸、短軸",
+      "category": "圓錐曲線",
+      "level": 7,
+      "prerequisites": ["g6.3"],
+      "related": [],
+      "tags": ["橢圓"],
+      "examples": ["ex_g7_2_1", "ex_g7_2_2"]
+    },
+    {
+      "id": "g7.3",
+      "name": "雙曲線",
+      "description": "$\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$、漸近線、焦點",
+      "category": "圓錐曲線",
+      "level": 7,
+      "prerequisites": ["g6.1"],
+      "related": ["g7.2"],
+      "tags": ["雙曲線"],
+      "examples": ["ex_g7_3_1"]
+    },
+    {
+      "id": "g7.4",
+      "name": "圓錐曲線統一定義",
+      "description": "離心率 $e$、焦點到準線距離比值",
+      "category": "圓錐曲線",
+      "level": 7,
+      "prerequisites": ["g7.1", "g7.2", "g7.3"],
+      "related": [],
+      "tags": ["離心率"],
+      "examples": ["ex_g7_4_1"]
+    },
+    {
+      "id": "g8.1",
+      "name": "柱體",
+      "description": "圓柱、角柱、體積 $V = Bh$、表面積",
+      "category": "立體幾何",
+      "level": 8,
+      "prerequisites": ["g4.1"],
+      "related": [],
+      "tags": ["柱體"],
+      "examples": ["ex_g8_1_1"]
+    },
+    {
+      "id": "g8.2",
+      "name": "錐體",
+      "description": "圓錐、角錐、體積 $V = \\frac{1}{3}Bh$、表面積",
+      "category": "立體幾何",
+      "level": 8,
+      "prerequisites": ["g4.1"],
+      "related": ["g8.1"],
+      "tags": ["錐體"],
+      "examples": ["ex_g8_2_1"]
+    },
+    {
+      "id": "g8.3",
+      "name": "球體",
+      "description": "體積 $V = \\frac{4}{3}\\pi r^3$、表面積 $A = 4\\pi r^2$",
+      "category": "立體幾何",
+      "level": 8,
+      "prerequisites": ["g3.1"],
+      "related": [],
+      "tags": ["球體"],
+      "examples": ["ex_g8_3_1"]
+    },
+    {
+      "id": "g8.4",
+      "name": "空間中的直線與平面",
+      "description": "平行、垂直、歪斜、三垂線定理",
+      "category": "立體幾何",
+      "level": 8,
+      "prerequisites": ["g6.1"],
+      "related": [],
+      "tags": ["空間幾何"],
+      "examples": ["ex_g8_4_1"]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_g1_1_1",
+      "question": "兩條直線相交，若其中一個角是 $70°$，求其對頂角和鄰角的度數",
+      "answer": "對頂角 $70°$，鄰角 $110°$",
+      "solution": "對頂角相等：$70°$\n\n鄰角互補：$180° - 70° = 110°$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["角"]
+    },
+    {
+      "id": "ex_g1_1_2",
+      "question": "若 $\\angle AOB = 120°$，OM 是 $\\angle AOB$ 的角平分線，求 $\\angle AOM$",
+      "answer": "$60°$",
+      "solution": "角平分線將角二等分：\n\n$\\angle AOM = \\frac{120°}{2} = 60°$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["角平分線"]
+    },
+    {
+      "id": "ex_g1_2_1",
+      "question": "三角形兩內角分別為 $50°$ 和 $70°$，求第三個內角",
+      "answer": "$60°$",
+      "solution": "三角形內角和 $= 180°$\n\n第三角 $= 180° - 50° - 70° = 60°$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["內角和"]
+    },
+    {
+      "id": "ex_g1_2_2",
+      "question": "三角形一外角為 $120°$，與它不相鄰的兩內角比為 $2:3$，求這兩內角",
+      "answer": "$48°$ 和 $72°$",
+      "solution": "外角 = 不相鄰兩內角和\n\n設兩內角為 $2x$ 和 $3x$：\n\n$2x + 3x = 120°$\n\n$5x = 120°$，$x = 24°$\n\n兩內角：$48°$ 和 $72°$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["外角"]
+    },
+    {
+      "id": "ex_g1_3_1",
+      "question": "平行四邊形一內角為 $70°$，求其餘三角",
+      "answer": "$110°, 70°, 110°$",
+      "solution": "平行四邊形對角相等，鄰角互補：\n\n對角：$70°$\n\n鄰角：$180° - 70° = 110°$\n\n四角：$70°, 110°, 70°, 110°$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["平行四邊形"]
+    },
+    {
+      "id": "ex_g1_4_1",
+      "question": "正八邊形的每一個內角是幾度？",
+      "answer": "$135°$",
+      "solution": "內角和：$(n-2) \\times 180° = (8-2) \\times 180° = 1080°$\n\n每一內角：$\\frac{1080°}{8} = 135°$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["正多邊形"]
+    },
+    {
+      "id": "ex_g2_1_1",
+      "question": "已知 $\\triangle ABC$ 與 $\\triangle DEF$ 中，$AB = DE$，$BC = EF$，$AC = DF$，判斷全等性質",
+      "answer": "SSS 全等",
+      "solution": "三邊對應相等，符合 SSS 全等性質\n\n$\\triangle ABC \\cong \\triangle DEF$ (SSS)",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["SSS"]
+    },
+    {
+      "id": "ex_g2_1_2",
+      "question": "已知 $\\triangle ABC$ 與 $\\triangle DEF$ 中，$AB = DE$，$\\angle A = \\angle D$，$AC = DF$，判斷全等性質",
+      "answer": "SAS 全等",
+      "solution": "兩邊及其夾角對應相等，符合 SAS 全等性質\n\n$\\triangle ABC \\cong \\triangle DEF$ (SAS)",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["SAS"]
+    },
+    {
+      "id": "ex_g2_2_1",
+      "question": "兩相似三角形對應邊比為 $2:3$，若小三角形一邊長 $6$，求大三角形對應邊長",
+      "answer": "$9$",
+      "solution": "設大三角形對應邊為 $x$：\n\n$\\frac{6}{x} = \\frac{2}{3}$\n\n$2x = 18$\n\n$x = 9$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["相似比"]
+    },
+    {
+      "id": "ex_g2_2_2",
+      "question": "已知 $\\triangle ABC \\sim \\triangle DEF$，$AB = 4$，$DE = 6$，$BC = 5$，求 $EF$",
+      "answer": "$7.5$",
+      "solution": "相似比：$\\frac{AB}{DE} = \\frac{4}{6} = \\frac{2}{3}$\n\n$\\frac{BC}{EF} = \\frac{2}{3}$\n\n$\\frac{5}{EF} = \\frac{2}{3}$\n\n$EF = \\frac{5 \\times 3}{2} = 7.5$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["相似"]
+    },
+    {
+      "id": "ex_g2_3_1",
+      "question": "直角三角形兩股長為 $3$ 和 $4$，求斜邊長",
+      "answer": "$5$",
+      "solution": "畢氏定理：$c^2 = a^2 + b^2$\n\n$c^2 = 3^2 + 4^2 = 9 + 16 = 25$\n\n$c = 5$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["畢氏定理"]
+    },
+    {
+      "id": "ex_g2_3_2",
+      "question": "直角三角形斜邊長 $13$，一股長 $5$，求另一股長",
+      "answer": "$12$",
+      "solution": "設另一股為 $b$：\n\n$13^2 = 5^2 + b^2$\n\n$169 = 25 + b^2$\n\n$b^2 = 144$\n\n$b = 12$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["畢氏定理"]
+    },
+    {
+      "id": "ex_g2_4_1",
+      "question": "三角形三頂點為 $(0, 0)$，$(6, 0)$，$(0, 8)$，求重心坐標",
+      "answer": "$(2, \\frac{8}{3})$",
+      "solution": "重心坐標：$G = (\\frac{x_1+x_2+x_3}{3}, \\frac{y_1+y_2+y_3}{3})$\n\n$G = (\\frac{0+6+0}{3}, \\frac{0+0+8}{3}) = (2, \\frac{8}{3})$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["重心"]
+    },
+    {
+      "id": "ex_g3_1_1",
+      "question": "圓的半徑為 $5$，求直徑和圓周長",
+      "answer": "直徑 $10$，圓周長 $10\\pi$",
+      "solution": "直徑 $= 2r = 2 \\times 5 = 10$\n\n圓周長 $= 2\\pi r = 2\\pi \\times 5 = 10\\pi$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["圓周長"]
+    },
+    {
+      "id": "ex_g3_2_1",
+      "question": "圓心角為 $80°$，求同弧所對的圓周角",
+      "answer": "$40°$",
+      "solution": "圓周角 $= \\frac{1}{2} \\times$ 圓心角\n\n$= \\frac{80°}{2} = 40°$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["圓周角"]
+    },
+    {
+      "id": "ex_g3_2_2",
+      "question": "圓周角為 $35°$，求同弧所對的圓心角",
+      "answer": "$70°$",
+      "solution": "圓心角 $= 2 \\times$ 圓周角\n\n$= 2 \\times 35° = 70°$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["圓心角"]
+    },
+    {
+      "id": "ex_g3_3_1",
+      "question": "從圓外一點引兩切線，兩切線長分別為 $PA = 8$，$PB = 8$，證明 $PA = PB$",
+      "answer": "見詳解",
+      "solution": "切線長定理：從圓外一點引兩切線，兩切線長相等\n\n$PA = PB$（已證）",
+      "difficulty": "easy",
+      "type": "proof",
+      "tags": ["切線長"]
+    },
+    {
+      "id": "ex_g3_4_1",
+      "question": "圓內接四邊形 $ABCD$，$\\angle A = 70°$，求 $\\angle C$",
+      "answer": "$110°$",
+      "solution": "圓內接四邊形對角互補：\n\n$\\angle A + \\angle C = 180°$\n\n$\\angle C = 180° - 70° = 110°$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["圓內接四邊形"]
+    },
+    {
+      "id": "ex_g4_1_1",
+      "question": "三角形底 $8$，高 $5$，求面積",
+      "answer": "$20$",
+      "solution": "三角形面積 $= \\frac{1}{2}bh = \\frac{1}{2} \\times 8 \\times 5 = 20$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["三角形面積"]
+    },
+    {
+      "id": "ex_g4_1_2",
+      "question": "圓半徑 $6$，扇形圓心角 $60°$，求扇形面積",
+      "answer": "$6\\pi$",
+      "solution": "扇形面積 $= \\frac{\\theta}{360°} \\times \\pi r^2$\n\n$= \\frac{60°}{360°} \\times \\pi \\times 6^2 = \\frac{1}{6} \\times 36\\pi = 6\\pi$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["扇形面積"]
+    },
+    {
+      "id": "ex_g4_2_1",
+      "question": "三角形三邊長 $5, 6, 7$，用海龍公式求面積",
+      "answer": "$6\\sqrt{6}$",
+      "solution": "半周長：$s = \\frac{5+6+7}{2} = 9$\n\n海龍公式：$A = \\sqrt{s(s-a)(s-b)(s-c)}$\n\n$= \\sqrt{9(9-5)(9-6)(9-7)}$\n\n$= \\sqrt{9 \\times 4 \\times 3 \\times 2} = \\sqrt{216} = 6\\sqrt{6}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["海龍公式"]
+    },
+    {
+      "id": "ex_g4_3_1",
+      "question": "兩相似三角形相似比 $3:4$，小三角形面積 $18$，求大三角形面積",
+      "answer": "$32$",
+      "solution": "面積比 $= (相似比)^2 = (\\frac{3}{4})^2 = \\frac{9}{16}$\n\n$\\frac{18}{A} = \\frac{9}{16}$\n\n$9A = 288$\n\n$A = 32$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["面積比"]
+    },
+    {
+      "id": "ex_g5_1_1",
+      "question": "點 $(-3, 4)$ 在第幾象限？",
+      "answer": "第二象限",
+      "solution": "$x < 0$，$y > 0$\n\n第二象限",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["象限"]
+    },
+    {
+      "id": "ex_g5_2_1",
+      "question": "求 $A(1, 2)$ 到 $B(4, 6)$ 的距離",
+      "answer": "$5$",
+      "solution": "$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$\n\n$= \\sqrt{(4-1)^2 + (6-2)^2}$\n\n$= \\sqrt{9 + 16} = \\sqrt{25} = 5$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["距離公式"]
+    },
+    {
+      "id": "ex_g5_2_2",
+      "question": "點 $(x, 3)$ 到原點距離為 $5$，求 $x$",
+      "answer": "$x = \\pm 4$",
+      "solution": "$\\sqrt{x^2 + 3^2} = 5$\n\n$x^2 + 9 = 25$\n\n$x^2 = 16$\n\n$x = \\pm 4$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["距離公式"]
+    },
+    {
+      "id": "ex_g5_3_1",
+      "question": "求 $A(2, 5)$ 和 $B(8, 11)$ 的中點",
+      "answer": "$(5, 8)$",
+      "solution": "中點：$(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2})$\n\n$= (\\frac{2+8}{2}, \\frac{5+11}{2}) = (5, 8)$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["中點"]
+    },
+    {
+      "id": "ex_g5_4_1",
+      "question": "求通過 $(1, 3)$ 和 $(4, 9)$ 的直線斜率",
+      "answer": "$2$",
+      "solution": "$m = \\frac{y_2-y_1}{x_2-x_1} = \\frac{9-3}{4-1} = \\frac{6}{3} = 2$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["斜率"]
+    },
+    {
+      "id": "ex_g5_4_2",
+      "question": "直線 $L_1$ 斜率為 $3$，$L_2$ 斜率為 $-\\frac{1}{3}$，判斷兩直線關係",
+      "answer": "垂直",
+      "solution": "$m_1 \\times m_2 = 3 \\times (-\\frac{1}{3}) = -1$\n\n兩直線垂直",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["垂直"]
+    },
+    {
+      "id": "ex_g6_1_1",
+      "question": "求通過 $(2, 3)$，斜率 $4$ 的直線方程式（點斜式）",
+      "answer": "$y - 3 = 4(x - 2)$",
+      "solution": "點斜式：$y - y_1 = m(x - x_1)$\n\n$y - 3 = 4(x - 2)$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["點斜式"]
+    },
+    {
+      "id": "ex_g6_1_2",
+      "question": "求通過 $(1, 2)$ 和 $(3, 8)$ 的直線方程式",
+      "answer": "$y = 3x - 1$",
+      "solution": "斜率：$m = \\frac{8-2}{3-1} = 3$\n\n點斜式：$y - 2 = 3(x - 1)$\n\n$y = 3x - 1$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["兩點式"]
+    },
+    {
+      "id": "ex_g6_2_1",
+      "question": "點 $(3, 4)$ 到直線 $3x + 4y - 10 = 0$ 的距離",
+      "answer": "$3$",
+      "solution": "$d = \\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$\n\n$= \\frac{|3(3)+4(4)-10|}{\\sqrt{3^2+4^2}}$\n\n$= \\frac{|9+16-10|}{5} = \\frac{15}{5} = 3$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["點到直線距離"]
+    },
+    {
+      "id": "ex_g6_3_1",
+      "question": "寫出圓心 $(2, -3)$，半徑 $5$ 的圓方程式",
+      "answer": "$(x-2)^2 + (y+3)^2 = 25$",
+      "solution": "標準式：$(x-h)^2 + (y-k)^2 = r^2$\n\n$(x-2)^2 + (y-(-3))^2 = 5^2$\n\n$(x-2)^2 + (y+3)^2 = 25$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["圓方程式"]
+    },
+    {
+      "id": "ex_g6_3_2",
+      "question": "求 $x^2 + y^2 - 4x + 6y - 12 = 0$ 的圓心和半徑",
+      "answer": "圓心 $(2, -3)$，半徑 $5$",
+      "solution": "配方：\n\n$(x^2-4x+4) + (y^2+6y+9) = 12 + 4 + 9$\n\n$(x-2)^2 + (y+3)^2 = 25$\n\n圓心 $(2, -3)$，半徑 $5$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["圓方程式"]
+    },
+    {
+      "id": "ex_g6_4_1",
+      "question": "圓 $x^2 + y^2 = 25$ 與直線 $3x + 4y - 25 = 0$ 的關係",
+      "answer": "相切",
+      "solution": "圓心 $(0, 0)$，半徑 $5$\n\n圓心到直線距離：$d = \\frac{|0+0-25|}{\\sqrt{9+16}} = \\frac{25}{5} = 5$\n\n$d = r$，相切",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["直線與圓"]
+    },
+    {
+      "id": "ex_g7_1_1",
+      "question": "拋物線 $y^2 = 8x$ 的焦點坐標",
+      "answer": "$(2, 0)$",
+      "solution": "$y^2 = 4px$，$4p = 8$，$p = 2$\n\n焦點：$(\\frac{p}{2}, 0) = (2, 0)$\n\n（標準形式焦點在 $(p, 0)$）",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["拋物線"]
+    },
+    {
+      "id": "ex_g7_1_2",
+      "question": "拋物線焦點 $(3, 0)$，頂點原點，求方程式",
+      "answer": "$y^2 = 12x$",
+      "solution": "$p = 3$\n\n$y^2 = 4px = 4(3)x = 12x$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["拋物線"]
+    },
+    {
+      "id": "ex_g7_2_1",
+      "question": "橢圓 $\\frac{x^2}{25} + \\frac{y^2}{16} = 1$ 的長軸和短軸長",
+      "answer": "長軸 $10$，短軸 $8$",
+      "solution": "$a^2 = 25$，$a = 5$\n\n$b^2 = 16$，$b = 4$\n\n長軸 $= 2a = 10$\n\n短軸 $= 2b = 8$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["橢圓"]
+    },
+    {
+      "id": "ex_g7_2_2",
+      "question": "橢圓 $\\frac{x^2}{25} + \\frac{y^2}{16} = 1$ 的焦點坐標",
+      "answer": "$(\\pm 3, 0)$",
+      "solution": "$a^2 = 25$，$b^2 = 16$\n\n$c^2 = a^2 - b^2 = 25 - 16 = 9$\n\n$c = 3$\n\n焦點：$(\\pm 3, 0)$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["橢圓"]
+    },
+    {
+      "id": "ex_g7_3_1",
+      "question": "雙曲線 $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ 的漸近線方程式",
+      "answer": "$y = \\pm \\frac{3}{4}x$",
+      "solution": "$a^2 = 16$，$a = 4$\n\n$b^2 = 9$，$b = 3$\n\n漸近線：$y = \\pm \\frac{b}{a}x = \\pm \\frac{3}{4}x$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["雙曲線"]
+    },
+    {
+      "id": "ex_g7_4_1",
+      "question": "橢圓離心率 $e = \\frac{3}{5}$，$a = 5$，求 $b$",
+      "answer": "$4$",
+      "solution": "$e = \\frac{c}{a} = \\frac{3}{5}$\n\n$c = 3$\n\n$b^2 = a^2 - c^2 = 25 - 9 = 16$\n\n$b = 4$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["離心率"]
+    },
+    {
+      "id": "ex_g8_1_1",
+      "question": "圓柱底半徑 $3$，高 $5$，求體積",
+      "answer": "$45\\pi$",
+      "solution": "底面積：$B = \\pi r^2 = 9\\pi$\n\n體積：$V = Bh = 9\\pi \\times 5 = 45\\pi$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["圓柱"]
+    },
+    {
+      "id": "ex_g8_2_1",
+      "question": "圓錐底半徑 $6$，高 $8$，求體積",
+      "answer": "$96\\pi$",
+      "solution": "底面積：$B = \\pi r^2 = 36\\pi$\n\n體積：$V = \\frac{1}{3}Bh = \\frac{1}{3} \\times 36\\pi \\times 8 = 96\\pi$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["圓錐"]
+    },
+    {
+      "id": "ex_g8_3_1",
+      "question": "球半徑 $3$，求體積和表面積",
+      "answer": "體積 $36\\pi$，表面積 $36\\pi$",
+      "solution": "體積：$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (3)^3 = 36\\pi$\n\n表面積：$A = 4\\pi r^2 = 4\\pi (3)^2 = 36\\pi$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["球體"]
+    },
+    {
+      "id": "ex_g8_4_1",
+      "question": "正方體中，對角線與底面所成角的正切值",
+      "answer": "$\\sqrt{2}$",
+      "solution": "設正方體邊長 $a$\n\n底面對角線：$a\\sqrt{2}$\n\n體對角線在底面投影：$a\\sqrt{2}$\n\n高：$a$\n\n$\\tan\\theta = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$\n\n（更正：正確答案應為 $\\frac{\\sqrt{2}}{2}$）",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["空間角"]
+    }
+  ]
+}

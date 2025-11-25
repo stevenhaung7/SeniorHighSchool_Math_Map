@@ -1,0 +1,634 @@
+{
+  "topic": "離散數學",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-26",
+  "nodes": [
+    {
+      "id": "dm1.1",
+      "name": "命題",
+      "description": "真假值、邏輯變數",
+      "category": "邏輯",
+      "level": 1,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["命題"],
+      "examples": ["ex_dm1_1_1"]
+    },
+    {
+      "id": "dm1.2",
+      "name": "邏輯運算子",
+      "description": "否定 $\\neg$、且 $\\land$、或 $\\lor$、蘊含 $\\rightarrow$、若且唯若 $\\leftrightarrow$",
+      "category": "邏輯",
+      "level": 1,
+      "prerequisites": ["dm1.1"],
+      "related": [],
+      "tags": ["邏輯運算"],
+      "examples": ["ex_dm1_2_1", "ex_dm1_2_2"]
+    },
+    {
+      "id": "dm1.3",
+      "name": "真值表",
+      "description": "列舉所有可能的真假組合",
+      "category": "邏輯",
+      "level": 1,
+      "prerequisites": ["dm1.2"],
+      "related": [],
+      "tags": ["真值表"],
+      "examples": ["ex_dm1_3_1"]
+    },
+    {
+      "id": "dm1.4",
+      "name": "邏輯等價",
+      "description": "德摩根定律、分配律、吸收律",
+      "category": "邏輯",
+      "level": 1,
+      "prerequisites": ["dm1.3"],
+      "related": [],
+      "tags": ["邏輯等價"],
+      "examples": ["ex_dm1_4_1"]
+    },
+    {
+      "id": "dm2.1",
+      "name": "量詞",
+      "description": "全稱量詞 $\\forall$、存在量詞 $\\exists$",
+      "category": "述詞邏輯",
+      "level": 2,
+      "prerequisites": ["dm1.1"],
+      "related": [],
+      "tags": ["量詞"],
+      "examples": ["ex_dm2_1_1"]
+    },
+    {
+      "id": "dm2.2",
+      "name": "證明方法",
+      "description": "直接證明、反證法、數學歸納法",
+      "category": "述詞邏輯",
+      "level": 2,
+      "prerequisites": ["dm1.2"],
+      "related": [],
+      "tags": ["證明"],
+      "examples": ["ex_dm2_2_1", "ex_dm2_2_2"]
+    },
+    {
+      "id": "dm3.1",
+      "name": "集合定義",
+      "description": "元素 $\\in$、空集合 $\\emptyset$、子集 $\\subseteq$",
+      "category": "集合論",
+      "level": 3,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["集合"],
+      "examples": ["ex_dm3_1_1"]
+    },
+    {
+      "id": "dm3.2",
+      "name": "集合運算",
+      "description": "聯集 $\\cup$、交集 $\\cap$、差集 $-$、補集 $A^c$",
+      "category": "集合論",
+      "level": 3,
+      "prerequisites": ["dm3.1"],
+      "related": [],
+      "tags": ["集合運算"],
+      "examples": ["ex_dm3_2_1", "ex_dm3_2_2"]
+    },
+    {
+      "id": "dm3.3",
+      "name": "集合恆等式",
+      "description": "德摩根定律、分配律、吸收律",
+      "category": "集合論",
+      "level": 3,
+      "prerequisites": ["dm3.2"],
+      "related": ["dm1.4"],
+      "tags": ["集合恆等式"],
+      "examples": ["ex_dm3_3_1"]
+    },
+    {
+      "id": "dm3.4",
+      "name": "冪集合與卡氏積",
+      "description": "$\\mathcal{P}(A)$、$A \\times B$",
+      "category": "集合論",
+      "level": 3,
+      "prerequisites": ["dm3.1"],
+      "related": [],
+      "tags": ["冪集合"],
+      "examples": ["ex_dm3_4_1"]
+    },
+    {
+      "id": "dm4.1",
+      "name": "關係定義",
+      "description": "二元關係 $R \\subseteq A \\times B$",
+      "category": "關係",
+      "level": 4,
+      "prerequisites": ["dm3.4"],
+      "related": [],
+      "tags": ["關係"],
+      "examples": ["ex_dm4_1_1"]
+    },
+    {
+      "id": "dm4.2",
+      "name": "關係性質",
+      "description": "反身性、對稱性、遞移性",
+      "category": "關係",
+      "level": 4,
+      "prerequisites": ["dm4.1"],
+      "related": [],
+      "tags": ["關係性質"],
+      "examples": ["ex_dm4_2_1"]
+    },
+    {
+      "id": "dm4.3",
+      "name": "等價關係",
+      "description": "反身、對稱、遞移 → 等價類、分割",
+      "category": "關係",
+      "level": 4,
+      "prerequisites": ["dm4.2"],
+      "related": [],
+      "tags": ["等價關係"],
+      "examples": ["ex_dm4_3_1"]
+    },
+    {
+      "id": "dm4.4",
+      "name": "偏序關係",
+      "description": "反身、反對稱、遞移 → Hasse 圖",
+      "category": "關係",
+      "level": 4,
+      "prerequisites": ["dm4.2"],
+      "related": [],
+      "tags": ["偏序"],
+      "examples": ["ex_dm4_4_1"]
+    },
+    {
+      "id": "dm5.1",
+      "name": "函數定義",
+      "description": "單射、滿射、雙射",
+      "category": "函數",
+      "level": 5,
+      "prerequisites": ["dm4.1"],
+      "related": [],
+      "tags": ["函數"],
+      "examples": ["ex_dm5_1_1", "ex_dm5_1_2"]
+    },
+    {
+      "id": "dm5.2",
+      "name": "反函數與合成",
+      "description": "$f^{-1}$、$f \\circ g$",
+      "category": "函數",
+      "level": 5,
+      "prerequisites": ["dm5.1"],
+      "related": [],
+      "tags": ["函數合成"],
+      "examples": ["ex_dm5_2_1"]
+    },
+    {
+      "id": "dm5.3",
+      "name": "遞迴定義",
+      "description": "遞迴函數、費氏數列、階乘",
+      "category": "函數",
+      "level": 5,
+      "prerequisites": ["dm5.1"],
+      "related": [],
+      "tags": ["遞迴"],
+      "examples": ["ex_dm5_3_1"]
+    },
+    {
+      "id": "dm6.1",
+      "name": "圖的定義",
+      "description": "頂點 $V$、邊 $E$、無向圖、有向圖",
+      "category": "圖論",
+      "level": 6,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["圖"],
+      "examples": ["ex_dm6_1_1"]
+    },
+    {
+      "id": "dm6.2",
+      "name": "圖的表示",
+      "description": "鄰接矩陣、鄰接串列",
+      "category": "圖論",
+      "level": 6,
+      "prerequisites": ["dm6.1"],
+      "related": [],
+      "tags": ["圖表示"],
+      "examples": ["ex_dm6_2_1"]
+    },
+    {
+      "id": "dm6.3",
+      "name": "路徑與迴路",
+      "description": "路徑、簡單路徑、迴路、歐拉路徑、漢米爾頓路徑",
+      "category": "圖論",
+      "level": 6,
+      "prerequisites": ["dm6.1"],
+      "related": [],
+      "tags": ["路徑"],
+      "examples": ["ex_dm6_3_1"]
+    },
+    {
+      "id": "dm6.4",
+      "name": "連通性",
+      "description": "連通圖、連通分量、強連通",
+      "category": "圖論",
+      "level": 6,
+      "prerequisites": ["dm6.3"],
+      "related": [],
+      "tags": ["連通性"],
+      "examples": ["ex_dm6_4_1"]
+    },
+    {
+      "id": "dm7.1",
+      "name": "樹",
+      "description": "無迴路連通圖、根、葉、高度",
+      "category": "樹與圖應用",
+      "level": 7,
+      "prerequisites": ["dm6.1"],
+      "related": [],
+      "tags": ["樹"],
+      "examples": ["ex_dm7_1_1"]
+    },
+    {
+      "id": "dm7.2",
+      "name": "生成樹",
+      "description": "最小生成樹、Kruskal、Prim 演算法",
+      "category": "樹與圖應用",
+      "level": 7,
+      "prerequisites": ["dm7.1"],
+      "related": [],
+      "tags": ["生成樹"],
+      "examples": ["ex_dm7_2_1"]
+    },
+    {
+      "id": "dm7.3",
+      "name": "二元樹",
+      "description": "完全二元樹、二元搜尋樹、遍歷",
+      "category": "樹與圖應用",
+      "level": 7,
+      "prerequisites": ["dm7.1"],
+      "related": [],
+      "tags": ["二元樹"],
+      "examples": ["ex_dm7_3_1"]
+    },
+    {
+      "id": "dm7.4",
+      "name": "圖著色",
+      "description": "頂點著色、色數、四色定理",
+      "category": "樹與圖應用",
+      "level": 7,
+      "prerequisites": ["dm6.1"],
+      "related": [],
+      "tags": ["圖著色"],
+      "examples": ["ex_dm7_4_1"]
+    },
+    {
+      "id": "dm8.1",
+      "name": "整除性",
+      "description": "$a \\mid b$、質數、合成數",
+      "category": "數論",
+      "level": 8,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["整除"],
+      "examples": ["ex_dm8_1_1"]
+    },
+    {
+      "id": "dm8.2",
+      "name": "最大公因數與最小公倍數",
+      "description": "$\\gcd(a, b)$、$\\text{lcm}(a, b)$、輾轉相除法",
+      "category": "數論",
+      "level": 8,
+      "prerequisites": ["dm8.1"],
+      "related": [],
+      "tags": ["GCD"],
+      "examples": ["ex_dm8_2_1", "ex_dm8_2_2"]
+    },
+    {
+      "id": "dm8.3",
+      "name": "模運算",
+      "description": "$a \\equiv b \\pmod{n}$、同餘性質",
+      "category": "數論",
+      "level": 8,
+      "prerequisites": ["dm8.1"],
+      "related": [],
+      "tags": ["模運算"],
+      "examples": ["ex_dm8_3_1"]
+    },
+    {
+      "id": "dm8.4",
+      "name": "密碼學應用",
+      "description": "RSA、費馬小定理、歐拉函數",
+      "category": "數論",
+      "level": 8,
+      "prerequisites": ["dm8.3"],
+      "related": [],
+      "tags": ["密碼學"],
+      "examples": ["ex_dm8_4_1"]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_dm1_1_1",
+      "question": "「$2 + 2 = 5$」是命題嗎？",
+      "answer": "是（假命題）",
+      "solution": "命題是有明確真假值的陳述句\n\n此句為假，但仍是命題",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["命題"]
+    },
+    {
+      "id": "ex_dm1_2_1",
+      "question": "$p \\land q$ 何時為真？",
+      "answer": "$p$ 和 $q$ 都為真",
+      "solution": "邏輯且 ($\\land$)：兩者都為真時才為真\n\n$T \\land T = T$\n$T \\land F = F$\n$F \\land T = F$\n$F \\land F = F$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["邏輯運算"]
+    },
+    {
+      "id": "ex_dm1_2_2",
+      "question": "$p \\rightarrow q$ 何時為假？",
+      "answer": "$p$ 為真且 $q$ 為假",
+      "solution": "蘊含 ($\\rightarrow$)：只在 $p$ 真 $q$ 假時為假\n\n$T \\rightarrow T = T$\n$T \\rightarrow F = F$（唯一假的情況）\n$F \\rightarrow T = T$\n$F \\rightarrow F = T$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["邏輯運算"]
+    },
+    {
+      "id": "ex_dm1_3_1",
+      "question": "建立 $\\neg(p \\land q)$ 的真值表",
+      "answer": "當 $p, q$ 至少一個為假時為真",
+      "solution": "$p$ | $q$ | $p \\land q$ | $\\neg(p \\land q)$\nT | T | T | F\nT | F | F | T\nF | T | F | T\nF | F | F | T",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["真值表"]
+    },
+    {
+      "id": "ex_dm1_4_1",
+      "question": "德摩根定律：$\\neg(p \\land q) = ?$",
+      "answer": "$\\neg p \\lor \\neg q$",
+      "solution": "德摩根定律：\n\n$\\neg(p \\land q) \\equiv \\neg p \\lor \\neg q$\n$\\neg(p \\lor q) \\equiv \\neg p \\land \\neg q$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["邏輯等價"]
+    },
+    {
+      "id": "ex_dm2_1_1",
+      "question": "$\\forall x \\in \\mathbb{N}, x \\geq 0$ 的意義？",
+      "answer": "所有自然數都大於等於 0",
+      "solution": "全稱量詞 $\\forall$（對所有）：\n\n對於所有自然數 $x$，$x \\geq 0$ 都成立",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["量詞"]
+    },
+    {
+      "id": "ex_dm2_2_1",
+      "question": "反證法的步驟？",
+      "answer": "假設結論為假，推導出矛盾",
+      "solution": "反證法：\n1. 假設欲證明的結論為假\n2. 推導邏輯結果\n3. 得到矛盾\n4. 結論原假設錯誤，命題為真",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["證明"]
+    },
+    {
+      "id": "ex_dm2_2_2",
+      "question": "數學歸納法的步驟？",
+      "answer": "基底步驟 + 歸納步驟",
+      "solution": "數學歸納法：\n1. 基底：證明 $P(1)$ 成立\n2. 歸納：假設 $P(k)$ 成立，證明 $P(k+1)$ 成立\n3. 結論：對所有 $n \\geq 1$，$P(n)$ 成立",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["證明"]
+    },
+    {
+      "id": "ex_dm3_1_1",
+      "question": "$\\{1, 2\\} \\subseteq \\{1, 2, 3\\}$ 正確嗎？",
+      "answer": "正確",
+      "solution": "$A \\subseteq B$ 表示 $A$ 的所有元素都在 $B$ 中\n\n$\\{1, 2\\}$ 的元素都在 $\\{1, 2, 3\\}$ 中，所以正確",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["集合"]
+    },
+    {
+      "id": "ex_dm3_2_1",
+      "question": "$\\{1, 2, 3\\} \\cup \\{3, 4, 5\\} = ?$",
+      "answer": "$\\{1, 2, 3, 4, 5\\}$",
+      "solution": "聯集 ($\\cup$)：所有在 $A$ 或 $B$ 中的元素\n\n$= \\{1, 2, 3, 4, 5\\}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["集合運算"]
+    },
+    {
+      "id": "ex_dm3_2_2",
+      "question": "$\\{1, 2, 3\\} \\cap \\{2, 3, 4\\} = ?$",
+      "answer": "$\\{2, 3\\}$",
+      "solution": "交集 ($\\cap$)：同時在 $A$ 和 $B$ 中的元素\n\n$= \\{2, 3\\}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["集合運算"]
+    },
+    {
+      "id": "ex_dm3_3_1",
+      "question": "集合的德摩根定律：$(A \\cup B)^c = ?$",
+      "answer": "$A^c \\cap B^c$",
+      "solution": "德摩根定律：\n\n$(A \\cup B)^c = A^c \\cap B^c$\n$(A \\cap B)^c = A^c \\cup B^c$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["集合恆等式"]
+    },
+    {
+      "id": "ex_dm3_4_1",
+      "question": "$\\{1, 2\\}$ 的冪集合有幾個元素？",
+      "answer": "$4$ 個",
+      "solution": "$\\mathcal{P}(\\{1, 2\\}) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$\n\n冪集合有 $2^n$ 個元素，$n = 2$，所以有 $2^2 = 4$ 個",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["冪集合"]
+    },
+    {
+      "id": "ex_dm4_1_1",
+      "question": "若 $A = \\{1, 2\\}$，$B = \\{3, 4\\}$，$A \\times B = ?$",
+      "answer": "$\\{(1,3), (1,4), (2,3), (2,4)\\}$",
+      "solution": "卡氏積：所有有序對 $(a, b)$，其中 $a \\in A$，$b \\in B$\n\n$A \\times B = \\{(1,3), (1,4), (2,3), (2,4)\\}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["關係"]
+    },
+    {
+      "id": "ex_dm4_2_1",
+      "question": "「$=$」關係具有哪些性質？",
+      "answer": "反身、對稱、遞移",
+      "solution": "反身：$a = a$\n對稱：若 $a = b$ 則 $b = a$\n遞移：若 $a = b$ 且 $b = c$ 則 $a = c$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["關係性質"]
+    },
+    {
+      "id": "ex_dm4_3_1",
+      "question": "等價關係會產生什麼？",
+      "answer": "等價類與分割",
+      "solution": "等價關係將集合分割成互斥的等價類\n\n例如：整數模 3 的等價關係產生 $[0], [1], [2]$ 三個等價類",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["等價關係"]
+    },
+    {
+      "id": "ex_dm4_4_1",
+      "question": "偏序關係必須滿足什麼性質？",
+      "answer": "反身、反對稱、遞移",
+      "solution": "偏序關係：\n1. 反身：$a \\leq a$\n2. 反對稱：若 $a \\leq b$ 且 $b \\leq a$ 則 $a = b$\n3. 遞移：若 $a \\leq b$ 且 $b \\leq c$ 則 $a \\leq c$",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["偏序"]
+    },
+    {
+      "id": "ex_dm5_1_1",
+      "question": "什麼是單射函數？",
+      "answer": "不同的輸入對應不同的輸出",
+      "solution": "單射 (one-to-one)：若 $f(x_1) = f(x_2)$ 則 $x_1 = x_2$\n\n沒有兩個不同的輸入對應到相同輸出",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["函數"]
+    },
+    {
+      "id": "ex_dm5_1_2",
+      "question": "什麼是滿射函數？",
+      "answer": "每個輸出都至少有一個輸入對應",
+      "solution": "滿射 (onto)：對於所有 $y \\in B$，存在 $x \\in A$ 使得 $f(x) = y$\n\n值域 = 對應域",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["函數"]
+    },
+    {
+      "id": "ex_dm5_2_1",
+      "question": "若 $f(x) = 2x$，$g(x) = x + 1$，求 $(f \\circ g)(x)$",
+      "answer": "$2x + 2$",
+      "solution": "$(f \\circ g)(x) = f(g(x)) = f(x+1) = 2(x+1) = 2x + 2$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["函數合成"]
+    },
+    {
+      "id": "ex_dm5_3_1",
+      "question": "費氏數列的遞迴定義？",
+      "answer": "$F(0) = 0$，$F(1) = 1$，$F(n) = F(n-1) + F(n-2)$",
+      "solution": "費氏數列：\n$F(0) = 0$\n$F(1) = 1$\n$F(n) = F(n-1) + F(n-2)$ for $n \\geq 2$\n\n數列：0, 1, 1, 2, 3, 5, 8, 13, ...",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["遞迴"]
+    },
+    {
+      "id": "ex_dm6_1_1",
+      "question": "完全圖 $K_4$ 有幾條邊？",
+      "answer": "$6$ 條",
+      "solution": "完全圖 $K_n$：$n$ 個頂點，每兩點間都有邊\n\n邊數 $= \\binom{n}{2} = \\frac{n(n-1)}{2}$\n\n$K_4$ 有 $\\frac{4 \\times 3}{2} = 6$ 條邊",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["圖"]
+    },
+    {
+      "id": "ex_dm6_2_1",
+      "question": "鄰接矩陣表示圖的優缺點？",
+      "answer": "優：查詢快；缺：空間大",
+      "solution": "鄰接矩陣 ($n \\times n$)：\n優點：查詢兩點是否相鄰為 $O(1)$\n缺點：空間複雜度 $O(n^2)$，稀疏圖浪費空間\n\n鄰接串列適合稀疏圖",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["圖表示"]
+    },
+    {
+      "id": "ex_dm6_3_1",
+      "question": "歐拉路徑的存在條件？",
+      "answer": "恰有 0 或 2 個奇度頂點",
+      "solution": "歐拉路徑（經過每條邊恰一次）：\n- 0 個奇度頂點：歐拉迴路\n- 2 個奇度頂點：歐拉路徑（非迴路）\n- 其他：不存在",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["路徑"]
+    },
+    {
+      "id": "ex_dm6_4_1",
+      "question": "連通圖的定義？",
+      "answer": "任意兩點間都存在路徑",
+      "solution": "連通圖：對於任意兩個頂點 $u, v$，存在從 $u$ 到 $v$ 的路徑\n\n若不連通，圖可分為多個連通分量",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["連通性"]
+    },
+    {
+      "id": "ex_dm7_1_1",
+      "question": "$n$ 個頂點的樹有幾條邊？",
+      "answer": "$n - 1$ 條",
+      "solution": "樹的性質：\n- 連通且無迴路\n- $n$ 個頂點恰有 $n-1$ 條邊\n- 任意兩點間恰有一條路徑",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["樹"]
+    },
+    {
+      "id": "ex_dm7_2_1",
+      "question": "最小生成樹的應用？",
+      "answer": "網路設計、道路規劃、最小成本連接",
+      "solution": "最小生成樹 (MST)：\n連接所有頂點且總權重最小的樹\n\n應用：\n- 網路佈線\n- 道路建設\n- 電路設計",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["生成樹"]
+    },
+    {
+      "id": "ex_dm7_3_1",
+      "question": "二元搜尋樹的性質？",
+      "answer": "左子樹 < 根 < 右子樹",
+      "solution": "二元搜尋樹 (BST)：\n- 左子樹所有節點 < 根節點\n- 右子樹所有節點 > 根節點\n- 中序遍歷得到遞增序列",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["二元樹"]
+    },
+    {
+      "id": "ex_dm7_4_1",
+      "question": "四色定理的內容？",
+      "answer": "任何平面圖最多需要 4 種顏色著色",
+      "solution": "四色定理：\n任何平面圖的頂點都可以用最多 4 種顏色著色，使相鄰頂點顏色不同\n\n（最早用計算機證明的定理）",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["圖著色"]
+    },
+    {
+      "id": "ex_dm8_1_1",
+      "question": "$12$ 的所有正因數？",
+      "answer": "$1, 2, 3, 4, 6, 12$",
+      "solution": "$12 = 2^2 \\times 3$\n\n正因數：$1, 2, 3, 4, 6, 12$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["整除"]
+    },
+    {
+      "id": "ex_dm8_2_1",
+      "question": "求 $\\gcd(48, 18)$",
+      "answer": "$6$",
+      "solution": "輾轉相除法：\n$48 = 18 \\times 2 + 12$\n$18 = 12 \\times 1 + 6$\n$12 = 6 \\times 2 + 0$\n\n$\\gcd(48, 18) = 6$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["GCD"]
+    },
+    {
+      "id": "ex_dm8_2_2",
+      "question": "$\\gcd(a, b) \\times \\text{lcm}(a, b) = ?$",
+      "answer": "$a \\times b$",
+      "solution": "性質：$\\gcd(a, b) \\times \\text{lcm}(a, b) = a \\times b$\n\n例：$\\gcd(12, 18) = 6$，$\\text{lcm}(12, 18) = 36$\n$6 \\times 36 = 216 = 12 \\times 18$",
+      "difficulty": "medium",
+      "type": "choice",
+      "tags": ["GCD"]
+    },
+    {
+      "id": "ex_dm8_3_1",
+      "question": "$17 \\equiv ? \\pmod{5}$",
+      "answer": "$2$",
+      "solution": "$17 = 5 \\times 3 + 2$\n\n$17 \\equiv 2 \\pmod{5}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["模運算"]
+    },
+    {
+      "id": "ex_dm8_4_1",
+      "question": "RSA 加密的數學基礎？",
+      "answer": "大質數分解困難性、模指數運算",
+      "solution": "RSA 基於：\n1. 大數質因數分解困難\n2. 模指數運算\n3. 歐拉函數與費馬小定理\n\n公鑰：$(n, e)$\n私鑰：$(n, d)$\n加密：$c = m^e \\bmod n$\n解密：$m = c^d \\bmod n$",
+      "difficulty": "hard",
+      "type": "choice",
+      "tags": ["密碼學"]
+    }
+  ]
+}

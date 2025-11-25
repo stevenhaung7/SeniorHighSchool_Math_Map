@@ -1,0 +1,921 @@
+{
+  "topic": "代數",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-25",
+  "nodes": [
+    {
+      "id": "a1.1",
+      "name": "數的運算",
+      "description": "整數、有理數、實數、四則運算、運算律",
+      "category": "基礎運算",
+      "level": 1,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["數系", "四則運算"],
+      "examples": ["ex_a1_1_1", "ex_a1_1_2"]
+    },
+    {
+      "id": "a1.2",
+      "name": "代數式",
+      "description": "文字符號、代數式的值、同類項",
+      "category": "基礎運算",
+      "level": 1,
+      "prerequisites": ["a1.1"],
+      "related": [],
+      "tags": ["代數式", "化簡"],
+      "examples": ["ex_a1_2_1", "ex_a1_2_2"]
+    },
+    {
+      "id": "a1.3",
+      "name": "指數律",
+      "description": "$a^m \\cdot a^n = a^{m+n}$、$(a^m)^n = a^{mn}$、負指數、零指數",
+      "category": "基礎運算",
+      "level": 1,
+      "prerequisites": ["a1.1"],
+      "related": [],
+      "tags": ["指數", "指數律"],
+      "examples": ["ex_a1_3_1", "ex_a1_3_2"]
+    },
+    {
+      "id": "a1.4",
+      "name": "根式運算",
+      "description": "平方根、$\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$、有理化",
+      "category": "基礎運算",
+      "level": 1,
+      "prerequisites": ["a1.1"],
+      "related": ["a1.3"],
+      "tags": ["根式", "有理化"],
+      "examples": ["ex_a1_4_1", "ex_a1_4_2"]
+    },
+    {
+      "id": "a2.1",
+      "name": "一元一次方程式",
+      "description": "$ax + b = 0$、移項、解方程式",
+      "category": "方程式",
+      "level": 2,
+      "prerequisites": ["a1.2"],
+      "related": [],
+      "tags": ["方程式", "一次"],
+      "examples": ["ex_a2_1_1", "ex_a2_1_2"]
+    },
+    {
+      "id": "a2.2",
+      "name": "一元二次方程式",
+      "description": "$ax^2 + bx + c = 0$、因式分解法、配方法、公式解",
+      "category": "方程式",
+      "level": 2,
+      "prerequisites": ["a2.1"],
+      "related": [],
+      "tags": ["方程式", "二次"],
+      "examples": ["ex_a2_2_1", "ex_a2_2_2", "ex_a2_2_3"]
+    },
+    {
+      "id": "a2.3",
+      "name": "根與係數",
+      "description": "韋達定理、$x_1 + x_2 = -\\frac{b}{a}$、$x_1 x_2 = \\frac{c}{a}$",
+      "category": "方程式",
+      "level": 2,
+      "prerequisites": ["a2.2"],
+      "related": [],
+      "tags": ["韋達定理", "根與係數"],
+      "examples": ["ex_a2_3_1", "ex_a2_3_2"]
+    },
+    {
+      "id": "a2.4",
+      "name": "聯立方程式",
+      "description": "二元一次、代入消去法、加減消去法",
+      "category": "方程式",
+      "level": 2,
+      "prerequisites": ["a2.1"],
+      "related": [],
+      "tags": ["聯立方程式"],
+      "examples": ["ex_a2_4_1", "ex_a2_4_2"]
+    },
+    {
+      "id": "a2.5",
+      "name": "高次方程式",
+      "description": "三次以上、因式分解、有理根檢驗",
+      "category": "方程式",
+      "level": 2,
+      "prerequisites": ["a2.2"],
+      "related": ["a3.2"],
+      "tags": ["高次方程式"],
+      "examples": ["ex_a2_5_1"]
+    },
+    {
+      "id": "a3.1",
+      "name": "一元一次不等式",
+      "description": "$ax + b > 0$、不等號方向、數線表示",
+      "category": "不等式",
+      "level": 3,
+      "prerequisites": ["a2.1"],
+      "related": [],
+      "tags": ["不等式", "一次"],
+      "examples": ["ex_a3_1_1", "ex_a3_1_2"]
+    },
+    {
+      "id": "a3.2",
+      "name": "一元二次不等式",
+      "description": "$ax^2 + bx + c > 0$、圖解法、判別式",
+      "category": "不等式",
+      "level": 3,
+      "prerequisites": ["a2.2", "a3.1"],
+      "related": [],
+      "tags": ["不等式", "二次"],
+      "examples": ["ex_a3_2_1", "ex_a3_2_2"]
+    },
+    {
+      "id": "a3.3",
+      "name": "絕對值不等式",
+      "description": "$|x| < a$、$|x - a| < b$、分類討論",
+      "category": "不等式",
+      "level": 3,
+      "prerequisites": ["a3.1"],
+      "related": [],
+      "tags": ["絕對值", "不等式"],
+      "examples": ["ex_a3_3_1", "ex_a3_3_2"]
+    },
+    {
+      "id": "a3.4",
+      "name": "算幾不等式",
+      "description": "算術-幾何平均 $\\frac{a+b}{2} \\geq \\sqrt{ab}$、應用",
+      "category": "不等式",
+      "level": 3,
+      "prerequisites": ["a1.4"],
+      "related": [],
+      "tags": ["AM-GM", "不等式"],
+      "examples": ["ex_a3_4_1"]
+    },
+    {
+      "id": "a4.1",
+      "name": "多項式基礎",
+      "description": "次數、係數、首項係數、常數項",
+      "category": "多項式",
+      "level": 4,
+      "prerequisites": ["a1.2"],
+      "related": [],
+      "tags": ["多項式"],
+      "examples": ["ex_a4_1_1"]
+    },
+    {
+      "id": "a4.2",
+      "name": "多項式運算",
+      "description": "加減乘除、長除法、綜合除法",
+      "category": "多項式",
+      "level": 4,
+      "prerequisites": ["a4.1"],
+      "related": [],
+      "tags": ["多項式運算"],
+      "examples": ["ex_a4_2_1", "ex_a4_2_2"]
+    },
+    {
+      "id": "a4.3",
+      "name": "因式分解",
+      "description": "提公因式、乘法公式、十字交乘、分組分解",
+      "category": "多項式",
+      "level": 4,
+      "prerequisites": ["a4.1"],
+      "related": [],
+      "tags": ["因式分解"],
+      "examples": ["ex_a4_3_1", "ex_a4_3_2", "ex_a4_3_3"]
+    },
+    {
+      "id": "a4.4",
+      "name": "餘式定理與因式定理",
+      "description": "餘式定理、因式定理、綜合除法應用",
+      "category": "多項式",
+      "level": 4,
+      "prerequisites": ["a4.2"],
+      "related": [],
+      "tags": ["餘式", "因式"],
+      "examples": ["ex_a4_4_1", "ex_a4_4_2"]
+    },
+    {
+      "id": "a5.1",
+      "name": "等差數列",
+      "description": "首項 $a$、公差 $d$、第 $n$ 項 $a_n = a + (n-1)d$",
+      "category": "數列級數",
+      "level": 5,
+      "prerequisites": ["a1.2"],
+      "related": [],
+      "tags": ["數列", "等差"],
+      "examples": ["ex_a5_1_1", "ex_a5_1_2"]
+    },
+    {
+      "id": "a5.2",
+      "name": "等差級數",
+      "description": "等差級數和 $S_n = \\frac{n(a_1 + a_n)}{2}$",
+      "category": "數列級數",
+      "level": 5,
+      "prerequisites": ["a5.1"],
+      "related": [],
+      "tags": ["級數", "等差"],
+      "examples": ["ex_a5_2_1", "ex_a5_2_2"]
+    },
+    {
+      "id": "a5.3",
+      "name": "等比數列",
+      "description": "首項 $a$、公比 $r$、第 $n$ 項 $a_n = ar^{n-1}$",
+      "category": "數列級數",
+      "level": 5,
+      "prerequisites": ["a1.3"],
+      "related": [],
+      "tags": ["數列", "等比"],
+      "examples": ["ex_a5_3_1", "ex_a5_3_2"]
+    },
+    {
+      "id": "a5.4",
+      "name": "等比級數",
+      "description": "等比級數和 $S_n = \\frac{a(1-r^n)}{1-r}$、無窮等比級數",
+      "category": "數列級數",
+      "level": 5,
+      "prerequisites": ["a5.3"],
+      "related": [],
+      "tags": ["級數", "等比"],
+      "examples": ["ex_a5_4_1", "ex_a5_4_2"]
+    },
+    {
+      "id": "a5.5",
+      "name": "遞迴數列",
+      "description": "遞迴關係、特徵方程式、通項公式",
+      "category": "數列級數",
+      "level": 5,
+      "prerequisites": ["a5.1", "a5.3"],
+      "related": [],
+      "tags": ["遞迴", "數列"],
+      "examples": ["ex_a5_5_1"]
+    },
+    {
+      "id": "a6.1",
+      "name": "排列",
+      "description": "階乘、排列 $P^n_r = \\frac{n!}{(n-r)!}$、重複排列",
+      "category": "排列組合",
+      "level": 6,
+      "prerequisites": ["a1.1"],
+      "related": [],
+      "tags": ["排列", "階乘"],
+      "examples": ["ex_a6_1_1", "ex_a6_1_2"]
+    },
+    {
+      "id": "a6.2",
+      "name": "組合",
+      "description": "組合 $C^n_r = \\frac{n!}{r!(n-r)!}$、組合性質",
+      "category": "排列組合",
+      "level": 6,
+      "prerequisites": ["a6.1"],
+      "related": [],
+      "tags": ["組合"],
+      "examples": ["ex_a6_2_1", "ex_a6_2_2"]
+    },
+    {
+      "id": "a6.3",
+      "name": "二項式定理",
+      "description": "$(a+b)^n = \\sum C^n_k a^{n-k}b^k$、巴斯卡三角形",
+      "category": "排列組合",
+      "level": 6,
+      "prerequisites": ["a6.2"],
+      "related": [],
+      "tags": ["二項式定理"],
+      "examples": ["ex_a6_3_1", "ex_a6_3_2"]
+    },
+    {
+      "id": "a7.1",
+      "name": "矩陣基礎",
+      "description": "矩陣定義、列與行、矩陣相等",
+      "category": "矩陣",
+      "level": 7,
+      "prerequisites": [],
+      "related": [],
+      "tags": ["矩陣"],
+      "examples": ["ex_a7_1_1"]
+    },
+    {
+      "id": "a7.2",
+      "name": "矩陣運算",
+      "description": "矩陣加減、純量積、矩陣乘法",
+      "category": "矩陣",
+      "level": 7,
+      "prerequisites": ["a7.1"],
+      "related": [],
+      "tags": ["矩陣運算"],
+      "examples": ["ex_a7_2_1", "ex_a7_2_2"]
+    },
+    {
+      "id": "a7.3",
+      "name": "行列式",
+      "description": "$2 \\times 2$ 和 $3 \\times 3$ 行列式、性質",
+      "category": "矩陣",
+      "level": 7,
+      "prerequisites": ["a7.1"],
+      "related": [],
+      "tags": ["行列式"],
+      "examples": ["ex_a7_3_1", "ex_a7_3_2"]
+    },
+    {
+      "id": "a7.4",
+      "name": "反矩陣",
+      "description": "可逆矩陣、$AA^{-1} = I$、克拉瑪公式",
+      "category": "矩陣",
+      "level": 7,
+      "prerequisites": ["a7.2", "a7.3"],
+      "related": [],
+      "tags": ["反矩陣"],
+      "examples": ["ex_a7_4_1"]
+    },
+    {
+      "id": "a8.1",
+      "name": "複數基礎",
+      "description": "虛數單位 $i$、$i^2 = -1$、複數 $a + bi$",
+      "category": "複數",
+      "level": 8,
+      "prerequisites": ["a1.1"],
+      "related": [],
+      "tags": ["複數", "虛數"],
+      "examples": ["ex_a8_1_1", "ex_a8_1_2"]
+    },
+    {
+      "id": "a8.2",
+      "name": "複數運算",
+      "description": "複數加減乘除、共軛複數",
+      "category": "複數",
+      "level": 8,
+      "prerequisites": ["a8.1"],
+      "related": [],
+      "tags": ["複數運算"],
+      "examples": ["ex_a8_2_1", "ex_a8_2_2"]
+    },
+    {
+      "id": "a8.3",
+      "name": "複數的極式",
+      "description": "複數平面、模與輻角、極式 $r(\\cos\\theta + i\\sin\\theta)$",
+      "category": "複數",
+      "level": 8,
+      "prerequisites": ["a8.1"],
+      "related": [],
+      "tags": ["極式", "複數平面"],
+      "examples": ["ex_a8_3_1", "ex_a8_3_2"]
+    },
+    {
+      "id": "a8.4",
+      "name": "棣美弗定理",
+      "description": "$(\\cos\\theta + i\\sin\\theta)^n$、$n$ 次方根",
+      "category": "複數",
+      "level": 8,
+      "prerequisites": ["a8.3"],
+      "related": [],
+      "tags": ["棣美弗定理"],
+      "examples": ["ex_a8_4_1"]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_a1_1_1",
+      "question": "計算：$(-2) \\times 3 + 5 \\times (-4) - 6 \\div 2$",
+      "answer": "$-29$",
+      "solution": "按照運算順序：\n\n1. 乘除法：$(-2) \\times 3 = -6$，$5 \\times (-4) = -20$，$6 \\div 2 = 3$\n2. 加減法：$-6 + (-20) - 3 = -6 - 20 - 3 = -29$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["四則運算"]
+    },
+    {
+      "id": "ex_a1_1_2",
+      "question": "比較大小：$-\\frac{3}{4}$ ____ $-\\frac{5}{6}$",
+      "answer": "$-\\frac{3}{4} > -\\frac{5}{6}$",
+      "solution": "通分：$-\\frac{3}{4} = -\\frac{9}{12}$，$-\\frac{5}{6} = -\\frac{10}{12}$\n\n因為 $-9 > -10$，所以 $-\\frac{9}{12} > -\\frac{10}{12}$\n\n答案：$-\\frac{3}{4} > -\\frac{5}{6}$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["有理數"]
+    },
+    {
+      "id": "ex_a1_2_1",
+      "question": "化簡：$3x^2 - 5x + 2x^2 + 7x - 1$",
+      "answer": "$5x^2 + 2x - 1$",
+      "solution": "合併同類項：\n\n$3x^2 + 2x^2 = 5x^2$\n\n$-5x + 7x = 2x$\n\n答案：$5x^2 + 2x - 1$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["代數式", "同類項"]
+    },
+    {
+      "id": "ex_a1_2_2",
+      "question": "當 $x = -2$ 時，求 $2x^3 - 3x^2 + 5x - 1$ 的值",
+      "answer": "$-39$",
+      "solution": "代入 $x = -2$：\n\n$2(-2)^3 - 3(-2)^2 + 5(-2) - 1$\n\n$= 2(-8) - 3(4) - 10 - 1$\n\n$= -16 - 12 - 10 - 1 = -39$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["代數式求值"]
+    },
+    {
+      "id": "ex_a1_3_1",
+      "question": "化簡：$\\frac{2^5 \\times 2^3}{2^6}$",
+      "answer": "$4$",
+      "solution": "使用指數律：\n\n$\\frac{2^5 \\times 2^3}{2^6} = \\frac{2^{5+3}}{2^6} = \\frac{2^8}{2^6} = 2^{8-6} = 2^2 = 4$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["指數律"]
+    },
+    {
+      "id": "ex_a1_3_2",
+      "question": "化簡：$(3x^2y)^3 \\times (2xy^2)^2$",
+      "answer": "$108x^8y^7$",
+      "solution": "$(3x^2y)^3 = 27x^6y^3$\n\n$(2xy^2)^2 = 4x^2y^4$\n\n$27x^6y^3 \\times 4x^2y^4 = 108x^{6+2}y^{3+4} = 108x^8y^7$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["指數律"]
+    },
+    {
+      "id": "ex_a1_4_1",
+      "question": "化簡：$\\sqrt{50} - \\sqrt{18} + \\sqrt{8}$",
+      "answer": "$4\\sqrt{2}$",
+      "solution": "$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$\n\n$\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$\n\n$\\sqrt{8} = \\sqrt{4 \\times 2} = 2\\sqrt{2}$\n\n$5\\sqrt{2} - 3\\sqrt{2} + 2\\sqrt{2} = 4\\sqrt{2}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["根式化簡"]
+    },
+    {
+      "id": "ex_a1_4_2",
+      "question": "有理化：$\\frac{1}{\\sqrt{3} - 1}$",
+      "answer": "$\\frac{\\sqrt{3} + 1}{2}$",
+      "solution": "分子分母同乘 $\\sqrt{3} + 1$：\n\n$\\frac{1}{\\sqrt{3} - 1} \\times \\frac{\\sqrt{3} + 1}{\\sqrt{3} + 1} = \\frac{\\sqrt{3} + 1}{(\\sqrt{3})^2 - 1^2} = \\frac{\\sqrt{3} + 1}{3 - 1} = \\frac{\\sqrt{3} + 1}{2}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["有理化"]
+    },
+    {
+      "id": "ex_a2_1_1",
+      "question": "解方程式：$3x - 5 = 2x + 7$",
+      "answer": "$x = 12$",
+      "solution": "移項：$3x - 2x = 7 + 5$\n\n$x = 12$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["一元一次方程式"]
+    },
+    {
+      "id": "ex_a2_1_2",
+      "question": "解方程式：$\\frac{2x-1}{3} = \\frac{x+2}{2}$",
+      "answer": "$x = 7$",
+      "solution": "兩邊同乘 $6$：\n\n$2(2x-1) = 3(x+2)$\n\n$4x - 2 = 3x + 6$\n\n$x = 8$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["一元一次方程式"]
+    },
+    {
+      "id": "ex_a2_2_1",
+      "question": "用因式分解法解：$x^2 - 5x + 6 = 0$",
+      "answer": "$x = 2$ 或 $x = 3$",
+      "solution": "因式分解：$(x-2)(x-3) = 0$\n\n得 $x - 2 = 0$ 或 $x - 3 = 0$\n\n答案：$x = 2$ 或 $x = 3$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["二次方程式", "因式分解"]
+    },
+    {
+      "id": "ex_a2_2_2",
+      "question": "用配方法解：$x^2 + 6x + 5 = 0$",
+      "answer": "$x = -1$ 或 $x = -5$",
+      "solution": "$x^2 + 6x + 5 = 0$\n\n$(x+3)^2 - 9 + 5 = 0$\n\n$(x+3)^2 = 4$\n\n$x + 3 = \\pm 2$\n\n$x = -3 \\pm 2$\n\n答案：$x = -1$ 或 $x = -5$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二次方程式", "配方法"]
+    },
+    {
+      "id": "ex_a2_2_3",
+      "question": "用公式解：$2x^2 - 3x - 1 = 0$",
+      "answer": "$x = \\frac{3 \\pm \\sqrt{17}}{4}$",
+      "solution": "公式：$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$\n\n這裡 $a = 2$，$b = -3$，$c = -1$\n\n判別式：$\\Delta = (-3)^2 - 4(2)(-1) = 9 + 8 = 17$\n\n$x = \\frac{3 \\pm \\sqrt{17}}{4}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二次方程式", "公式解"]
+    },
+    {
+      "id": "ex_a2_3_1",
+      "question": "設 $x^2 - 5x + 6 = 0$ 的兩根為 $\\alpha, \\beta$，求 $\\alpha + \\beta$ 和 $\\alpha \\beta$",
+      "answer": "$\\alpha + \\beta = 5$，$\\alpha \\beta = 6$",
+      "solution": "根據韋達定理：\n\n$\\alpha + \\beta = -\\frac{b}{a} = -\\frac{-5}{1} = 5$\n\n$\\alpha \\beta = \\frac{c}{a} = \\frac{6}{1} = 6$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["韋達定理"]
+    },
+    {
+      "id": "ex_a2_3_2",
+      "question": "若 $x^2 - 3x + k = 0$ 的兩根為 $\\alpha, \\beta$，且 $\\alpha^2 + \\beta^2 = 13$，求 $k$",
+      "answer": "$k = -2$",
+      "solution": "$\\alpha + \\beta = 3$，$\\alpha \\beta = k$\n\n$\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = 9 - 2k = 13$\n\n$-2k = 4$\n\n$k = -2$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["韋達定理"]
+    },
+    {
+      "id": "ex_a2_4_1",
+      "question": "解聯立方程式：$\\begin{cases} 2x + y = 7 \\\\ x - y = 2 \\end{cases}$",
+      "answer": "$x = 3$，$y = 1$",
+      "solution": "加法消去 $y$：\n\n$(2x + y) + (x - y) = 7 + 2$\n\n$3x = 9$，$x = 3$\n\n代入：$3 - y = 2$，$y = 1$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["聯立方程式"]
+    },
+    {
+      "id": "ex_a2_4_2",
+      "question": "解聯立方程式：$\\begin{cases} 3x + 2y = 8 \\\\ 5x - 3y = 1 \\end{cases}$",
+      "answer": "$x = 2$，$y = 1$",
+      "solution": "乘法消去：第一式 $\\times 3$，第二式 $\\times 2$：\n\n$\\begin{cases} 9x + 6y = 24 \\\\ 10x - 6y = 2 \\end{cases}$\n\n相加：$19x = 26$，$x = 2$\n\n代入：$6 + 2y = 8$，$y = 1$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["聯立方程式"]
+    },
+    {
+      "id": "ex_a2_5_1",
+      "question": "解三次方程式：$x^3 - 6x^2 + 11x - 6 = 0$",
+      "answer": "$x = 1, 2, 3$",
+      "solution": "試 $x = 1$：$1 - 6 + 11 - 6 = 0$ ✓\n\n因式分解：$(x-1)(x^2 - 5x + 6) = 0$\n\n$(x-1)(x-2)(x-3) = 0$\n\n答案：$x = 1, 2, 3$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["三次方程式"]
+    },
+    {
+      "id": "ex_a3_1_1",
+      "question": "解不等式：$3x - 5 > 2x + 1$",
+      "answer": "$x > 6$",
+      "solution": "移項：$3x - 2x > 1 + 5$\n\n$x > 6$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["一次不等式"]
+    },
+    {
+      "id": "ex_a3_1_2",
+      "question": "解不等式：$-2x + 3 \\leq 7$",
+      "answer": "$x \\geq -2$",
+      "solution": "$-2x \\leq 4$\n\n兩邊同除 $-2$（不等號反向）：\n\n$x \\geq -2$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["一次不等式"]
+    },
+    {
+      "id": "ex_a3_2_1",
+      "question": "解不等式：$x^2 - 5x + 6 > 0$",
+      "answer": "$x < 2$ 或 $x > 3$",
+      "solution": "因式分解：$(x-2)(x-3) > 0$\n\n找零點：$x = 2, 3$\n\n測試區間：\n- $x < 2$：正\n- $2 < x < 3$：負\n- $x > 3$：正\n\n答案：$x < 2$ 或 $x > 3$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二次不等式"]
+    },
+    {
+      "id": "ex_a3_2_2",
+      "question": "解不等式：$-x^2 + 4x - 3 \\geq 0$",
+      "answer": "$1 \\leq x \\leq 3$",
+      "solution": "$-x^2 + 4x - 3 \\geq 0$\n\n$x^2 - 4x + 3 \\leq 0$\n\n$(x-1)(x-3) \\leq 0$\n\n答案：$1 \\leq x \\leq 3$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二次不等式"]
+    },
+    {
+      "id": "ex_a3_3_1",
+      "question": "解不等式：$|x - 2| < 3$",
+      "answer": "$-1 < x < 5$",
+      "solution": "$|x - 2| < 3$ 表示：\n\n$-3 < x - 2 < 3$\n\n$-1 < x < 5$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["絕對值不等式"]
+    },
+    {
+      "id": "ex_a3_3_2",
+      "question": "解不等式：$|2x + 1| \\geq 5$",
+      "answer": "$x \\leq -3$ 或 $x \\geq 2$",
+      "solution": "$|2x + 1| \\geq 5$ 表示：\n\n$2x + 1 \\leq -5$ 或 $2x + 1 \\geq 5$\n\n$2x \\leq -6$ 或 $2x \\geq 4$\n\n$x \\leq -3$ 或 $x \\geq 2$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["絕對值不等式"]
+    },
+    {
+      "id": "ex_a3_4_1",
+      "question": "設 $x > 0$，求 $x + \\frac{1}{x}$ 的最小值",
+      "answer": "$2$",
+      "solution": "由算幾不等式：$\\frac{x + \\frac{1}{x}}{2} \\geq \\sqrt{x \\cdot \\frac{1}{x}} = 1$\n\n$x + \\frac{1}{x} \\geq 2$\n\n等號成立於 $x = \\frac{1}{x}$，即 $x = 1$\n\n最小值為 $2$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["AM-GM", "最值"]
+    },
+    {
+      "id": "ex_a4_1_1",
+      "question": "寫出多項式 $3x^4 - 2x^2 + 5x - 7$ 的次數和首項係數",
+      "answer": "次數：$4$，首項係數：$3$",
+      "solution": "次數是最高次項的次數：$4$\n\n首項係數是最高次項的係數：$3$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["多項式"]
+    },
+    {
+      "id": "ex_a4_2_1",
+      "question": "計算：$(2x^3 - 3x^2 + x - 1)(x + 2)$",
+      "answer": "$2x^4 + x^3 - 5x^2 - x - 2$",
+      "solution": "展開：\n\n$2x^3 \\cdot x + 2x^3 \\cdot 2 - 3x^2 \\cdot x - 3x^2 \\cdot 2 + x \\cdot x + x \\cdot 2 - 1 \\cdot x - 1 \\cdot 2$\n\n$= 2x^4 + 4x^3 - 3x^3 - 6x^2 + x^2 + 2x - x - 2$\n\n$= 2x^4 + x^3 - 5x^2 + x - 2$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["多項式乘法"]
+    },
+    {
+      "id": "ex_a4_2_2",
+      "question": "用長除法計算：$(x^3 - 2x^2 + 3x - 5) \\div (x - 1)$",
+      "answer": "商：$x^2 - x + 2$，餘式：$-3$",
+      "solution": "長除法：\n\n$x^3 - 2x^2 + 3x - 5 = (x-1)(x^2 - x + 2) - 3$\n\n商：$x^2 - x + 2$\n\n餘式：$-3$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["多項式除法"]
+    },
+    {
+      "id": "ex_a4_3_1",
+      "question": "因式分解：$x^2 - 9$",
+      "answer": "$(x+3)(x-3)$",
+      "solution": "平方差公式：$a^2 - b^2 = (a+b)(a-b)$\n\n$x^2 - 9 = x^2 - 3^2 = (x+3)(x-3)$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["因式分解"]
+    },
+    {
+      "id": "ex_a4_3_2",
+      "question": "因式分解：$2x^2 + 7x + 3$",
+      "answer": "$(2x+1)(x+3)$",
+      "solution": "十字交乘法：\n\n$2x^2 + 7x + 3 = (2x+1)(x+3)$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["因式分解", "十字交乘"]
+    },
+    {
+      "id": "ex_a4_3_3",
+      "question": "因式分解：$x^3 + 2x^2 - x - 2$",
+      "answer": "$(x+2)(x+1)(x-1)$",
+      "solution": "分組分解：\n\n$x^3 + 2x^2 - x - 2$\n\n$= x^2(x+2) - 1(x+2)$\n\n$= (x+2)(x^2-1)$\n\n$= (x+2)(x+1)(x-1)$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["因式分解", "分組"]
+    },
+    {
+      "id": "ex_a4_4_1",
+      "question": "求 $f(x) = x^3 - 2x^2 + 3x - 5$ 除以 $x - 2$ 的餘式",
+      "answer": "$-3$",
+      "solution": "餘式定理：$f(2) = 2^3 - 2(2)^2 + 3(2) - 5$\n\n$= 8 - 8 + 6 - 5 = 1$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["餘式定理"]
+    },
+    {
+      "id": "ex_a4_4_2",
+      "question": "若 $x - 3$ 是 $x^3 - 5x^2 + kx - 6$ 的因式，求 $k$",
+      "answer": "$k = 8$",
+      "solution": "因式定理：$f(3) = 0$\n\n$3^3 - 5(3)^2 + 3k - 6 = 0$\n\n$27 - 45 + 3k - 6 = 0$\n\n$3k = 24$\n\n$k = 8$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["因式定理"]
+    },
+    {
+      "id": "ex_a5_1_1",
+      "question": "等差數列 $3, 7, 11, 15, \\ldots$，求第 $10$ 項",
+      "answer": "$39$",
+      "solution": "首項 $a = 3$，公差 $d = 4$\n\n$a_{10} = a + (10-1)d = 3 + 9 \\times 4 = 39$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["等差數列"]
+    },
+    {
+      "id": "ex_a5_1_2",
+      "question": "等差數列第 $5$ 項為 $17$，第 $8$ 項為 $26$，求首項和公差",
+      "answer": "$a = 5$，$d = 3$",
+      "solution": "$a_5 = a + 4d = 17$\n\n$a_8 = a + 7d = 26$\n\n相減：$3d = 9$，$d = 3$\n\n代入：$a + 12 = 17$，$a = 5$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["等差數列"]
+    },
+    {
+      "id": "ex_a5_2_1",
+      "question": "求 $1 + 2 + 3 + \\cdots + 100$",
+      "answer": "$5050$",
+      "solution": "$S_n = \\frac{n(a_1 + a_n)}{2}$\n\n$S_{100} = \\frac{100(1 + 100)}{2} = \\frac{100 \\times 101}{2} = 5050$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["等差級數"]
+    },
+    {
+      "id": "ex_a5_2_2",
+      "question": "求 $3 + 7 + 11 + \\cdots + 99$ 的和",
+      "answer": "$1275$",
+      "solution": "首項 $a = 3$，公差 $d = 4$，末項 $99$\n\n項數：$99 = 3 + (n-1) \\times 4$，$n = 25$\n\n$S_{25} = \\frac{25(3 + 99)}{2} = \\frac{25 \\times 102}{2} = 1275$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["等差級數"]
+    },
+    {
+      "id": "ex_a5_3_1",
+      "question": "等比數列 $2, 6, 18, 54, \\ldots$，求第 $7$ 項",
+      "answer": "$1458$",
+      "solution": "首項 $a = 2$，公比 $r = 3$\n\n$a_7 = ar^{7-1} = 2 \\times 3^6 = 2 \\times 729 = 1458$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["等比數列"]
+    },
+    {
+      "id": "ex_a5_3_2",
+      "question": "等比數列第 $2$ 項為 $12$，第 $5$ 項為 $96$，求首項和公比",
+      "answer": "$a = 6$，$r = 2$",
+      "solution": "$a_2 = ar = 12$\n\n$a_5 = ar^4 = 96$\n\n相除：$r^3 = 8$，$r = 2$\n\n代入：$a \\times 2 = 12$，$a = 6$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["等比數列"]
+    },
+    {
+      "id": "ex_a5_4_1",
+      "question": "求 $2 + 6 + 18 + 54 + 162$ 的和",
+      "answer": "$242$",
+      "solution": "首項 $a = 2$，公比 $r = 3$，項數 $n = 5$\n\n$S_5 = \\frac{a(1-r^5)}{1-r} = \\frac{2(1-3^5)}{1-3} = \\frac{2(1-243)}{-2} = \\frac{-484}{-2} = 242$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["等比級數"]
+    },
+    {
+      "id": "ex_a5_4_2",
+      "question": "求無窮等比級數 $1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\cdots$ 的和",
+      "answer": "$2$",
+      "solution": "首項 $a = 1$，公比 $r = \\frac{1}{2}$\n\n因為 $|r| < 1$，無窮等比級數收斂：\n\n$S = \\frac{a}{1-r} = \\frac{1}{1-\\frac{1}{2}} = \\frac{1}{\\frac{1}{2}} = 2$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["無窮等比級數"]
+    },
+    {
+      "id": "ex_a5_5_1",
+      "question": "數列 $a_1 = 1$，$a_{n+1} = 2a_n + 1$，求 $a_3$",
+      "answer": "$7$",
+      "solution": "$a_1 = 1$\n\n$a_2 = 2(1) + 1 = 3$\n\n$a_3 = 2(3) + 1 = 7$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["遞迴數列"]
+    },
+    {
+      "id": "ex_a6_1_1",
+      "question": "計算 $P^5_3$",
+      "answer": "$60$",
+      "solution": "$P^5_3 = \\frac{5!}{(5-3)!} = \\frac{5!}{2!} = \\frac{120}{2} = 60$\n\n或：$5 \\times 4 \\times 3 = 60$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["排列"]
+    },
+    {
+      "id": "ex_a6_1_2",
+      "question": "5 個人排成一列，甲必須在乙前面，有幾種排法？",
+      "answer": "$60$",
+      "solution": "總排列數：$5! = 120$\n\n甲在乙前和甲在乙後各佔一半：\n\n$\\frac{120}{2} = 60$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["排列", "條件排列"]
+    },
+    {
+      "id": "ex_a6_2_1",
+      "question": "計算 $C^6_2$",
+      "answer": "$15$",
+      "solution": "$C^6_2 = \\frac{6!}{2!(6-2)!} = \\frac{6!}{2!4!} = \\frac{6 \\times 5}{2 \\times 1} = 15$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["組合"]
+    },
+    {
+      "id": "ex_a6_2_2",
+      "question": "10 人中選 4 人組成委員會，有幾種選法？",
+      "answer": "$210$",
+      "solution": "$C^{10}_4 = \\frac{10!}{4!6!} = \\frac{10 \\times 9 \\times 8 \\times 7}{4 \\times 3 \\times 2 \\times 1} = 210$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["組合"]
+    },
+    {
+      "id": "ex_a6_3_1",
+      "question": "展開 $(x + 2)^3$",
+      "answer": "$x^3 + 6x^2 + 12x + 8$",
+      "solution": "$(x+2)^3 = C^3_0 x^3 + C^3_1 x^2 \\cdot 2 + C^3_2 x \\cdot 2^2 + C^3_3 \\cdot 2^3$\n\n$= x^3 + 3 \\cdot 2x^2 + 3 \\cdot 4x + 8$\n\n$= x^3 + 6x^2 + 12x + 8$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二項式定理"]
+    },
+    {
+      "id": "ex_a6_3_2",
+      "question": "$(x + 1)^5$ 展開式中 $x^3$ 的係數",
+      "answer": "$10$",
+      "solution": "$x^3$ 項為：$C^5_3 x^3 \\cdot 1^2 = C^5_3 x^3$\n\n係數：$C^5_3 = \\frac{5!}{3!2!} = 10$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["二項式定理"]
+    },
+    {
+      "id": "ex_a7_1_1",
+      "question": "寫出矩陣 $\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}$ 的大小",
+      "answer": "$2 \\times 3$",
+      "solution": "2 列 3 行，大小為 $2 \\times 3$",
+      "difficulty": "easy",
+      "type": "choice",
+      "tags": ["矩陣"]
+    },
+    {
+      "id": "ex_a7_2_1",
+      "question": "計算：$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 5 & 6 \\\\ 7 & 8 \\end{bmatrix}$",
+      "answer": "$\\begin{bmatrix} 6 & 8 \\\\ 10 & 12 \\end{bmatrix}$",
+      "solution": "對應元素相加：\n\n$\\begin{bmatrix} 1+5 & 2+6 \\\\ 3+7 & 4+8 \\end{bmatrix} = \\begin{bmatrix} 6 & 8 \\\\ 10 & 12 \\end{bmatrix}$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["矩陣加法"]
+    },
+    {
+      "id": "ex_a7_2_2",
+      "question": "計算：$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} \\times \\begin{bmatrix} 2 & 0 \\\\ 1 & 3 \\end{bmatrix}$",
+      "answer": "$\\begin{bmatrix} 4 & 6 \\\\ 10 & 12 \\end{bmatrix}$",
+      "solution": "$\\begin{bmatrix} 1 \\times 2 + 2 \\times 1 & 1 \\times 0 + 2 \\times 3 \\\\ 3 \\times 2 + 4 \\times 1 & 3 \\times 0 + 4 \\times 3 \\end{bmatrix}$\n\n$= \\begin{bmatrix} 4 & 6 \\\\ 10 & 12 \\end{bmatrix}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["矩陣乘法"]
+    },
+    {
+      "id": "ex_a7_3_1",
+      "question": "計算行列式：$\\begin{vmatrix} 3 & 2 \\\\ 1 & 4 \\end{vmatrix}$",
+      "answer": "$10$",
+      "solution": "$\\begin{vmatrix} 3 & 2 \\\\ 1 & 4 \\end{vmatrix} = 3 \\times 4 - 2 \\times 1 = 12 - 2 = 10$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["行列式"]
+    },
+    {
+      "id": "ex_a7_3_2",
+      "question": "計算行列式：$\\begin{vmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{vmatrix}$",
+      "answer": "$24$",
+      "solution": "上三角矩陣的行列式為對角線元素之積：\n\n$1 \\times 4 \\times 6 = 24$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["行列式"]
+    },
+    {
+      "id": "ex_a7_4_1",
+      "question": "求 $\\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}$ 的反矩陣",
+      "answer": "$\\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}$",
+      "solution": "$\\det(A) = 2 \\times 2 - 1 \\times 3 = 1$\n\n$A^{-1} = \\frac{1}{1} \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix} = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["反矩陣"]
+    },
+    {
+      "id": "ex_a8_1_1",
+      "question": "計算：$i^{2025}$",
+      "answer": "$i$",
+      "solution": "$i^1 = i$, $i^2 = -1$, $i^3 = -i$, $i^4 = 1$（週期為 4）\n\n$2025 = 4 \\times 506 + 1$\n\n$i^{2025} = i^1 = i$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["複數", "虛數"]
+    },
+    {
+      "id": "ex_a8_1_2",
+      "question": "化簡：$(2 + 3i) + (1 - 4i)$",
+      "answer": "$3 - i$",
+      "solution": "實部相加，虛部相加：\n\n$(2+1) + (3-4)i = 3 - i$",
+      "difficulty": "easy",
+      "type": "calc",
+      "tags": ["複數加法"]
+    },
+    {
+      "id": "ex_a8_2_1",
+      "question": "計算：$(3 + 2i)(1 - 4i)$",
+      "answer": "$11 - 10i$",
+      "solution": "$(3 + 2i)(1 - 4i)$\n\n$= 3 - 12i + 2i - 8i^2$\n\n$= 3 - 10i + 8$\n\n$= 11 - 10i$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["複數乘法"]
+    },
+    {
+      "id": "ex_a8_2_2",
+      "question": "計算：$\\frac{2 + i}{1 - i}$",
+      "answer": "$\\frac{1}{2} + \\frac{3}{2}i$",
+      "solution": "分子分母同乘共軛複數：\n\n$\\frac{2+i}{1-i} \\times \\frac{1+i}{1+i} = \\frac{(2+i)(1+i)}{(1-i)(1+i)}$\n\n$= \\frac{2 + 2i + i - 1}{1 - i^2} = \\frac{1 + 3i}{2} = \\frac{1}{2} + \\frac{3}{2}i$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["複數除法"]
+    },
+    {
+      "id": "ex_a8_3_1",
+      "question": "求 $z = 1 + i$ 的模與輻角主值",
+      "answer": "$|z| = \\sqrt{2}$，$\\arg(z) = \\frac{\\pi}{4}$",
+      "solution": "模：$|z| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$\n\n輻角：$\\tan\\theta = \\frac{1}{1} = 1$，在第一象限\n\n$\\theta = \\frac{\\pi}{4}$",
+      "difficulty": "medium",
+      "type": "calc",
+      "tags": ["複數極式"]
+    },
+    {
+      "id": "ex_a8_3_2",
+      "question": "將 $z = -1 + \\sqrt{3}i$ 化為極式",
+      "answer": "$2(\\cos\\frac{2\\pi}{3} + i\\sin\\frac{2\\pi}{3})$",
+      "solution": "$|z| = \\sqrt{(-1)^2 + (\\sqrt{3})^2} = 2$\n\n$\\tan\\theta = \\frac{\\sqrt{3}}{-1} = -\\sqrt{3}$，在第二象限\n\n$\\theta = \\frac{2\\pi}{3}$\n\n極式：$2(\\cos\\frac{2\\pi}{3} + i\\sin\\frac{2\\pi}{3})$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["複數極式"]
+    },
+    {
+      "id": "ex_a8_4_1",
+      "question": "用棣美弗定理計算 $(1 + i)^6$",
+      "answer": "$-8i$",
+      "solution": "$1 + i = \\sqrt{2}(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4})$\n\n$(1+i)^6 = (\\sqrt{2})^6(\\cos\\frac{6\\pi}{4} + i\\sin\\frac{6\\pi}{4})$\n\n$= 8(\\cos\\frac{3\\pi}{2} + i\\sin\\frac{3\\pi}{2})$\n\n$= 8(0 - i) = -8i$",
+      "difficulty": "hard",
+      "type": "calc",
+      "tags": ["棣美弗定理"]
+    }
+  ]
+}
